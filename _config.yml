@@ -99,7 +99,8 @@ deploy:
   # type: git
   # repository: git@github.com:vuejs/vuejs.org.git
   type: heroku
-  repo: git@github.com:eeosk/jf-guide.git
+  repo: git@git.heroku.com:eeosk/jf-guide.git
+
 
 feed:
   type: atom
