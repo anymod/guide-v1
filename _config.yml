@@ -96,8 +96,9 @@ markdown:
 # Deployment
 ## Docs: http://zespia.tw/hexo/docs/deployment.html
 deploy:
-  type: git
-  repository: git@github.com:vuejs/vuejs.org.git
+  # type: git
+  type: heroku
+  repo: https://github.com/eeosk/jf-guide.git
 
 feed:
   type: atom
