@@ -97,7 +97,7 @@ markdown:
 ## Docs: http://zespia.tw/hexo/docs/deployment.html
 deploy:
   type: heroku
-  repo: https://github.com/eeosk/jf-guide.git
+  repo: https://git.heroku.com/jf-guide.git
 
 
 feed:
