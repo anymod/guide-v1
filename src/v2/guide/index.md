@@ -4,56 +4,53 @@ type: guide
 order: 2
 ---
 
-## What is Vue.js?
+## What is jframe?
 
-Vue (pronounced /vjuː/, like **view**) is a **progressive framework** for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with [modern tooling](single-file-components.html) and [supporting libraries](https://github.com/vuejs/awesome-vue#libraries--plugins).
+Jframe makes it easy to use all kinds of **web components** to build websites and applications.  Unlike platforms like Wordpress, jframe **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, jframe **does not require any external styling or javascript**.
 
-If you are an experienced frontend developer and want to know how Vue compares to other libraries/frameworks, check out the [Comparison with Other Frameworks](comparison.html).
+The jframe platform is focused on providing components that are **simple to use** with other libraries or existing projects.  On the other hand, jframe is also perfectly capable of powering sophisticated Single-Page Applications.
+<!--- when used in combination with [modern tooling](single-file-components.html) and [supporting libraries](https://github.com/vuejs/awesome-vue#libraries--plugins). -->
+
+If you are an experienced frontend developer and want to know how jframe compares to other libraries/frameworks, check out the [Comparison with Other Frameworks](comparison.html).
 
 ## Getting Started
 
-<p class="tip">The official guide assumes intermediate level knowledge of HTML, CSS, and JavaScript. If you are totally new to frontend development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back! Prior experience with other frameworks helps, but is not required.</p>
+<p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a basic website up and running first.  Once you are at that point, you're ready to use jframe.</p>
 
-The easiest way to try out Vue.js is using the [JSFiddle Hello World example](https://jsfiddle.net/chrisvfritz/50wL7mdz/). Feel free to open it in another tab and follow along as we go through some basic examples. Or, you can simply create an `.html` file and include Vue with:
-
-``` html
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-```
-
-The [Installation](installation.html) page provides more options of installing Vue. Note that we **do not** recommend beginners to start with `vue-cli`, especially if you are not yet familiar with Node.js-based build tools.
-
-## Declarative Rendering
-
-At the core of Vue.js is a system that enables us to declaratively render data to the DOM using straightforward template syntax:
+The easiest way to try out jframe is using the [jframe carousel example](https://codepen.io/jframe/pen/NROZrm). Feel free to open it in another tab and see what it takes to get a jframe working. Or, you can simply create an `.html` file and add a jframe with:
 
 ``` html
-<div id="app">
-  {{ message }}
-</div>
+<jframe id="carousel-demo"></jframe>
+
+<!-- jframe snippet code -->
+<script>
+  (function(s,i,m,p,l,e,r){
+    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
+  })(window,document,'script','jframe','//jfra.me/v0/');
+</script>
 ```
-``` js
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
+
+The [Quickstart](quickstart.html) page provides more options of installing jframe.
+
+## Embed Anywhere
+
+At the core of jframe is a system that enables components to be delivered to any platform.
+
+``` html
+<jframe id="text-helloworld"></jframe>
 ```
 {% raw %}
-<div id="app" class="demo">
-  {{ message }}
-</div>
+<h4 style="background: #f8f8f8; padding: 20px;">
+  <jframe id="text-helloworld"></jframe>
+</h4>
 <script>
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
+  (function(s,i,m,p,l,e,r){
+    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
+  })(window,document,'script','jframe','//jfra.me/v0/');
 </script>
 {% endraw %}
 
-We have already created our very first Vue app! This looks pretty similar to just rendering a string template, but Vue has done a lot of work under the hood. The data and the DOM are now linked, and everything is now **reactive**. How do we know? Just open up your browser's JavaScript console and set `app.message` to a different value. You should see the rendered example above update accordingly.
+We have already created our very first jframe component! This looks pretty similar to just rendering a string template, but jframe has done a lot of work under the hood. The data and the DOM are now linked, and everything is now **reactive**. How do we know? Just open up your browser's JavaScript console and set `app.message` to a different value. You should see the rendered example above update accordingly.
 
 In addition to text interpolation, we can also bind element attributes like this:
 
@@ -92,7 +89,7 @@ Here we are encountering something new. The `v-bind` attribute you are seeing is
 
 If you open up your JavaScript console again and enter `app2.message = 'some new message'`, you'll once again see that the bound HTML - in this case the `title` attribute - has been updated.
 
-## Conditionals and Loops
+## Manage Content
 
 It's quite simple to toggle the presence of an element, too:
 
@@ -176,7 +173,7 @@ var app4 = new Vue({
 
 In the console, enter `app4.todos.push({ text: 'New item' })`. You should see a new item appended to the list.
 
-## Handling User Input
+## Single API Call
 
 To let users interact with your app, we can use the `v-on` directive to attach event listeners that invoke methods on our Vue instances:
 
@@ -354,7 +351,7 @@ In a large application, it is necessary to divide the whole app into components 
 </div>
 ```
 
-### Relation to Custom Elements
+## Speed vs CDN
 
 You may have noticed that Vue components are very similar to **Custom Elements**, which are part of the [Web Components Spec](http://www.w3.org/wiki/WebComponents/). That's because Vue's component syntax is loosely modeled after the spec. For example, Vue components implement the [Slot API](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md) and the `is` special attribute. However, there are a few key differences:
 

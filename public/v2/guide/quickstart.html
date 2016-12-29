@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Mixins - jframe</title>
+        <title>Quickstart - jframe</title>
         <meta charset="utf-8">
         <meta name="description" content="jframe - Web components at your service">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Mixins - vue.js">
+        <meta property="og:title" content="Quickstart - vue.js">
         <meta property="og:description" content="jframe - Web components at your service">
         <meta property="og:image" content="https://jframe.io/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Mixins - vue.js">
+        <meta name="twitter:title" content="Quickstart - vue.js">
         <meta name="twitter:description" content="jframe - Web components at your service">
         <meta name="twitter:image" content="https://jframe.io/images/logo.png">
 
@@ -168,7 +168,7 @@
                 
                 
                 <li>
-                    <a href="/v2/guide/quickstart.html" class="sidebar-link">Quickstart</a>
+                    <a href="/v2/guide/quickstart.html" class="sidebar-link current">Quickstart</a>
                 </li>
             
                 
@@ -362,7 +362,7 @@
                 
                 
                 <li>
-                    <a href="/v2/guide/mixins.html" class="sidebar-link current">Mixins</a>
+                    <a href="/v2/guide/mixins.html" class="sidebar-link">Mixins</a>
                 </li>
             
                 
@@ -519,42 +519,57 @@
 </div>
 
 
-<div class="content guide with-sidebar mixins-guide">
+<div class="content guide with-sidebar quickstart-guide">
     
-      <h1>Mixins</h1>
+      <h1>Quickstart</h1>
     
-    <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p>Mixins are a flexible way to distribute reusable functionalities for Vue components. A mixin object can contain any component options. When a component uses a mixin, all options in the mixin will be “mixed” into the component’s own options.</p>
-<p>Example:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// define a mixin object</span></div><div class="line"><span class="keyword">var</span> myMixin = &#123;</div><div class="line">  <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.hello()</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">hello</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'hello from mixin!'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// define a component that uses this mixin</span></div><div class="line"><span class="keyword">var</span> Component = Vue.extend(&#123;</div><div class="line">  <span class="attr">mixins</span>: [myMixin]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">var</span> component = <span class="keyword">new</span> Component() <span class="comment">// -&gt; "hello from mixin!"</span></div></pre></td></tr></table></figure>
-<h2 id="Option-Merging"><a href="#Option-Merging" class="headerlink" title="Option Merging"></a>Option Merging</h2><p>When a mixin and the component itself contain overlapping options, they will be “merged” using appropriate strategies. For example, hook functions with the same name are merged into an array so that all of them will be called. In addition, mixin hooks will be called <strong>before</strong> the component’s own hooks:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> mixin = &#123;</div><div class="line">  <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'mixin hook called'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">mixins</span>: [mixin],</div><div class="line">  <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'component hook called'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// -&gt; "mixin hook called"</span></div><div class="line"><span class="comment">// -&gt; "component hook called"</span></div></pre></td></tr></table></figure>
-<p>Options that expect object values, for example <code>methods</code>, <code>components</code> and <code>directives</code>, will be merged into the same object. The component’s options will take priority when there are conflicting keys in these objects:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> mixin = &#123;</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">foo</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'foo'</span>)</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">conflicting</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'from mixin'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">mixins</span>: [mixin],</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">bar</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'bar'</span>)</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">conflicting</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'from self'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">vm.foo() <span class="comment">// -&gt; "foo"</span></div><div class="line">vm.bar() <span class="comment">// -&gt; "bar"</span></div><div class="line">vm.conflicting() <span class="comment">// -&gt; "from self"</span></div></pre></td></tr></table></figure>
-<p>Note that the same merge strategies are used in <code>Vue.extend()</code>.</p>
-<h2 id="Global-Mixin"><a href="#Global-Mixin" class="headerlink" title="Global Mixin"></a>Global Mixin</h2><p>You can also apply a mixin globally. Use caution! Once you apply a mixin globally, it will affect <strong>every</strong> Vue instance created afterwards. When used properly, this can be used to inject processing logic for custom options:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// inject a handler for `myOption` custom option</span></div><div class="line">Vue.mixin(&#123;</div><div class="line">  <span class="attr">created</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> myOption = <span class="keyword">this</span>.$options.myOption</div><div class="line">    <span class="keyword">if</span> (myOption) &#123;</div><div class="line">      <span class="built_in">console</span>.log(myOption)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">myOption</span>: <span class="string">'hello!'</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// -&gt; "hello!"</span></div></pre></td></tr></table></figure>
-<p class="tip">Use global mixins sparsely and carefully, because it affects every single Vue instance created, including third party components. In most cases, you should only use it for custom option handling like demonstrated in the example above. It’s also a good idea to ship them as <a href="plugins.html">Plugins</a> to avoid duplicate application.</p>
+    <h3 id="Compatibility-Note"><a href="#Compatibility-Note" class="headerlink" title="Compatibility Note"></a>Compatibility Note</h3><p>Jframe does <strong>not</strong> support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all <a href="http://caniuse.com/#feat=es5" target="_blank" rel="external">ECMAScript 5 compliant browsers</a>.</p>
+<h3 id="Release-Notes"><a href="#Release-Notes" class="headerlink" title="Release Notes"></a>Release Notes</h3><p>Detailed release notes for each version are available on <a href="https://github.com/vuejs/vue/releases" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Standalone"><a href="#Standalone" class="headerlink" title="Standalone"></a>Standalone</h2><p>Simply download and include with a script tag. <code>Vue</code> will be registered as a global variable.</p>
+<p class="tip">Don’t use the minified version during development. You will miss out all the nice warnings for common mistakes!</p>
 
-<h2 id="Custom-Option-Merge-Strategies"><a href="#Custom-Option-Merge-Strategies" class="headerlink" title="Custom Option Merge Strategies"></a>Custom Option Merge Strategies</h2><p>When custom options are merged, they use the default strategy, which simply overwrites the existing value. If you want a custom option to be merged using custom logic, you need to attach a function to <code>Vue.config.optionMergeStrategies</code>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.optionMergeStrategies.myOption = <span class="function"><span class="keyword">function</span> (<span class="params">toVal, fromVal</span>) </span>&#123;</div><div class="line">  <span class="comment">// return mergedVal</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>For most object-based options, you can simply use the same strategy used by <code>methods</code>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> strategies = Vue.config.optionMergeStrategies</div><div class="line">strategies.myOption = strategies.methods</div></pre></td></tr></table></figure>
-<p>A more advanced example can be found on <a href="https://github.com/vuejs/vuex" target="_blank" rel="external">Vuex</a>‘s 1.x merging strategy:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> merge = Vue.config.optionMergeStrategies.computed</div><div class="line">Vue.config.optionMergeStrategies.vuex = <span class="function"><span class="keyword">function</span> (<span class="params">toVal, fromVal</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (!toVal) <span class="keyword">return</span> fromVal</div><div class="line">  <span class="keyword">if</span> (!fromVal) <span class="keyword">return</span> toVal</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">getters</span>: merge(toVal.getters, fromVal.getters),</div><div class="line">    <span class="attr">state</span>: merge(toVal.state, fromVal.state),</div><div class="line">    <span class="attr">actions</span>: merge(toVal.actions, fromVal.actions)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<div id="downloads"><br><a class="button" href="/js/vue.js" download="">Development Version</a><span class="light info">With full warnings and debug mode</span><br><br><a class="button" href="/js/vue.min.js" download="">Production Version</a><span class="light info">Warnings stripped, 24.72kb min+gzip</span><br></div>
+
+<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>Recommended: <a href="https://unpkg.com/vue/dist/vue.js" target="_blank" rel="external">unpkg</a>, which will reflect the latest version as soon as it is published to npm. You can also browse the source of the npm package at <a href="https://unpkg.com/vue/" target="_blank" rel="external">unpkg.com/vue/</a>.</p>
+<p>Also available on <a href="//cdn.jsdelivr.net/vue/2.1.3/vue.js">jsdelivr</a> or <a href="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.3/vue.js">cdnjs</a>, but these two services take some time to sync so the latest release may not be available yet.</p>
+<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> or <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a>. Vue also provides accompanying tools for authoring <a href="single-file-components.html">Single File Components</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># latest stable</span></div><div class="line">$ npm install vue</div></pre></td></tr></table></figure>
+<h3 id="Standalone-vs-Runtime-only-Build"><a href="#Standalone-vs-Runtime-only-Build" class="headerlink" title="Standalone vs. Runtime-only Build"></a>Standalone vs. Runtime-only Build</h3><p>There are two builds available, the standalone build and the runtime-only build. The difference being that the former includes the <strong>template compiler</strong> and the latter does not.</p>
+<p>The template compiler is responsible for compiling Vue template strings into pure JavaScript render functions. If you want to use the <code>template</code> option, then you need the compiler.</p>
+<ul>
+<li><p>The standalone build includes the compiler and supports the <code>template</code> option. <strong>It also relies on the presence of browser APIs so you cannot use it for server-side rendering.</strong></p>
+</li>
+<li><p>The runtime-only build does not include the template compiler, and does not support the <code>template</code> option. You can only use the <code>render</code> option when using the runtime-only build, but it works with single-file components, because single-file components’ templates are pre-compiled into <code>render</code> functions during the build step. The runtime-only build is roughly 30% lighter-weight than the standalone build, weighing only 17.14kb min+gzip.</p>
+</li>
+</ul>
+<p>By default, the NPM package exports the <strong>runtime-only</strong> build. To use the standalone build, add the following alias to your Webpack config:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">  <span class="attr">alias</span>: &#123;</div><div class="line">    <span class="string">'vue$'</span>: <span class="string">'vue/dist/vue.common.js'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>For Browserify, you can add an alias to your package.json:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="string">"browser"</span>: &#123;</div><div class="line">  <span class="string">"vue"</span>: <span class="string">"vue/dist/vue.common"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<p class="tip">Do NOT do <code>import Vue from &#39;vue/dist/vue.js&#39;</code> - since some tools or 3rd party libraries may import vue as well, this may cause the app to load both the runtime and standalone builds at the same time and lead to errors.</p>
+
+<h3 id="CSP-environments"><a href="#CSP-environments" class="headerlink" title="CSP environments"></a>CSP environments</h3><p>Some environments, such as Google Chrome Apps, enforce Content Security Policy (CSP), which prohibits the use of <code>new Function()</code> for evaluating expressions. The standalone build depends on this feature to compile templates, so is unusable in these environments.</p>
+<p>On the other hand, the runtime-only build is fully CSP-compliant. When using the runtime-only build with <a href="https://github.com/vuejs-templates/webpack-simple" target="_blank" rel="external">Webpack + vue-loader</a> or <a href="https://github.com/vuejs-templates/browserify-simple" target="_blank" rel="external">Browserify + vueify</a>, your templates will be precompiled into <code>render</code> functions which work perfectly in CSP environments.</p>
+<h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>Vue.js provides an <a href="https://github.com/vuejs/vue-cli" target="_blank" rel="external">official CLI</a> for quickly scaffolding ambitious Single Page Applications. It provides batteries-included build setups for a modern frontend workflow. It takes only a few minutes to get up and running with hot-reload, lint-on-save, and production-ready builds:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># install vue-cli</span></div><div class="line">$ npm install --global vue-cli</div><div class="line"><span class="comment"># create a new project using the "webpack" template</span></div><div class="line">$ vue init webpack my-project</div><div class="line"><span class="comment"># install dependencies and go!</span></div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line">$ npm install</div><div class="line">$ npm run dev</div></pre></td></tr></table></figure>
+<p class="tip">The CLI assumes prior knowledge of Node.js and the associated build tools. If you are new to Vue or front-end build tools, we strongly suggest going through <a href="./">the guide</a> without any build tools before using the CLI.</p>
+
+<h2 id="Dev-Build"><a href="#Dev-Build" class="headerlink" title="Dev Build"></a>Dev Build</h2><p><strong>Important</strong>: the built files in GitHub’s <code>/dist</code> folder are only checked-in during releases. To use Vue from the latest source code on GitHub, you will have to build it yourself!</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/vuejs/vue.git node_modules/vue</div><div class="line"><span class="built_in">cd</span> node_modules/vue</div><div class="line">npm install</div><div class="line">npm run build</div></pre></td></tr></table></figure>
+<h2 id="Bower"><a href="#Bower" class="headerlink" title="Bower"></a>Bower</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># latest stable</span></div><div class="line">$ bower install vue</div></pre></td></tr></table></figure>
+<h2 id="AMD-Module-Loaders"><a href="#AMD-Module-Loaders" class="headerlink" title="AMD Module Loaders"></a>AMD Module Loaders</h2><p>The standalone downloads or versions installed via Bower are wrapped with UMD so they can be used directly as an AMD module.</p>
 
     
       <div class="guide-links">
         
-          <span>← <a href="/v2/guide/custom-directive.html">Custom Directives</a></span>
         
-        
-          <span style="float:right"><a href="/v2/guide/plugins.html">Plugins</a> →</span>
+          <span style="float:right"><a href="/v2/guide/index.html">Introduction</a> →</span>
         
       </div>
     
     <div class="footer">
       Caught a mistake or want to contribute to the documentation?
-      <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/mixins.md" target="_blank">
+      <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/quickstart.md" target="_blank">
         Edit this page on Github!
       </a>
     </div>

@@ -9,7 +9,7 @@ Vue.js 0.10.0 (Blade Runner) has been released! This release comes with many use
 
 <!-- more -->
 
-See the [Installation](/guide/installation.html) page for the latest builds.
+See the [Quickstart](/guide/quickstart.html) page for the latest builds.
 
 ### New
 

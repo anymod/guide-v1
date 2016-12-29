@@ -377,11 +377,11 @@
     <link href="https://jframe.io/2014/03/22/vuejs-010-release/"/>
     <id>https://jframe.io/2014/03/22/vuejs-010-release/</id>
     <published>2014-03-23T02:00:13.000Z</published>
-    <updated>2016-12-04T01:21:34.000Z</updated>
+    <updated>2016-12-29T00:02:16.000Z</updated>
     
     <content type="html"><![CDATA[<p>Vue.js 0.10.0 (Blade Runner) has been released! This release comes with many useful additions based on the suggestions from the users, notably interpolation in literal directives, dynamic components with the new <code>v-view</code> directive, array filters, and the option to configure interpolation delimiters. Internally, the codebase has received many refactoring and improvements which makes Vue.js <a href="http://vuejs.org/perf/" target="_blank" rel="external">even faster</a>.</p>
 <a id="more"></a>
-<p>See the <a href="/guide/installation.html">Installation</a> page for the latest builds.</p>
+<p>See the <a href="/guide/quickstart.html">Quickstart</a> page for the latest builds.</p>
 <h3 id="New"><a href="#New" class="headerlink" title="New"></a>New</h3><ul>
 <li>Literal directives can now contain interpolation tags. These tags will be evaluated only once at compile time. An example usage is conditionally decide which component to instantiate with <code>v-component=&quot;{{type}}&quot;</code>. <a href="/guide/directives.html#Literal_Directives">Doc</a>.</li>
 <li>Attributes listed in the <code>paramAttributes</code> option now accept mustache interpolations too. They will also only be evaluated once.</li>
