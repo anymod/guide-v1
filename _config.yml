@@ -87,7 +87,7 @@ disqus_shortname:
 # Extensions
 ## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
 ## Themes: https://github.com/tommy351/hexo/wiki/Themes
-theme: vue
+theme: jframe
 exclude_generator:
 
 # Markdown
@@ -129,9 +129,6 @@ alias:
   guide/instance.html: v1/guide/instance.html
   guide/join.html: v1/guide/join.html
   guide/list.html: v1/guide/list.html
-  guide/migration-vue-router.html: v1/guide/migration-vue-router.html
-  guide/migration-vuex.html: v1/guide/migration-vuex.html
-  guide/migration.html: v1/guide/migration.html
   guide/mixins.html: v1/guide/mixins.html
   guide/plugins.html: v1/guide/plugins.html
   guide/reactivity.html: v1/guide/reactivity.html

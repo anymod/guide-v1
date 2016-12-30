@@ -446,44 +446,6 @@
                     
                     
                     
-                      <li><h3>Migrating</h3></li>
-                    
-                    
-                
-                
-                <li>
-                    <a href="/v1/guide/migration.html" class="sidebar-link">Migration from Vue 1.x</a>
-                </li>
-            
-                
-                
-                    
-                    
-                    
-                    
-                
-                
-                <li>
-                    <a href="/v1/guide/migration-vue-router.html" class="sidebar-link">Migration from Vue Router 0.7.x</a>
-                </li>
-            
-                
-                
-                    
-                    
-                    
-                    
-                
-                
-                <li>
-                    <a href="/v1/guide/migration-vuex.html" class="sidebar-link">Migration from Vuex 0.6.x to 1.0</a>
-                </li>
-            
-                
-                
-                    
-                    
-                    
                     
                       <li><h3>Meta</h3></li>
                     
@@ -522,42 +484,22 @@
 
 <p>The easiest way to try out jframe is using the <a href="https://codepen.io/jframe/pen/NROZrm" target="_blank" rel="external">jframe carousel example</a>. Feel free to open it in another tab and see what it takes to get a jframe working. Or, you can simply create an <code>.html</code> file and add a jframe with:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">jframe</span> <span class="attr">id</span>=<span class="string">"carousel-demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">jframe</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- jframe snippet code --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params">s,i,m,p,l,e,r</span>)</span>&#123;</div><div class="line">    e=i.createElement(m),r=i.getElementsByTagName(m)[<span class="number">0</span>],e.src=l+<span class="string">'j?i='</span>+[].map.call(i.querySelectorAll(p),<span class="function"><span class="keyword">function</span>(<span class="params">f</span>)</span>&#123;<span class="keyword">return</span> f.id&#125;)+<span class="string">''</span>,r.parentNode.insertBefore(e,r);</div><div class="line">  &#125;)(<span class="built_in">window</span>,<span class="built_in">document</span>,<span class="string">'script'</span>,<span class="string">'jframe'</span>,<span class="string">'//jfra.me/v0/'</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>The <a href="quickstart.html">Quickstart</a> page provides more options of installing jframe.</p>
+<p>The <a href="quickstart.html">Quickstart</a> page provides more options for installing jframe.</p>
 <h2 id="Embed-Anywhere"><a href="#Embed-Anywhere" class="headerlink" title="Embed Anywhere"></a>Embed Anywhere</h2><p>At the core of jframe is a system that enables components to be delivered to any platform.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">jframe</span> <span class="attr">id</span>=<span class="string">"text-helloworld"</span>&gt;</span><span class="tag">&lt;/<span class="name">jframe</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">jframe</span> <span class="attr">id</span>=<span class="string">"hello"</span>&gt;</span><span class="tag">&lt;/<span class="name">jframe</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>This code puts a simple text component on the page:</p>
 
-<h4 style="background: #f8f8f8; padding: 20px;">
-  <jframe id="text-helloworld"></jframe>
-</h4>
-<script>
-  (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
-  })(window,document,'script','jframe','//jfra.me/v0/');
-</script>
-
-<p>We have already created our very first jframe component! This looks pretty similar to just rendering a string template, but jframe has done a lot of work under the hood. The data and the DOM are now linked, and everything is now <strong>reactive</strong>. How do we know? Just open up your browser’s JavaScript console and set <code>app.message</code> to a different value. You should see the rendered example above update accordingly.</p>
-<p>In addition to text interpolation, we can also bind element attributes like this:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app-2"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-bind:title</span>=<span class="string">"message"</span>&gt;</span></div><div class="line">    Hover your mouse over me for a few seconds to see my dynamically bound title!</div><div class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> app2 = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app-2'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">message</span>: <span class="string">'You loaded this page on '</span> + <span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-
-<div id="app-2" class="demo">
-  <span v-bind:title="message">
-    Hover your mouse over me for a few seconds to see my dynamically bound title!
-  </span>
+<div class="demo">
+  <jframe id="hello"></jframe>
 </div>
-<script>
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
-    message: 'You loaded this page on ' + new Date()
-  }
-})
-</script>
 
-<p>Here we are encountering something new. The <code>v-bind</code> attribute you are seeing is called a <strong>directive</strong>. Directives are prefixed with <code>v-</code> to indicate that they are special attributes provided by Vue, and as you may have guessed, they apply special reactive behavior to the rendered DOM. Here it is basically saying “keep this element’s <code>title</code> attribute up-to-date with the <code>message</code> property on the Vue instance.”</p>
-<p>If you open up your JavaScript console again and enter <code>app2.message = &#39;some new message&#39;</code>, you’ll once again see that the bound HTML - in this case the <code>title</code> attribute - has been updated.</p>
-<h2 id="Manage-Content"><a href="#Manage-Content" class="headerlink" title="Manage Content"></a>Manage Content</h2><p>It’s quite simple to toggle the presence of an element, too:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app-3"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">"seen"</span>&gt;</span>Now you see me<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>We have already created our very first jframe component! This looks pretty similar to just rendering some basic text, but jframe has done a lot of work under the hood. The data and the DOM are now linked, and everything is now <strong>reactive</strong>. How do we know? Just open up your browser’s developer console and type <code>jframe(&#39;hello&#39;).text = &#39;Woohoo&#39;</code>. You should see the rendered example above update accordingly.</p>
+<p>Similarly, you can get values from a jframe at any time. Try typing <code>jframe(&#39;hello&#39;).text</code> into your developer console to see for yourself.</p>
+<h2 id="Manage-Content"><a href="#Manage-Content" class="headerlink" title="Manage Content"></a>Manage Content</h2><p>Jframe makes it incredibly easy to manage content remotely through the jframe dashboard. Once you have a component in place, you don’t need to touch your code to change the content. Let’s say you have a navbar on your website and you want to be able to change it easily. With jframe, it’s as simple as adding the code for a navbar:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">jframe</span> <span class="attr">id</span>=<span class="string">"navdemo"</span>&gt;</span><span class="tag">&lt;/<span class="name">jframe</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<jframe id="accordion-123"></jframe>
+
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> app3 = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app-3'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">seen</span>: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
 <div id="app-3" class="demo">
@@ -684,6 +626,13 @@ var app7 = new Vue({
 </li>
 </ol>
 <h2 id="Ready-for-More"><a href="#Ready-for-More" class="headerlink" title="Ready for More?"></a>Ready for More?</h2><p>We’ve just briefly introduced the most basic features of Vue.js core - the rest of this guide will cover them and other advanced features with much finer details, so make sure to read through it all!</p>
+
+<script>
+  (function(s,i,m,p,l,e,r){
+    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
+  })(window,document,'script','jframe','//jfra.me/v0/');
+</script>
+
 
     
       <div class="guide-links">

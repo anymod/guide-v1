@@ -30,74 +30,38 @@ The easiest way to try out jframe is using the [jframe carousel example](https:/
 </script>
 ```
 
-The [Quickstart](quickstart.html) page provides more options of installing jframe.
+The [Quickstart](quickstart.html) page provides more options for installing jframe.
 
 ## Embed Anywhere
 
 At the core of jframe is a system that enables components to be delivered to any platform.
 
 ``` html
-<jframe id="text-helloworld"></jframe>
+<jframe id="hello"></jframe>
 ```
+This code puts a simple text component on the page:
+
 {% raw %}
-<h4 style="background: #f8f8f8; padding: 20px;">
-  <jframe id="text-helloworld"></jframe>
-</h4>
-<script>
-  (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
-  })(window,document,'script','jframe','//jfra.me/v0/');
-</script>
+<div class="demo">
+  <jframe id="hello"></jframe>
+</div>
 {% endraw %}
 
-We have already created our very first jframe component! This looks pretty similar to just rendering a string template, but jframe has done a lot of work under the hood. The data and the DOM are now linked, and everything is now **reactive**. How do we know? Just open up your browser's JavaScript console and set `app.message` to a different value. You should see the rendered example above update accordingly.
+We have already created our very first jframe component! This looks pretty similar to just rendering some basic text, but jframe has done a lot of work under the hood. The data and the DOM are now linked, and everything is now **reactive**. How do we know? Just open up your browser's developer console and type `jframe('hello').text = 'Woohoo'`. You should see the rendered example above update accordingly.
 
-In addition to text interpolation, we can also bind element attributes like this:
-
-``` html
-<div id="app-2">
-  <span v-bind:title="message">
-    Hover your mouse over me for a few seconds to see my dynamically bound title!
-  </span>
-</div>
-```
-``` js
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
-    message: 'You loaded this page on ' + new Date()
-  }
-})
-```
-{% raw %}
-<div id="app-2" class="demo">
-  <span v-bind:title="message">
-    Hover your mouse over me for a few seconds to see my dynamically bound title!
-  </span>
-</div>
-<script>
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
-    message: 'You loaded this page on ' + new Date()
-  }
-})
-</script>
-{% endraw %}
-
-Here we are encountering something new. The `v-bind` attribute you are seeing is called a **directive**. Directives are prefixed with `v-` to indicate that they are special attributes provided by Vue, and as you may have guessed, they apply special reactive behavior to the rendered DOM. Here it is basically saying "keep this element's `title` attribute up-to-date with the `message` property on the Vue instance."
-
-If you open up your JavaScript console again and enter `app2.message = 'some new message'`, you'll once again see that the bound HTML - in this case the `title` attribute - has been updated.
+Similarly, you can get values from a jframe at any time. Try typing `jframe('hello').text` into your developer console to see for yourself.
 
 ## Manage Content
 
-It's quite simple to toggle the presence of an element, too:
+Jframe makes it incredibly easy to manage content remotely through the jframe dashboard. Once you have a component in place, you don't need to touch your code to change the content. Let's say you have a navbar on your website and you want to be able to change it easily. With jframe, it's as simple as adding the code for a navbar:
 
 ``` html
-<div id="app-3">
-  <p v-if="seen">Now you see me</p>
-</div>
+<jframe id="navdemo"></jframe>
 ```
+
+{% raw %}
+<jframe id="accordion-123"></jframe>
+{% endraw %}
 
 ``` js
 var app3 = new Vue({
@@ -362,3 +326,11 @@ You may have noticed that Vue components are very similar to **Custom Elements**
 ## Ready for More?
 
 We've just briefly introduced the most basic features of Vue.js core - the rest of this guide will cover them and other advanced features with much finer details, so make sure to read through it all!
+
+{% raw %}
+<script>
+  (function(s,i,m,p,l,e,r){
+    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
+  })(window,document,'script','jframe','//jfra.me/v0/');
+</script>
+{% endraw %}
