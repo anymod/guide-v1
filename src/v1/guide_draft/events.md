@@ -1,6 +1,6 @@
 ---
 title: Event Handling
-type: guide
+type: draft # guide
 order: 9
 ---
 

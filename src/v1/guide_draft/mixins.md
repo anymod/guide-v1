@@ -1,6 +1,6 @@
 ---
 title: Mixins
-type: guide
+type: draft # guide
 order: 17
 ---
 

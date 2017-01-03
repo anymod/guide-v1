@@ -1,6 +1,6 @@
 ---
 title: Class and Style Bindings
-type: guide
+type: draft # guide
 order: 6
 ---
 

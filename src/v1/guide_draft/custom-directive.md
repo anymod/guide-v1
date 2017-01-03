@@ -1,6 +1,6 @@
 ---
 title: Custom Directives
-type: guide
+type: draft # guide
 order: 16
 ---
 

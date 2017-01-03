@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="/css/page.css">
 
         <!-- this needs to be loaded before guide's inline scripts -->
-        <script src="/js/vue.js"></script>
+        <script src="/js/vue.min.js"></script>
         <script>window.PAGE_TYPE = "guide"</script>
     </head>
     <body class="docs">        <div id="mobile-bar" >
@@ -39,16 +39,17 @@
     <!-- <span>jframe</span> -->
   </a>
   <ul id="nav">
-    <li>Guide coming soon</li>
-<!--
+    <li><a href="/v1/guide/" class="nav-link current">Guide</a></li>
+<!-- <li><a href="/v1/api/" class="nav-link">API</a></li> -->
+<!-- <li><a href="/v1/examples/" class="nav-link">Examples</a></li> -->
 <li>
   <form id="search-form">
     <input type="text" id="search-query-nav" class="search-query st-default-search-input">
   </form>
 </li>
-<li><a href="/v1/guide/" class="nav-link current">Guide</a></li>
-<li><a href="/v1/api/" class="nav-link">API</a></li>
-<li><a href="/v1/examples/" class="nav-link">Examples</a></li>
+
+<!--
+<li>Guide coming soon</li>
 -->
 
 <!--
@@ -93,16 +94,17 @@
                     
     <div class="sidebar">
     <ul class="main-menu">
-        <li>Guide coming soon</li>
-<!--
+        <li><a href="/v1/guide/" class="nav-link current">Guide</a></li>
+<!-- <li><a href="/v1/api/" class="nav-link">API</a></li> -->
+<!-- <li><a href="/v1/examples/" class="nav-link">Examples</a></li> -->
 <li>
   <form id="search-form">
     <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
 </li>
-<li><a href="/v1/guide/" class="nav-link current">Guide</a></li>
-<li><a href="/v1/api/" class="nav-link">API</a></li>
-<li><a href="/v1/examples/" class="nav-link">Examples</a></li>
+
+<!--
+<li>Guide coming soon</li>
 -->
 
 <!--
@@ -458,7 +460,7 @@
                 
                 
                 <li>
-                    <a href="/v1/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
+                    <a href="/v1/guide_draft/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
                 </li>
             
                 
@@ -470,7 +472,7 @@
                 
                 
                 <li>
-                    <a href="/v1/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
+                    <a href="/v1/guide_draft/join.html" class="sidebar-link">Join the Vue.js Community!</a>
                 </li>
             
             
@@ -483,7 +485,7 @@
     
       <h1>Introduction</h1>
     
-    <h2 id="What-is-jframe"><a href="#What-is-jframe" class="headerlink" title="What is jframe?"></a>What is jframe?</h2><p>Jframe makes it easy to use all kinds of <strong>web components</strong> to build websites and applications.  Unlike platforms like Wordpress, jframe <strong>works with every web technology</strong> (including Wordpress), and unlike frameworks like Bootstrap, jframe <strong>does not require any external styling or javascript</strong>.</p>
+    <h2 id="What-is-jframe"><a href="#What-is-jframe" class="headerlink" title="What is jframe?"></a>What is jframe?</h2><p>jframe makes it easy to use all kinds of <strong>web components</strong> to build websites and applications.  Unlike platforms like Wordpress, jframe <strong>works with every web technology</strong> (including Wordpress), and unlike frameworks like Bootstrap, jframe <strong>does not require any external styling or javascript</strong>.</p>
 <p>The jframe platform is focused on providing components that are <strong>simple to use</strong> with other libraries or existing projects.  On the other hand, jframe is also perfectly capable of powering sophisticated Single-Page Applications.<br><!--- when used in combination with [modern tooling](single-file-components.html) and [supporting libraries](https://github.com/vuejs/awesome-vue#libraries--plugins). --></p>
 <p>If you are an experienced frontend developer and want to know how jframe compares to other libraries/frameworks, check out the <a href="comparison.html">Comparison with Other Frameworks</a>.</p>
 <h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a basic website up and running first.  Once you are at that point, you’re ready to use jframe.</p>
@@ -501,7 +503,7 @@
 
 <p>We have already created our very first jframe component! This looks pretty similar to just rendering some basic text, but jframe has done a lot of work under the hood. The data and the DOM are now linked, and everything is now <strong>reactive</strong>. How do we know? Just open up your browser’s developer console and type <code>jframe(&#39;hello&#39;).text = &#39;Woohoo&#39;</code>. You should see the rendered example above update accordingly.</p>
 <p>Similarly, you can get values from a jframe at any time. Try typing <code>jframe(&#39;hello&#39;).text</code> into your developer console to see for yourself.</p>
-<h2 id="Manage-Content"><a href="#Manage-Content" class="headerlink" title="Manage Content"></a>Manage Content</h2><p>Jframe makes it incredibly easy to manage content remotely through the jframe dashboard. Once you have a component in place, you don’t need to touch your code to change the content. Let’s say you have a navbar on your website and you want to be able to change it easily. With jframe, it’s as simple as adding the code for a navbar:</p>
+<h2 id="Manage-Content"><a href="#Manage-Content" class="headerlink" title="Manage Content"></a>Manage Content</h2><p>jframe makes it incredibly easy to manage content remotely through the jframe dashboard. Once you have a component in place, you don’t need to touch your code to change the content. Let’s say you have a navbar on your website and you want to be able to change it easily. With jframe, it’s as simple as adding the code for a navbar:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">jframe</span> <span class="attr">id</span>=<span class="string">"navdemo"</span>&gt;</span><span class="tag">&lt;/<span class="name">jframe</span>&gt;</span></div></pre></td></tr></table></figure>
 
 <jframe id="accordion-123"></jframe>
@@ -689,11 +691,10 @@ var app7 = new Vue({
             if (!document.querySelector(selector)) return
             // search index defaults to v2
             var match = window.location.pathname.match(/^\/(v\d+)/)
-            var version = match ? match[1] : 'v2'
+            var version = match ? match[1] : 'v1'
             docsearch({
-              appId: '12KMT604V9',
-              apiKey: '50fc65b8e45fe58fbbbd7b03fdbd686c',
-              indexName: 'guide',
+              apiKey: '9153482358299401320bc05950f35c8e',
+              indexName: 'jframe',
               inputSelector: selector
             })
           })

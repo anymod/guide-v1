@@ -1,6 +1,6 @@
 ---
 title: Components
-type: guide
+type: draft # guide
 order: 11
 ---
 

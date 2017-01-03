@@ -1,6 +1,6 @@
 ---
 title: Plugins
-type: guide
+type: draft # guide
 order: 18
 ---
 

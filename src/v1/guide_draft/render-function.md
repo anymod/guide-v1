@@ -1,6 +1,6 @@
 ---
 title: Render Functions
-type: guide
+type: draft # guide
 order: 15
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Deploying For Production
-type: guide
+type: draft # guide
 order: 20
 ---
 

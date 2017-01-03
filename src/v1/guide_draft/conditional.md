@@ -1,6 +1,6 @@
 ---
 title: Conditional Rendering
-type: guide
+type: draft # guide
 order: 7
 ---
 

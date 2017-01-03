@@ -1,6 +1,6 @@
 ---
 title: The Vue Instance
-type: guide
+type: draft # guide
 order: 3
 ---
 

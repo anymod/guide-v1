@@ -1,6 +1,6 @@
 ---
 title: Comparison with Other Frameworks
-type: guide
+type: draft # guide
 order: 28
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Template Syntax
-type: guide
+type: draft # guide
 order: 4
 ---
 

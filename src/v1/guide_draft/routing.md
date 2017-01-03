@@ -1,6 +1,6 @@
 ---
 title: Routing
-type: guide
+type: draft # guide
 order: 21
 ---
 

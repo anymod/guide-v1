@@ -1,6 +1,6 @@
 ---
 title: Computed Properties and Watchers
-type: guide
+type: draft # guide
 order: 5
 ---
 

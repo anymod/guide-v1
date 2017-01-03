@@ -1,6 +1,6 @@
 ---
 title: List Rendering
-type: guide
+type: draft # guide
 order: 8
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: State Management
-type: guide
+type: draft # guide
 order: 22
 ---
 

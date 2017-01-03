@@ -1,6 +1,6 @@
 ---
 title: Single File Components
-type: guide
+type: draft # guide
 order: 19
 ---
 

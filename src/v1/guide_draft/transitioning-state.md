@@ -1,6 +1,6 @@
 ---
 title: Transitioning State
-type: guide
+type: draft # guide
 order: 14
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Transition Effects
-type: guide
+type: draft # guide
 order: 13
 ---
 
@@ -1653,4 +1653,3 @@ new Vue({
 {% endraw %}
 
 Finally, the ultimate way of creating dynamic transitions is through components that accept props to change the nature of the transition(s) to be used. It may sound cheesy, but the only limit really is your imagination.
-

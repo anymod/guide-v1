@@ -6,13 +6,18 @@ $border = #ddd
     line-height normal
 
 .aa-dropdown-menu
-    width 100%
+    width 95%
     border-color #999
     font-size 0.9rem
 
 @media (min-width: 768px)
     .aa-dropdown-menu
         min-width: 515px
+
+@media (min-width: 900px)
+    .aa-dropdown-menu
+        right: 10px !important
+        left: auto !important
 
 .algolia-docsearch-suggestion
     border-color $border

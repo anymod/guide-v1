@@ -11,7 +11,7 @@ ro_gz_size: "17.14"
 
 ### Compatibility Note
 
-Jframe does **not** support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all [ECMAScript 5 compliant browsers](http://caniuse.com/#feat=es5).
+jframe does **not** support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all [ECMAScript 5 compliant browsers](http://caniuse.com/#feat=es5).
 
 ### Release Notes
 

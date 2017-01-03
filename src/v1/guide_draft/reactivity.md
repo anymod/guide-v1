@@ -1,6 +1,6 @@
 ---
 title: Reactivity in Depth
-type: guide
+type: draft # guide
 order: 12
 ---
 

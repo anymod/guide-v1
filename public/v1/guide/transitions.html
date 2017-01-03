@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="/css/page.css">
 
         <!-- this needs to be loaded before guide's inline scripts -->
-        <script src="/js/vue.js"></script>
+        <script src="/js/vue.min.js"></script>
         <script>window.PAGE_TYPE = "guide"</script>
     </head>
     <body class="docs">        <div id="mobile-bar" >
@@ -39,16 +39,17 @@
     <!-- <span>jframe</span> -->
   </a>
   <ul id="nav">
-    <li>Guide coming soon</li>
-<!--
+    <li><a href="/v1/guide/" class="nav-link current">Guide</a></li>
+<!-- <li><a href="/v1/api/" class="nav-link">API</a></li> -->
+<!-- <li><a href="/v1/examples/" class="nav-link">Examples</a></li> -->
 <li>
   <form id="search-form">
     <input type="text" id="search-query-nav" class="search-query st-default-search-input">
   </form>
 </li>
-<li><a href="/v1/guide/" class="nav-link current">Guide</a></li>
-<li><a href="/v1/api/" class="nav-link">API</a></li>
-<li><a href="/v1/examples/" class="nav-link">Examples</a></li>
+
+<!--
+<li>Guide coming soon</li>
 -->
 
 <!--
@@ -93,16 +94,17 @@
                     
     <div class="sidebar">
     <ul class="main-menu">
-        <li>Guide coming soon</li>
-<!--
+        <li><a href="/v1/guide/" class="nav-link current">Guide</a></li>
+<!-- <li><a href="/v1/api/" class="nav-link">API</a></li> -->
+<!-- <li><a href="/v1/examples/" class="nav-link">Examples</a></li> -->
 <li>
   <form id="search-form">
     <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
 </li>
-<li><a href="/v1/guide/" class="nav-link current">Guide</a></li>
-<li><a href="/v1/api/" class="nav-link">API</a></li>
-<li><a href="/v1/examples/" class="nav-link">Examples</a></li>
+
+<!--
+<li>Guide coming soon</li>
 -->
 
 <!--
@@ -458,7 +460,7 @@
                 
                 
                 <li>
-                    <a href="/v1/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
+                    <a href="/v1/guide_draft/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
                 </li>
             
                 
@@ -470,7 +472,7 @@
                 
                 
                 <li>
-                    <a href="/v1/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
+                    <a href="/v1/guide_draft/join.html" class="sidebar-link">Join the Vue.js Community!</a>
                 </li>
             
             
@@ -1396,11 +1398,10 @@ new Vue({
             if (!document.querySelector(selector)) return
             // search index defaults to v2
             var match = window.location.pathname.match(/^\/(v\d+)/)
-            var version = match ? match[1] : 'v2'
+            var version = match ? match[1] : 'v1'
             docsearch({
-              appId: '12KMT604V9',
-              apiKey: '50fc65b8e45fe58fbbbd7b03fdbd686c',
-              indexName: 'guide',
+              apiKey: '9153482358299401320bc05950f35c8e',
+              indexName: 'jframe',
               inputSelector: selector
             })
           })

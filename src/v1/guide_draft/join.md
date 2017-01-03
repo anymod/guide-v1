@@ -1,6 +1,6 @@
 ---
 title: Join the Vue.js Community!
-type: guide
+type: draft # guide
 order: 29
 ---
 

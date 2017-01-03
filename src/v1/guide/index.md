@@ -6,7 +6,7 @@ order: 2
 
 ## What is jframe?
 
-Jframe makes it easy to use all kinds of **web components** to build websites and applications.  Unlike platforms like Wordpress, jframe **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, jframe **does not require any external styling or javascript**.
+jframe makes it easy to use all kinds of **web components** to build websites and applications.  Unlike platforms like Wordpress, jframe **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, jframe **does not require any external styling or javascript**.
 
 The jframe platform is focused on providing components that are **simple to use** with other libraries or existing projects.  On the other hand, jframe is also perfectly capable of powering sophisticated Single-Page Applications.
 <!--- when used in combination with [modern tooling](single-file-components.html) and [supporting libraries](https://github.com/vuejs/awesome-vue#libraries--plugins). -->
@@ -53,7 +53,7 @@ Similarly, you can get values from a jframe at any time. Try typing `jframe('hel
 
 ## Manage Content
 
-Jframe makes it incredibly easy to manage content remotely through the jframe dashboard. Once you have a component in place, you don't need to touch your code to change the content. Let's say you have a navbar on your website and you want to be able to change it easily. With jframe, it's as simple as adding the code for a navbar:
+jframe makes it incredibly easy to manage content remotely through the jframe dashboard. Once you have a component in place, you don't need to touch your code to change the content. Let's say you have a navbar on your website and you want to be able to change it easily. With jframe, it's as simple as adding the code for a navbar:
 
 ``` html
 <jframe id="navdemo"></jframe>
