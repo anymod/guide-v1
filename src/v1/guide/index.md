@@ -25,7 +25,7 @@ The easiest way to try out jframe is using the [jframe carousel example](https:/
 <!-- jframe snippet code -->
 <script>
   (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
+    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',s[p]={f:[],ready:function(c){s[p].f.push(c)}},r.parentNode.insertBefore(e,r)
   })(window,document,'script','jframe','//jfra.me/v0/');
 </script>
 ```
@@ -76,10 +76,7 @@ and you want to be able to change it easily. With jframe, it's as simple as edit
 <script>
   var dashboard1 = new Vue({
     el: '#dashboard-1',
-    data: {
-      header: 'Click here for information',
-      body: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.'
-    },
+    data: { header: '', body: '' },
     methods: {
       setDropdownText: function() {
         if (!window.jframe) return
@@ -105,8 +102,15 @@ Try editing the content with the form. You should see it change in the dropdown 
 
 {% raw %}
 <script>
+  // jframe snippet code
   (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
+    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',s[p]={f:[],ready:function(c){s[p].f.push(c)}},r.parentNode.insertBefore(e,r)
   })(window,document,'script','jframe','//jfra.me/v0/');
+
+  jframe.ready(function() {
+    if (!dashboard1 || !jframe("dropdown").panels) return
+    dashboard1.header = jframe("dropdown").panels[0].header
+    dashboard1.body = jframe("dropdown").panels[0].body
+  })
 </script>
 {% endraw %}

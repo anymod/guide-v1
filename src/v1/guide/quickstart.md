@@ -23,7 +23,7 @@ Simply add the basic `hello` component to one of your projects or view the [jsfi
 <!-- jframe snippet code -->
 <script>
   (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
+    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',s[p]={f:[],ready:function(c){s[p].f.push(c)}},r.parentNode.insertBefore(e,r)
   })(window,document,'script','jframe','//jfra.me/v0/');
 </script>
 ```
@@ -44,7 +44,7 @@ This code puts a simple text component on the page:
 {% raw %}
 <script>
   (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',r.parentNode.insertBefore(e,r);
+    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',s[p]={f:[],ready:function(c){s[p].f.push(c)}},r.parentNode.insertBefore(e,r)
   })(window,document,'script','jframe','//jfra.me/v0/');
 </script>
 {% endraw %}
