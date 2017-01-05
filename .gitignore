@@ -1,2 +1,8 @@
-node_modules
-bower_components
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+src/_drafts
