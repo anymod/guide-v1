@@ -35,10 +35,12 @@ This code puts a simple text component on the page:
 </div>
 {% endraw %}
 
+## Create your own
+
 <p class="tip">Don't use the minified version during development. You will miss out all the nice warnings for common mistakes!</p>
 
 <div id="downloads">
-  <a class="button" href="https://jframe.io/auth/signup">Signup</a><span class="light info">With full warnings and debug mode</span>
+  <a class="button" href="https://jframe.io/auth/signup">Signup</a><span class="light info">at jframe.io</span>
 </div>
 
 {% raw %}
