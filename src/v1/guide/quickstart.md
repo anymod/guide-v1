@@ -37,8 +37,6 @@ This code puts a simple text component on the page:
 
 ## Create your own
 
-<p class="tip">Don't use the minified version during development. You will miss out all the nice warnings for common mistakes!</p>
-
 <div id="downloads">
   <a class="button" href="https://jframe.io/auth/signup">Signup</a><span class="light info">at jframe.io</span>
 </div>
