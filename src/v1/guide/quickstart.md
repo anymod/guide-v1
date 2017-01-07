@@ -18,7 +18,7 @@ jframe does **not** support IE8 and below, because it uses ECMAScript 5 features
 Simply add the basic `hello` component to one of your projects or view the [jsfiddle](https://jsfiddle.net/jframe/hvnx6p0q/).
 
 ``` html
-<jframe id="hello"></jframe>
+<jframe text id="hello"></jframe>
 
 <!-- jframe snippet code -->
 <script>
@@ -31,14 +31,16 @@ This code puts a simple text component on the page:
 
 {% raw %}
 <div class="demo">
-  <jframe id="hello"></jframe>
+  <jframe text id="hello"></jframe>
 </div>
 {% endraw %}
 
 ## Create your own
 
+To create your own components, sign up and choose components from the jframe library.
+
 <div id="downloads">
-  <a class="button" href="https://jframe.io/auth/signup">Signup</a><span class="light info">at jframe.io</span>
+  <a class="button" href="https://jframe.io/auth/signup">Signup</a><span class="light info">Once logged in, you can create your own components</span>
 </div>
 
 {% raw %}

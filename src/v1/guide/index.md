@@ -6,9 +6,9 @@ order: 2
 
 ## What is jframe?
 
-jframe makes it easy to use all kinds of **web components** to build websites and applications.  Unlike platforms like Wordpress, jframe **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, jframe **does not require any external styling or javascript**.
+jframe makes it easy to use all kinds of web components to build websites and applications.  Unlike platforms like Wordpress, jframe **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, jframe **does not require any external styling or javascript**.
 
-The jframe platform is focused on providing components that are **simple to use** with other libraries or existing projects.  On the other hand, jframe is also perfectly capable of powering sophisticated Single-Page Applications.
+The goal of the jframe platform is to provide components that are **simple to use** with other libraries or existing projects.  That means jframe is simple to set up, and is also perfectly capable of powering sophisticated Single-Page Applications.
 <!--- when used in combination with [modern tooling](single-file-components.html) and [supporting libraries](https://github.com/vuejs/awesome-vue#libraries--plugins). -->
 
 <!-- If you are an experienced frontend developer and want to know how jframe compares to other libraries/frameworks, check out the [Comparison with Other Frameworks](comparison.html). -->
@@ -17,10 +17,10 @@ The jframe platform is focused on providing components that are **simple to use*
 
 <p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a basic website up and running first.  Once you are at that point, you're ready to use jframe.</p>
 
-The easiest way to try out jframe is using the [jframe carousel example](https://codepen.io/jframe/pen/NROZrm). Feel free to open it in another tab and see what it takes to get a jframe working. Or, you can simply create an `.html` file and add a jframe with:
+The easiest way to try out jframe is using the [jframe carousel example](https://jsfiddle.net/jframe/jqhv3e1h/). Feel free to open it in another tab and see what it takes to get a jframe working. Or, you can simply create an `.html` file and add a jframe with:
 
 ``` html
-<jframe id="carousel-demo"></jframe>
+<jframe carousel id="demo"></jframe>
 
 <!-- jframe snippet code -->
 <script>
@@ -37,13 +37,13 @@ The [Quickstart](quickstart.html) page provides a basic text example using jfram
 At the core of jframe is a system that enables components to be delivered to any platform.
 
 ``` html
-<jframe id="hello"></jframe>
+<jframe text id="hello"></jframe>
 ```
 This code puts a simple text component on the page:
 
 {% raw %}
 <div class="demo">
-  <jframe id="hello"></jframe>
+  <jframe text id="hello"></jframe>
 </div>
 {% endraw %}
 
@@ -58,7 +58,7 @@ jframe makes it incredibly easy to manage content remotely through the jframe da
 
 {% raw %}
 <br>
-<jframe id="accordion-dropdown"></jframe>
+<jframe accordion id="dropdown"></jframe>
 {% endraw %}
 
 and you want to be able to change it easily. With jframe, it's as simple as editing in the dashboard. In this case, the dashboard would look something like
@@ -88,7 +88,7 @@ and you want to be able to change it easily. With jframe, it's as simple as edit
 </script>
 {% endraw %}
 
-Try editing the content with the form. You should see it change in the dropdown above the form.
+Try editing the content with the form. You should see it change in the dropdown above the form. This is what it's like editing in the dashboard: **updated content is automatically reflected on your site**.
 
 <!-- This example demonstrates that we can bind data to not only text and attributes, but also the **structure** of the DOM. Moreover, Vue also provides a powerful transition effect system that can automatically apply [transition effects](transitions.html) when elements are inserted/updated/removed by Vue. -->
 

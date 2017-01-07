@@ -12,7 +12,7 @@ language:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://jframe.io
+url: https://guide.jframe.io
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
@@ -105,7 +105,7 @@ markdown:
 ## Docs: http://zespia.tw/hexo/docs/deployment.html
 deploy:
   type: heroku
-  repo: https://git.heroku.com/jf-guide.git
+  repo: https://github.com/jframedev/guide.git
 
 
 feed:
