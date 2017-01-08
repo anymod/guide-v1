@@ -15,7 +15,7 @@ The goal of the jframe platform is to provide components that are **simple to us
 
 ## Getting Started
 
-<p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a basic website up and running first.  Once you are at that point, you're ready to use jframe.</p>
+<p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a simple web page working first.  Once you have a web page, you're ready to use jframe.</p>
 
 The easiest way to try out jframe is using the [jframe carousel example](https://jsfiddle.net/jframe/jqhv3e1h/). Feel free to open it in another tab and see what it takes to get a jframe working. Or, you can simply create an `.html` file and add a jframe with:
 
@@ -47,9 +47,7 @@ This code puts a simple text component on the page:
 </div>
 {% endraw %}
 
-We have already created our very first jframe component! This looks pretty similar to just rendering some basic text, but jframe has done a lot of work under the hood. The data and the DOM are now linked, and everything is now **reactive**. How do we know? Just open up your browser's developer console and type `jframe('hello').text = 'Woohoo'`. You should see the rendered example above update accordingly.
-
-Similarly, you can get values from a jframe at any time. Try typing `jframe('hello').text` into your developer console to see for yourself.
+We have just created our very first jframe component! This looks pretty similar to just rendering some basic text, but jframe has done a lot of work under the hood. The text `Hello World!` is not hard-coded. Instead it's coming from the jframe, and that means it can be edited without touching the code on the page. This is done with an easy-to-use online dashboard.
 
 ## Manage Content
 
@@ -90,15 +88,40 @@ and you want to be able to change it easily. With jframe, it's as simple as edit
 
 Try editing the content with the form. You should see it change in the dropdown above the form. This is what it's like editing in the dashboard: **updated content is automatically reflected on your site**.
 
-<!-- This example demonstrates that we can bind data to not only text and attributes, but also the **structure** of the DOM. Moreover, Vue also provides a powerful transition effect system that can automatically apply [transition effects](transitions.html) when elements are inserted/updated/removed by Vue. -->
+The dashboard makes jframe excellent for teams that have non-technical members and for advanced developers who want to focus on other parts of the codebase. It also means you can handle edits from your phone while sitting next to a pool, which is a nice side effect.
 
-<!-- ## Single API Call -->
+## Adapt on the Fly
 
-<!-- ## Composing with Components -->
+jframe does more than just deliver content. It actually links data from components with the DOM, meaning everything is **reactive**. How do we know? Just open up your browser's developer console and type `jframe('hello').text = 'The text has changed'`. You should see the rendered `Hello World!` example above update accordingly.
+
+Similarly, you can get values from a jframe at any time. Try typing `jframe('hello').text` into your developer console to see for yourself.
+
+<!-- ## The jframe library
+
+jframe is designed to cover all of the basics needed for a website: from navigation to dropdown menus, carousels, footers, and loading screens. We work with the open source community to find what developers want and then to build components for those needs.
+
+You can browse the library [here](), and if you have suggestions for components you can do so [here](). -->
+
+## Load Fast
+
+Speed is one of the most important factors on the web, so jframe is focused on it. jframe does a lot behind the scenes to keep your page moving quickly.
+
+Regardless of how many components you put on a page, jframe makes just one API call to get everything it needs. That means less time spent waiting for separate stylesheets or templates to download.  With jframe, everything comes down the wire together.
+
+Components are cached on the server side, which means they get delivered instantly, without requiring any database lookups.
+
+<!-- With jframe's geographically distributed network of servers, your users will probably see faster speed -->
+<!-- When using images with jframe, you can choose to have them automatically sized according to the user's screen size. This makes components especially fast on mobile, and also improves performance for desktop too. -->
 
 <!-- ## Speed vs CDN -->
 
-<!-- ## Ready for More? -->
+## Ready for More?
+
+Get started creating your own components!
+
+<div id="downloads">
+  <a class="button" href="https://jframe.io/auth/signup">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
+</div>
 
 {% raw %}
 <script>

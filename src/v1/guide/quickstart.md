@@ -40,7 +40,7 @@ This code puts a simple text component on the page:
 To create your own components, sign up and choose components from the jframe library.
 
 <div id="downloads">
-  <a class="button" href="https://jframe.io/auth/signup">Signup</a><span class="light info">Once logged in, you can create your own components</span>
+  <a class="button" href="https://jframe.io/auth/signup">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
 </div>
 
 {% raw %}
