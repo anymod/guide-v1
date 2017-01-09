@@ -1,7 +1,8 @@
 ---
 title: Basics
-type: components
-order: 1
+type: guide
+interLink: true
+order: 3
 ---
 
 ## Text

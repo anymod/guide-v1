@@ -1,6 +1,7 @@
 ---
 title: Bootstrap
 type: api
+interLink: true
 order: 2
 ---
 

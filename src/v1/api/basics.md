@@ -1,6 +1,7 @@
 ---
 title: Basics
 type: api
+interLink: true
 order: 1
 ---
 

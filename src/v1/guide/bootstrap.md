@@ -1,7 +1,8 @@
 ---
 title: Bootstrap
-type: components
-order: 3
+type: guide
+interLink: true
+order: 5
 ---
 
 ## Carousel (Slider)

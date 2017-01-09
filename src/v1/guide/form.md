@@ -1,7 +1,8 @@
 ---
 title: Form
-type: components
-order: 2
+type: guide
+interLink: true
+order: 4
 ---
 
 ## Coming soon
