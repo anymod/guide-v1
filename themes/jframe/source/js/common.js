@@ -4,30 +4,58 @@
   if (PAGE_TYPE) {
     initVersionSelect()
     initSubHeaders()
-    initApiSpecLinks()
+    // initApiSpecLinks() // Disabled during initial setup 1/9/17
+    initInterLinks() // Created during initial setup 1/9/17
     initLocationHashFuzzyMatching()
   }
 
-  function initApiSpecLinks () {
+  // function initApiSpecLinks () {
+  //   var apiContent = document.querySelector('.content.api')
+  //   if (apiContent) {
+  //     var apiTitles = [].slice.call(apiContent.querySelectorAll('h2'))
+  //     apiTitles.forEach(function (titleNode) {
+  //       var ulNode = titleNode.parentNode.nextSibling
+  //       if (ulNode.tagName !== 'UL') {
+  //         ulNode = ulNode.nextSibling
+  //       }
+  //       if (ulNode.tagName === 'UL') {
+  //         var specNode = document.createElement('li')
+  //         var specLink = createSourceSearchPath(titleNode.textContent)
+  //         specNode.innerHTML = '<a href="' + specLink + '" target="_blank">Source</a>'
+  //         ulNode.appendChild(specNode)
+  //       }
+  //     })
+  //   }
+  //
+  //   function createSourceSearchPath(query) {
+  //     return 'https://github.com/search?utf8=%E2%9C%93&q=repo%3Avuejs%2Fvue+extension%3Ajs+' + encodeURIComponent(query) + '+&type=Code'
+  //   }
+  // }
+
+  function initInterLinks () {
     var apiContent = document.querySelector('.content.api')
-    if (apiContent) {
-      var apiTitles = [].slice.call(apiContent.querySelectorAll('h3'))
-      apiTitles.forEach(function (titleNode) {
+    var componentsContent = document.querySelector('.content.components')
+    if (apiContent) { placeLinks('components', 'Component', apiContent) }
+    if (componentsContent) { placeLinks('api', 'API', componentsContent) }
+
+    function placeLinks (toPage, toText, content) {
+      var section = content.querySelectorAll('h1')[0].textContent
+      if (section === 'Component API') return
+      var titles = [].slice.call(content.querySelectorAll('h2'))
+      titles.forEach(function (titleNode) {
         var ulNode = titleNode.parentNode.nextSibling
-        if (ulNode.tagName !== 'UL') {
-          ulNode = ulNode.nextSibling
-        }
+        if (ulNode.tagName !== 'UL') { ulNode = ulNode.nextSibling }
         if (ulNode.tagName === 'UL') {
           var specNode = document.createElement('li')
-          var specLink = createSourceSearchPath(titleNode.textContent)
-          specNode.innerHTML = '<a href="' + specLink + '" target="_blank">Source</a>'
+          var specLink = createPath(toPage, section, titleNode.textContent)
+          specNode.innerHTML = '<a href="' + specLink + '">' + toText + '</a>'
           ulNode.appendChild(specNode)
         }
       })
     }
 
-    function createSourceSearchPath(query) {
-      return 'https://github.com/search?utf8=%E2%9C%93&q=repo%3Avuejs%2Fvue+extension%3Ajs+' + encodeURIComponent(query) + '+&type=Code'
+    function createPath(toPage, section, subsection) {
+      return '/v1/' + encodeURIComponent(toPage.toLowerCase()) + '/' + encodeURIComponent(section.toLowerCase()) + '.html#' + encodeURIComponent(subsection)
     }
   }
 
@@ -127,6 +155,7 @@
     // build sidebar
     var currentPageAnchor = sidebar.querySelector('.sidebar-link.current')
     var isAPI = document.querySelector('.content').classList.contains('api')
+    isAPI = false // Disabled 1/9/17 during setup
     if (currentPageAnchor || isAPI) {
       var allHeaders = []
       var sectionContainer

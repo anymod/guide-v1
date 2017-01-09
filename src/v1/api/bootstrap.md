@@ -1,7 +1,7 @@
 ---
 title: Bootstrap
-type: components
-order: 3
+type: api
+order: 2
 ---
 
 ## Carousel (Slider)
