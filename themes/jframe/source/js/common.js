@@ -33,28 +33,51 @@
   // }
 
   function initInterLinks () {
-    // var apiContent = document.querySelector('.content.api')
-    // var componentsContent = document.querySelector('.content.components')
     var content = document.querySelector('.content.inter-linked')
     if (!content) return
     var isGuide = content.className.indexOf('guide') > -1
-    if (isGuide) { placeLinks('api', 'API', content) }
-    else { placeLinks('guide', 'Guide', content) }
+    if (isGuide) {
+      var interLinks = [].slice.call(content.querySelectorAll('.api-link'))
+      ,   section = content.querySelectorAll('h1')[0].textContent
+      interLinks.forEach(function (interLink) {
+        interLink.setAttribute('href', '/v1/api/' + encodeURIComponent(section.toLowerCase()) + '.html#' + findPriorTitle(interLink.parentNode))
+      })
+    } else {
+      placeLinks('guide', 'View Guide', content)
+    }
 
     function placeLinks (toPage, toText, content) {
       var section = content.querySelectorAll('h1')[0].textContent
-      if (section === 'Component API') return
       var titles = [].slice.call(content.querySelectorAll('h2'))
       titles.forEach(function (titleNode) {
         var ulNode = titleNode.parentNode.nextSibling
-        if (ulNode.tagName !== 'UL') { ulNode = ulNode.nextSibling }
-        if (ulNode.tagName === 'UL') {
-          var specNode = document.createElement('li')
-          var specLink = createPath(toPage, section, titleNode.textContent)
-          specNode.innerHTML = '<p><a href="' + specLink + '">View ' + toText + '</a></p>'
-          ulNode.appendChild(specNode)
+        ,   specNode = document.createElement('li')
+        ,   specLink = createPath(toPage, section, titleNode.textContent)
+        console.log(titleNode)
+        specNode.innerHTML = '<p><a href="' + specLink + '">' + toText + '</a></p>'
+
+        var i = 0
+        while(i < 20) {
+          console.log('ulNode', ulNode)
+          if (ulNode.className === 'skip-interlink') {
+            return
+          } else if (ulNode.tagName !== 'UL') {
+            ulNode = ulNode.nextSibling
+            if (!ulNode) return titleNode.nextSibling.append(specNode)
+          } else {
+            return ulNode.appendChild(specNode)
+          }
+          i++
         }
       })
+    }
+    function findPriorTitle(sibling) {
+      var i = 0
+      while(i < 20) {
+        sibling = sibling.previousSibling
+        if (sibling && sibling.firstChild && sibling.firstChild.tagName === 'H2') return sibling.firstChild.id
+        i++
+      }
     }
 
     function createPath(toPage, section, subsection) {

@@ -26,7 +26,7 @@ order: 3
   </jframe>
   ```
 
-- [Demo]()
+<a class="button" href="https://jsfiddle.net/jframe/hvnx6p0q/" target="_blank">Demo</a> <a class="button white api-link" href>API</a>
 
 
 ## HTML
@@ -55,7 +55,7 @@ order: 3
   </jframe>
   ```
 
-- [Demo]()
+<a class="button white api-link" href>API</a>
 
 ## Markdown
 
@@ -83,7 +83,7 @@ order: 3
   </jframe>
   ```
 
-- [Demo]()
+<a class="button white api-link" href>API</a>
 
 
 ## Image
@@ -114,4 +114,4 @@ order: 3
   </jframe>
   ```
 
-- [Demo]()
+<a class="button white api-link" href>API</a>
