@@ -1,94 +1,95 @@
 <% var isIndex = page.path === 'index.html' %>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title><%- page.title ? page.title + ' - ' : '' %>jframe</title>
-        <meta charset="utf-8">
-        <meta name="description" content="<%- theme.site_description %>">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<head>
+  <title><%- page.title ? page.title + ' - ' : '' %>jframe</title>
+  <meta charset="utf-8">
+  <meta name="description" content="<%- theme.site_description %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="<%- page.title ? page.title + ' - ' : '' %>jframe">
-        <meta property="og:description" content="<%- theme.site_description %>">
-        <meta property="og:image" content="https://res.cloudinary.com/jframe/image/upload/v1483150140/jframe-logo-square-color.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="<%- page.title ? page.title + ' - ' : '' %>jframe">
+  <meta property="og:description" content="<%- theme.site_description %>">
+  <meta property="og:image" content="https://res.cloudinary.com/jframe/image/upload/v1483150140/jframe-logo-square-color.png">
 
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="<%- page.title ? page.title + ' - ' : '' %>jframe">
-        <meta name="twitter:description" content="<%- theme.site_description %>">
-        <meta name="twitter:image" content="https://res.cloudinary.com/jframe/image/upload/v1483150140/jframe-logo-square-color.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="<%- page.title ? page.title + ' - ' : '' %>jframe">
+  <meta name="twitter:description" content="<%- theme.site_description %>">
+  <meta name="twitter:image" content="https://res.cloudinary.com/jframe/image/upload/v1483150140/jframe-logo-square-color.png">
 
-        <link rel="icon" href="https://res.cloudinary.com/jframe/image/upload/c_scale,h_100,q_100,w_100/v1483150140/jframe-logo-square-color.png" type="image/x-icon">
+  <link rel="icon" href="https://res.cloudinary.com/jframe/image/upload/c_scale,h_100,q_100,w_100/v1483150140/jframe-logo-square-color.png" type="image/x-icon">
 
-        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
-        <!-- <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'> -->
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+  <!-- <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'> -->
 
-        <!-- main page styles -->
-        <%- css(isIndex ? 'css/index' : 'css/page') %>
+  <!-- main page styles -->
+  <%- css(isIndex ? 'css/index' : 'css/page') %>
 
-        <!-- this needs to be loaded before guide's inline scripts -->
-        <script src="/js/vue.min.js"></script>
-        <script>window.PAGE_TYPE = "<%- page.type %>"</script>
-    </head>
-    <body class="<%- isIndex ? '' : 'docs' -%>">
-        <div id="mobile-bar" <%- isIndex ? 'class="top"' : '' %>>
-            <a class="menu-button"></a>
-            <a class="logo" href="/"></a>
-        </div>
-        <%- partial('partials/header') %>
-        <% if (!isIndex) { %>
-            <div id="main" class="fix-sidebar">
-                <% if (page.blog_index) { %>
-                    <%- partial('partials/blog') %>
-                <% } else { %>
-                    <%- body %>
-                <% } %>
-            </div>
-            <script src="/js/smooth-scroll.min.js"></script>
-        <% } else { %>
-            <%- body %>
-        <% } %>
+  <!-- this needs to be loaded before guide's inline scripts -->
+  <script src="/js/vue.min.js"></script>
+  <script>window.PAGE_TYPE = "<%- page.type %>"</script>
+</head>
+<body class="<%- isIndex ? '' : 'docs' -%>">
 
-        <!-- main custom script for sidebars, version selects etc. -->
-        <script src="/js/common.js"></script>
+  <div id="mobile-bar" <%- isIndex ? 'class="top"' : '' %>>
+    <a class="menu-button"></a>
+    <a class="logo" href="/"></a>
+  </div>
+  <%- partial('partials/header') %>
+  <% if (!isIndex) { %>
+    <div id="main" class="fix-sidebar">
+      <% if (page.blog_index) { %>
+        <%- partial('partials/blog') %>
+      <% } else { %>
+        <%- body %>
+      <% } %>
+    </div>
+    <script src="/js/smooth-scroll.min.js"></script>
+  <% } else { %>
+    <%- body %>
+  <% } %>
 
-        <!-- ga -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <!-- main custom script for sidebars, version selects etc. -->
+  <script src="/js/common.js"></script>
 
-          ga('create', '<%- theme.google_analytics %>', '<%- theme.root_domain %>');
-          ga('send', 'pageview');
-        </script>
+  <!-- ga -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <!-- search -->
-        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
-        <%- css('css/search') %>
-        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
-        <script>
-          [
-            '#search-query-nav',
-            '#search-query-sidebar'
-          ].forEach(function (selector) {
-            if (!document.querySelector(selector)) return
-            // search index defaults to v2
-            var match = window.location.pathname.match(/^\/(v\d+)/)
-            var version = match ? match[1] : 'v1'
-            docsearch({
-              apiKey: '9153482358299401320bc05950f35c8e',
-              indexName: 'jframe',
-              inputSelector: selector
-            })
-          })
-        </script>
+    ga('create', '<%- theme.google_analytics %>', '<%- theme.root_domain %>');
+    ga('send', 'pageview');
+  </script>
 
-        <!-- fastclick -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            FastClick.attach(document.body)
-          }, false)
-        </script>
-    </body>
+  <!-- search -->
+  <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+  <%- css('css/search') %>
+  <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+  <script>
+    [
+      '#search-query-nav',
+      '#search-query-sidebar'
+    ].forEach(function (selector) {
+      if (!document.querySelector(selector)) return
+      // search index defaults to v2
+      var match = window.location.pathname.match(/^\/(v\d+)/)
+      var version = match ? match[1] : 'v1'
+      docsearch({
+        apiKey: '9153482358299401320bc05950f35c8e',
+        indexName: 'jframe',
+        inputSelector: selector
+      })
+    })
+  </script>
+
+  <!-- fastclick -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+  </script>
+</body>
 </html>

@@ -1,7 +1,6 @@
 ---
 title: Bootstrap
 type: guide
-interLink: true
 order: 5
 ---
 

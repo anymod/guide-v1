@@ -25,7 +25,8 @@ The easiest way to try out jframe is using the [jframe carousel example](https:/
 <!-- jframe snippet code -->
 <script>
   (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',s[p]={f:[],ready:function(c){s[p].f.push(c)}},r.parentNode.insertBefore(e,r)
+  s[p]=s[p]||{f:[],ready:function(c){s[p].f.push(c)}},e=i.createElement(m),
+  e.async=1,r=i.getElementsByTagName(m)[0],e.src=l+p+'.js',r.parentNode.insertBefore(e,r);
   })(window,document,'script','jframe','//jfra.me/v0/');
 </script>
 ```
@@ -78,8 +79,10 @@ and you want to be able to change it easily. With jframe, it's as simple as edit
     methods: {
       setDropdownText: function() {
         if (!window.jframe) return
-        jframe("dropdown").panels[0].header = dashboard1.header || 'Add a header'
-        jframe("dropdown").panels[0].body = dashboard1.body || 'Add a body'
+        jframe.ready(function() {
+          jframe("dropdown").panels[0].header = dashboard1.header || 'Add a header'
+          jframe("dropdown").panels[0].body = dashboard1.body || 'Add a body'
+        })
       }
     }
   })
@@ -133,10 +136,11 @@ Get started creating your own components!
 </div>
 
 {% raw %}
+<!-- jframe snippet code -->
 <script>
-  // jframe snippet code
   (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',s[p]={f:[],ready:function(c){s[p].f.push(c)}},r.parentNode.insertBefore(e,r)
+  s[p]=s[p]||{f:[],ready:function(c){s[p].f.push(c)}},e=i.createElement(m),
+  e.async=1,r=i.getElementsByTagName(m)[0],e.src=l+p+'.js',r.parentNode.insertBefore(e,r);
   })(window,document,'script','jframe','//jfra.me/v0/');
 
   jframe.ready(function() {

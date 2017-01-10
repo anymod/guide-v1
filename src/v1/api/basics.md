@@ -1,7 +1,6 @@
 ---
 title: Basics
 type: api
-interLink: true
 order: 1
 ---
 
@@ -25,6 +24,10 @@ order: 1
     <span>Hello World!</span>
   </jframe>
   ```
+
+<a class="guide-link"></a>
+
+
 
 
 ## HTML

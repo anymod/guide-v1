@@ -23,7 +23,8 @@ Simply add the basic `hello` component to one of your projects or view the [jsfi
 <!-- jframe snippet code -->
 <script>
   (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',s[p]={f:[],ready:function(c){s[p].f.push(c)}},r.parentNode.insertBefore(e,r)
+  s[p]=s[p]||{f:[],ready:function(c){s[p].f.push(c)}},e=i.createElement(m),
+  e.async=1,r=i.getElementsByTagName(m)[0],e.src=l+p+'.js',r.parentNode.insertBefore(e,r);
   })(window,document,'script','jframe','//jfra.me/v0/');
 </script>
 ```
@@ -45,8 +46,10 @@ To create your own components, sign up and choose components from the jframe lib
 
 {% raw %}
 <script>
+  // jframe snippet code
   (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',s[p]={f:[],ready:function(c){s[p].f.push(c)}},r.parentNode.insertBefore(e,r)
+  s[p]=s[p]||{f:[],ready:function(c){s[p].f.push(c)}},e=i.createElement(m),
+  e.async=1,r=i.getElementsByTagName(m)[0],e.src=l+p+'.js',r.parentNode.insertBefore(e,r);
   })(window,document,'script','jframe','//jfra.me/v0/');
 </script>
 {% endraw %}

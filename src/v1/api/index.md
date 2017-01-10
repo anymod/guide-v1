@@ -62,12 +62,3 @@ In this case, `jframe('hello')` gives access to the text component. This type of
   Executes any registered functions once jframe has loaded all components. Multiple functions can be registered and they will all be executed when jframe has all loaded components.
 
   Any functions registered after jframe is ready will be executed immediately.
-
-{% raw %}
-<script>
-  // jframe snippet code
-  (function(s,i,m,p,l,e,r){
-    e=i.createElement(m),r=i.getElementsByTagName(m)[0],e.src=l+'j?i='+[].map.call(i.querySelectorAll(p),function(f){return f.id})+'',s[p]={f:[],ready:function(c){s[p].f.push(c)}},r.parentNode.insertBefore(e,r)
-  })(window,document,'script','jframe','//jfra.me/v0/');
-</script>
-{% endraw %}

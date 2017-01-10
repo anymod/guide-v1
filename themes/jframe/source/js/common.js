@@ -33,44 +33,25 @@
   // }
 
   function initInterLinks () {
-    var content = document.querySelector('.content.inter-linked')
+    var content = document.querySelector('.content')
     if (!content) return
     var isGuide = content.className.indexOf('guide') > -1
+    ,   section = content.querySelectorAll('h1')[0].textContent
+    ,   interLinks
     if (isGuide) {
-      var interLinks = [].slice.call(content.querySelectorAll('.api-link'))
-      ,   section = content.querySelectorAll('h1')[0].textContent
+      interLinks = [].slice.call(content.querySelectorAll('.api-link'))
       interLinks.forEach(function (interLink) {
         interLink.setAttribute('href', '/v1/api/' + encodeURIComponent(section.toLowerCase()) + '.html#' + findPriorTitle(interLink.parentNode))
       })
     } else {
-      placeLinks('guide', 'View Guide', content)
-    }
-
-    function placeLinks (toPage, toText, content) {
-      var section = content.querySelectorAll('h1')[0].textContent
-      var titles = [].slice.call(content.querySelectorAll('h2'))
-      titles.forEach(function (titleNode) {
-        var ulNode = titleNode.parentNode.nextSibling
-        ,   specNode = document.createElement('li')
-        ,   specLink = createPath(toPage, section, titleNode.textContent)
-        console.log(titleNode)
-        specNode.innerHTML = '<p><a href="' + specLink + '">' + toText + '</a></p>'
-
-        var i = 0
-        while(i < 20) {
-          console.log('ulNode', ulNode)
-          if (ulNode.className === 'skip-interlink') {
-            return
-          } else if (ulNode.tagName !== 'UL') {
-            ulNode = ulNode.nextSibling
-            if (!ulNode) return titleNode.nextSibling.append(specNode)
-          } else {
-            return ulNode.appendChild(specNode)
-          }
-          i++
-        }
+      interLinks = [].slice.call(content.querySelectorAll('.guide-link'))
+      interLinks.forEach(function (interLink) {
+        var title = findPriorTitle(interLink.parentNode)
+        interLink.setAttribute('href', '/v1/guide/' + encodeURIComponent(section.toLowerCase()) + '.html#' + title)
+        interLink.text = 'View Guide'
       })
     }
+
     function findPriorTitle(sibling) {
       var i = 0
       while(i < 20) {
@@ -80,9 +61,34 @@
       }
     }
 
-    function createPath(toPage, section, subsection) {
-      return '/v1/' + encodeURIComponent(toPage.toLowerCase()) + '/' + encodeURIComponent(section.toLowerCase()) + '.html#' + encodeURIComponent(subsection)
-    }
+    // function placeLinks (toPage, toText, content) {
+    //   var section = content.querySelectorAll('h1')[0].textContent
+    //   var titles = [].slice.call(content.querySelectorAll('h2'))
+    //   titles.forEach(function (titleNode) {
+    //     var ulNode = titleNode.parentNode.nextSibling
+    //     ,   specNode = document.createElement('li')
+    //     ,   specLink = createPath(toPage, section, titleNode.textContent)
+    //     console.log(titleNode)
+    //     specNode.innerHTML = '<p><a href="' + specLink + '">' + toText + '</a></p>'
+    //
+    //     var i = 0
+    //     while(i < 20) {
+    //       console.log('ulNode', ulNode)
+    //       if (ulNode.className === 'skip-interlink') {
+    //         return
+    //       } else if (ulNode.tagName !== 'UL') {
+    //         ulNode = ulNode.nextSibling
+    //         if (!ulNode) return titleNode.nextSibling.append(specNode)
+    //       } else {
+    //         return ulNode.appendChild(specNode)
+    //       }
+    //       i++
+    //     }
+    //   })
+    // }
+    // function createPath(toPage, section, subsection) {
+    //   return '/v1/' + encodeURIComponent(toPage.toLowerCase()) + '/' + encodeURIComponent(section.toLowerCase()) + '.html#' + encodeURIComponent(subsection)
+    // }
   }
 
   function initLocationHashFuzzyMatching () {

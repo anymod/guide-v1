@@ -1,7 +1,6 @@
 ---
 title: Basics
 type: guide
-interLink: true
 order: 3
 ---
 
