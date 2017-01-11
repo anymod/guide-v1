@@ -14,15 +14,15 @@ Renders text on the page wherever the `<jframe>` element is placed.
 
 ## HTML
 
-> <h4 style="margin-bottom: 5px;">Hello World!</h4><p>Lorem ipsum dolor sit amet.</p>
+> <h2 style="margin: 2px 0 !important; padding: 0; border: none;">Hello World!</h2><p>Lorem ipsum dolor sit amet.</p>
 
 Renders HTML content on the page wherever the `<jframe>` element is placed.
 
-<a class="button white api-link" href>API</a>
+<a class="button" href="https://jsfiddle.net/jframe/m0k1p0td/" target="_blank">Demo</a> <a class="button white api-link" href>API</a>
 
 ## Markdown
 
-> <h4 style="margin-bottom: 5px;">Hello World!</h4><p>Lorem ipsum dolor sit amet.</p>
+> <h2 style="margin: 2px 0 !important; padding: 0; border: none;">Hello World!</h2><p>Lorem ipsum dolor sit amet.</p>
 
 Renders HTML content on the page (from Markdown) wherever the `<jframe>` element is placed.
 
