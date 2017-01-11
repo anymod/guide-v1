@@ -4,33 +4,9 @@
   if (PAGE_TYPE) {
     initVersionSelect()
     initSubHeaders()
-    // initApiSpecLinks() // Disabled during initial setup 1/9/17
     initInterLinks() // Created during initial setup 1/9/17
     initLocationHashFuzzyMatching()
   }
-
-  // function initApiSpecLinks () {
-  //   var apiContent = document.querySelector('.content.api')
-  //   if (apiContent) {
-  //     var apiTitles = [].slice.call(apiContent.querySelectorAll('h2'))
-  //     apiTitles.forEach(function (titleNode) {
-  //       var ulNode = titleNode.parentNode.nextSibling
-  //       if (ulNode.tagName !== 'UL') {
-  //         ulNode = ulNode.nextSibling
-  //       }
-  //       if (ulNode.tagName === 'UL') {
-  //         var specNode = document.createElement('li')
-  //         var specLink = createSourceSearchPath(titleNode.textContent)
-  //         specNode.innerHTML = '<a href="' + specLink + '" target="_blank">Source</a>'
-  //         ulNode.appendChild(specNode)
-  //       }
-  //     })
-  //   }
-  //
-  //   function createSourceSearchPath(query) {
-  //     return 'https://github.com/search?utf8=%E2%9C%93&q=repo%3Avuejs%2Fvue+extension%3Ajs+' + encodeURIComponent(query) + '+&type=Code'
-  //   }
-  // }
 
   function initInterLinks () {
     var content = document.querySelector('.content')
@@ -60,35 +36,6 @@
         i++
       }
     }
-
-    // function placeLinks (toPage, toText, content) {
-    //   var section = content.querySelectorAll('h1')[0].textContent
-    //   var titles = [].slice.call(content.querySelectorAll('h2'))
-    //   titles.forEach(function (titleNode) {
-    //     var ulNode = titleNode.parentNode.nextSibling
-    //     ,   specNode = document.createElement('li')
-    //     ,   specLink = createPath(toPage, section, titleNode.textContent)
-    //     console.log(titleNode)
-    //     specNode.innerHTML = '<p><a href="' + specLink + '">' + toText + '</a></p>'
-    //
-    //     var i = 0
-    //     while(i < 20) {
-    //       console.log('ulNode', ulNode)
-    //       if (ulNode.className === 'skip-interlink') {
-    //         return
-    //       } else if (ulNode.tagName !== 'UL') {
-    //         ulNode = ulNode.nextSibling
-    //         if (!ulNode) return titleNode.nextSibling.append(specNode)
-    //       } else {
-    //         return ulNode.appendChild(specNode)
-    //       }
-    //       i++
-    //     }
-    //   })
-    // }
-    // function createPath(toPage, section, subsection) {
-    //   return '/v1/' + encodeURIComponent(toPage.toLowerCase()) + '/' + encodeURIComponent(section.toLowerCase()) + '.html#' + encodeURIComponent(subsection)
-    // }
   }
 
   function initLocationHashFuzzyMatching () {
@@ -305,9 +252,9 @@
       if (small) {
         container.className = 'menu-sub'
       }
-      h3s.forEach(function (h) {
-        container.appendChild(makeLink(h))
-      })
+      // h3s.forEach(function (h) {
+      //   container.appendChild(makeLink(h))
+      // })
       return container
     }
 
@@ -316,7 +263,7 @@
       var currentActive = typeof id === 'string'
         ? sidebar.querySelector('.section-link[href="#' + id + '"]')
         : id
-      if (currentActive !== previousActive) {
+      if (currentActive && currentActive !== previousActive) {
         if (previousActive) previousActive.classList.remove('active')
         currentActive.classList.add('active')
         if (shouldScrollIntoView) {
