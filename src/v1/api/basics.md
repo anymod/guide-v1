@@ -4,13 +4,83 @@ type: api
 order: 1
 ---
 
+## Content
+
+### Structure
+``` html
+<jframe content id="jId"></jframe>
+```
+Is replaced by
+```html
+<div jframe content id="jId">
+  <div v-html="rawHtml"></div>
+</div>
+```
+
+### Options
+| Name | Type | Default | Description |
+|:---- |:---- |:------- |:----------- |
+| rawHtml | `String` | - | HTML content rendered by the component. |
+
+### Example
+  ``` html
+  <jframe content id="xgzdg"></jframe>
+  ```
+  Becomes
+  ``` html
+  <div jframe content id="xgzdg">
+    <div>
+      <h1>Hello World!</h1>
+      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+    </div>
+  </div>
+  ```
+<a class="guide-link"></a>
+
+## Image
+
+### Structure
+``` html
+<jframe image id="jId"></jframe>
+```
+Is replaced by
+```html
+<div jframe image id="jId">
+  <img :src="src"/>
+</div>
+```
+
+### Options
+| Name | Type | Default | Description |
+|:---- |:---- |:------- |:----------- |
+| rawSrc | `String` | - | Url base location of the image (without transformations). |
+| width | `Number` | - | Desired display width of image. |
+| height | `Number` | - | Desired display height of image. |
+| crop | `String` | `fill` | Cropping to use for image. Options include `scale`, `fit`, `mfit`, `fill`, `lfill`, `limit`, `pad`, `lpad`, `mpad`, `crop`, and `thumb` |
+
+### Example
+  ``` html
+  <jframe image id="bwpeg"></jframe>
+  ```
+  Becomes
+  ``` html
+  <div jframe image id="bwpeg">
+    <img src="https://res.cloudinary.com/jframe/image/upload/c_fill,h_200,w_600/v1481693531/library-image.jpg"/>
+  </div>
+  ```
+<a class="guide-link"></a>
+
 ## Text
 
 ### Structure
 ``` html
-<jframe text id="jId">
-  <span id="app-jId" v-text="text"></span>
-</jframe>
+<jframe text id="jId"></jframe>
+```
+Is replaced by
+```html
+<div jframe text id="jId">
+  <div v-text="text"></div>
+</div>
 ```
 
 ### Options
@@ -22,99 +92,10 @@ order: 1
   ``` html
   <jframe text id="hello"></jframe>
   ```
-
-  Will result in:
-
+  Becomes
   ``` html
-  <jframe text id="hello">
-    <span id="app-hello">Hello World!</span>
-  </jframe>
-  ```
-<a class="guide-link"></a>
-
-## HTML
-
-### Structure
-``` html
-<jframe text id="jId">
-  <span id="app-jId" v-html="rawHtml"></span>
-</jframe>
-```
-
-### Options
-| Name | Type | Default | Description |
-|:---- |:---- |:------- |:----------- |
-| rawHtml | `String` | - | HTML rendered by the component. |
-
-### Example
-  ``` html
-  <jframe text id="helloHtml"></jframe>
-  ```
-  Will result in:
-  ``` html
-  <jframe text id="helloHtml">
-    <span id="app-helloHtml">
-      <h1>Hello World!</h1>
-      <p>Lorem ipsum dolor sit amet</p>
-    </span>
-  </jframe>
-  ```
-<a class="guide-link"></a>
-
-## Markdown
-
-### Structure
-``` html
-<jframe text id="jId">
-  <span id="app-jId" v-html="compiledHtml"></span>
-</jframe>
-```
-
-### Options
-| Name | Type | Default | Description |
-|:---- |:---- |:------- |:----------- |
-| compiledHtml | `String` | - | Markdown rendered as HTML by the component. |
-
-### Example
-  ``` html
-  <jframe text id="helloMarkdown"></jframe>
-  ```
-  Will result in:
-  ``` html
-  <jframe text id="helloMarkdown">
-    <span id="app-helloMarkdown">
-      <h1>Hello World!</h1>
-      <p>Lorem ipsum dolor sit amet</p>
-    </span>
-  </jframe>
-  ```
-<a class="guide-link"></a>
-
-## Image
-
-### Structure
-``` html
-<jframe text id="jId">
-  <img id="app-jId" :src="src"/>
-</jframe>
-```
-
-### Options
-| Name | Type | Default | Description |
-|:---- |:---- |:------- |:----------- |
-| src | `String` | - | Url location of the image. |
-| width | `Number` | - | Desired display width of image. |
-| height | `Number` | - | Desired display height of image. |
-| crop | `String` | `fill` | Cropping to use for image. Options include `scale`, `fit`, `mfit`, `fill`, `lfill`, `limit`, `pad`, `lpad`, `mpad`, `crop`, and `thumb` |
-
-### Example
-  ``` html
-  <jframe image id="123"></jframe>
-  ```
-  Will result in:
-  ``` html
-  <jframe image id="123">
-    <img id="app-123" src="https://example.com/path/to/image.png"/>
-  </jframe>
+  <div jframe text id="hello">
+    <div>Hello World!</div>
+  </div>
   ```
 <a class="guide-link"></a>

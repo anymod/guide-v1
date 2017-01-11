@@ -7,21 +7,22 @@ order: 2
 ## Carousel (Slider)
 
 ### Structure
-
 ``` html
-<jframe carousel id="jId">
-  <div id="app-jId">
-    <carousel>
-      <slider v-for="slide in slides">
-        <img :src="slide.image"/>
-        <div class="carousel-caption">
-          <h3 v-text="slide.title"></h3>
-          <p v-text="slide.caption"></p>
-        </div>
-      </slider>
-    </carousel>
-  </div>
-</jframe>
+<jframe carousel id="jId"></jframe>
+```
+Is replaced by
+```html
+<div jframe carousel id="jId">
+  <carousel>
+    <slider v-for="slide in slides">
+      <img :src="slide.image"/>
+      <div class="carousel-caption">
+        <h3 v-text="slide.title"></h3>
+        <p v-text="slide.caption"></p>
+      </div>
+    </slider>
+  </carousel>
+</div>
 ```
 
 ### Options
