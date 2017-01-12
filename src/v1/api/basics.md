@@ -12,9 +12,7 @@ order: 1
 ```
 Is replaced by
 ```html
-<div jframe content id="jId">
-  <div v-html="rawHtml"></div>
-</div>
+<div jframe content id="jId" v-html="rawHtml"></div>
 ```
 
 ### Options
@@ -29,10 +27,8 @@ Is replaced by
   Becomes
   ``` html
   <div jframe content id="xgzdg">
-    <div>
-      <h1>Hello World!</h1>
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-    </div>
+    <h1>Hello World!</h1>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
   </div>
   ```
 <a class="guide-link"></a>
@@ -45,9 +41,7 @@ Is replaced by
 ```
 Is replaced by
 ```html
-<div jframe image id="jId">
-  <img :src="src"/>
-</div>
+<img jframe image id="jId" :src="src"/>
 ```
 
 ### Options
@@ -64,9 +58,7 @@ Is replaced by
   ```
   Becomes
   ``` html
-  <div jframe image id="bwpeg">
-    <img src="https://res.cloudinary.com/jframe/image/upload/c_fill,h_200,w_600/v1481693531/library-image.jpg"/>
-  </div>
+  <img jframe image id="bwpeg" src="https://res.cloudinary.com/jframe/image/upload/c_fill,h_200,w_600/v1481693531/library-image.jpg"/>
   ```
 <a class="guide-link"></a>
 
@@ -78,9 +70,7 @@ Is replaced by
 ```
 Is replaced by
 ```html
-<div jframe text id="jId">
-  <div v-text="text"></div>
-</div>
+<div jframe text id="jId" v-text="text"></div>
 ```
 
 ### Options
@@ -94,8 +84,6 @@ Is replaced by
   ```
   Becomes
   ``` html
-  <div jframe text id="hello">
-    <div>Hello World!</div>
-  </div>
+  <div jframe text id="hello">Hello World!</div>
   ```
 <a class="guide-link"></a>
