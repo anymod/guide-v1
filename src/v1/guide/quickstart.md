@@ -20,13 +20,8 @@ Simply add the basic `hello` component to one of your projects or view the [jsfi
 ``` html
 <jframe text id="hello"></jframe>
 
-<!-- jframe snippet code -->
-<script>
-  (function(s,i,m,p,l,e,r){
-  s[p]=s[p]||{f:[],ready:function(c){s[p].f.push(c)}},e=i.createElement(m),
-  e.async=1,r=i.getElementsByTagName(m)[0],e.src=l+p+'.js',r.parentNode.insertBefore(e,r);
-  })(window,document,'script','jframe','//jfra.me/v0/');
-</script>
+<!-- jframe script -->
+<script src="https://cdn.jframe.io/jframe.js" project="PROJECT-ID"></script>
 ```
 This code puts a simple text component on the page:
 
@@ -45,11 +40,6 @@ To create your own components, sign up and choose components from the jframe lib
 </div>
 
 {% raw %}
-<script>
-  // jframe snippet code
-  (function(s,i,m,p,l,e,r){
-  s[p]=s[p]||{f:[],ready:function(c){s[p].f.push(c)}},e=i.createElement(m),
-  e.async=1,r=i.getElementsByTagName(m)[0],e.src=l+p+'.js',r.parentNode.insertBefore(e,r);
-  })(window,document,'script','jframe','//jfra.me/v0/');
-</script>
+<!-- jframe script -->
+<script src="https://cdn.jframe.io/jframe.js" project="jframe"></script>
 {% endraw %}

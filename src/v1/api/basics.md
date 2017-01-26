@@ -12,7 +12,9 @@ order: 1
 ```
 Is replaced by
 ```html
-<div jframe content id="jId" v-html="rawHtml"></div>
+<div jframe content id="jId">
+  <!-- rawHtml -->
+</div>
 ```
 
 ### Options
@@ -41,7 +43,7 @@ Is replaced by
 ```
 Is replaced by
 ```html
-<img jframe image id="jId" :src="src"/>
+<img jframe image id="jId" src="src"/>
 ```
 
 ### Options
@@ -70,7 +72,7 @@ Is replaced by
 ```
 Is replaced by
 ```html
-<div jframe text id="jId" v-text="text"></div>
+<div jframe text id="jId"><!-- text --></div>
 ```
 
 ### Options

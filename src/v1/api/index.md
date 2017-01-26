@@ -64,10 +64,6 @@ In this case, `jframe('hello')` gives access to the text component. This type of
   Any functions registered after jframe is ready will be executed immediately.
 
 {% raw %}
-<!-- jframe snippet code -->
-<script>
-  (function(s,i,m,p,l,e,r){s[p]=s[p]||{f:[],ready:function(c){s[p].f.push(c)}},e=i.createElement(m),
-  e.async=1,r=i.getElementsByTagName(m)[0],e.src=l+p+'.js',r.parentNode.insertBefore(e,r);
-  })(window,document,'script','jframe','//jfra.me/v0/');
-</script>
+<!-- jframe script -->
+<script src="https://cdn.jframe.io/jframe.js" project="jframe"></script>
 {% endraw %}

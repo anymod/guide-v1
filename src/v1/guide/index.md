@@ -5,10 +5,12 @@ order: 2
 ---
 
 ## What is jframe?
+<jframe content id="wjpkw"></jframe>
+<style>#wjpkw{display:block !important;}</style>
 
-jframe makes it easy to use all kinds of web components to build websites and applications.  Unlike platforms like Wordpress, jframe **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, jframe **does not require any external styling or javascript**.
+<!-- jframe makes it easy to use all kinds of web components to build websites and applications.  Unlike platforms like Wordpress, jframe **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, jframe **does not require any external styling or javascript**.
 
-The goal of the jframe platform is to provide components that are **simple to use** with other libraries or existing projects.  That means jframe is simple to set up, and is also perfectly capable of powering sophisticated Single-Page Applications.
+The goal of the jframe platform is to provide components that are **simple to use** with other libraries or existing projects.  That means jframe is simple to set up, and is also perfectly capable of powering sophisticated Single-Page Applications. -->
 <!--- when used in combination with [modern tooling](single-file-components.html) and [supporting libraries](https://github.com/vuejs/awesome-vue#libraries--plugins). -->
 
 <!-- If you are an experienced frontend developer and want to know how jframe compares to other libraries/frameworks, check out the [Comparison with Other Frameworks](comparison.html). -->
@@ -16,19 +18,17 @@ The goal of the jframe platform is to provide components that are **simple to us
 ## Getting Started
 
 <p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a simple web page working first.  Once you have a web page, you're ready to use jframe.</p>
+<!-- TODO add a link to a tutorial for getting a basic jframe template up and running -->
 
-The easiest way to try out jframe is using the [jframe carousel example](https://jsfiddle.net/jframe/jqhv3e1h/). Feel free to open it in another tab and see what it takes to get a jframe working. Or, you can simply create an `.html` file and add a jframe with:
+The easiest way to try jframe is to use our carousel web component example. Open [this link](https://jsfiddle.net/jframe/jqhv3e1h/) to take a look under the hood of jframe and see how easy it is to get a jframe web component working on your web page.
+
+If you want to try this component in your own project, you can simply create an `.html` file and paste the following code:
 
 ``` html
 <jframe carousel id="demo"></jframe>
 
-<!-- jframe snippet code -->
-<script>
-  (function(s,i,m,p,l,e,r){
-  s[p]=s[p]||{f:[],ready:function(c){s[p].f.push(c)}},e=i.createElement(m),
-  e.async=1,r=i.getElementsByTagName(m)[0],e.src=l+p+'.js',r.parentNode.insertBefore(e,r);
-  })(window,document,'script','jframe','//jfra.me/v0/');
-</script>
+<!-- jframe script -->
+<script src="https://cdn.jframe.io/jframe.js" project="PROJECT-ID"></script>
 ```
 
 The [Quickstart](quickstart.html) page provides a basic text example using jframe.
@@ -60,7 +60,7 @@ jframe makes it incredibly easy to manage content remotely through the jframe da
 <jframe accordion id="dropdown"></jframe>
 {% endraw %}
 
-and you want to be able to change it easily. With jframe, it's as simple as editing in the dashboard. In this case, the dashboard would look something like
+and you want to be able to change its content easily. With jframe, it's as simple as editing in the dashboard. In this case, the dashboard would look something like
 
 {% raw %}
 <div id="dashboard-1" class="demo" style="padding: 0px; border-radius: 7px; overflow: hidden;">
@@ -136,13 +136,9 @@ Get started creating your own components!
 </div>
 
 {% raw %}
-<!-- jframe snippet code -->
+<!-- jframe script -->
+<script src="https://cdn.jframe.io/jframe.js" project="jframe"></script>
 <script>
-  (function(s,i,m,p,l,e,r){
-  s[p]=s[p]||{f:[],ready:function(c){s[p].f.push(c)}},e=i.createElement(m),
-  e.async=1,r=i.getElementsByTagName(m)[0],e.src=l+p+'.js',r.parentNode.insertBefore(e,r);
-  })(window,document,'script','jframe','//jfra.me/v0/');
-
   jframe.ready(function() {
     if (!dashboard1 || !jframe("dropdown").panels) return
     dashboard1.header = jframe("dropdown").panels[0].header
