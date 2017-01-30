@@ -103,10 +103,17 @@ markdown:
 
 # Deployment
 ## Docs: http://zespia.tw/hexo/docs/deployment.html
+# deploy:
+#   type: heroku
+#   repo: https://git.heroku.com/jf-guide.git
 deploy:
-  type: heroku
-  repo: https://git.heroku.com/jf-guide.git
-
+  type: s3
+  bucket: guide.jframe.io
+  concurrency: 10
+  aws_key: AKIAIDYPX3BMQAY2AQPA  # Optional, if the environment variable `AWS_ACCESS_KEY_ID` is set
+  aws_secret: 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  # Optional, if the environment variable `AWS_SECRET_ACCESS_KEY` is set
+  # cf_distribution: mydistributionid
+  # headers: {CacheControl: 'max-age=604800, public'}
 
 feed:
   type: atom

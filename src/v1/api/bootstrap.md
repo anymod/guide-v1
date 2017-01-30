@@ -31,7 +31,7 @@ Is replaced by
 |:---- |:---- |:------- |:----------- |
 | width | `number` | `1200` | Width of the carousel in pixels (default is 16:9 ratio). |
 | height | `number` | `675` | Height of the carousel in pixels (default is 16:9 ratio). |
-| crop | `string` | `'fill'` | How to crop the images in the slider. Value can be `'fill'`, `'limit'`, `'fit'`, `'fill'`, or `'pad'`. |
+| crop | `string` | `'fill'` | How to crop the images in the slider. Value can be `'fill'`, `'limit'`, `'fit'`, `'scale'`, or `'pad'`. |
 | indicators | `boolean` | `true` | Whether to show the indicators. |
 | controls | `boolean`   | `true` | Whether to show the directional arrow controls. |
 | interval | `number`    | `5000` | The amount of time in milliseconds to delay between automatically cycling a slide. If set to 0 or a negative number, carousel will not automatically cycle.|
