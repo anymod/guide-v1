@@ -29,17 +29,22 @@ Is replaced by
 
 | Name | Type | Default | Description |
 |:---- |:---- |:------- |:----------- |
-| indicators | `Boolean` | `true` | Whether to show the indicators. |
-| controls | `Boolean`   | `true` | Whether to show the direction controls. |
-| interval | `Number`    | `5000` | The amount of time to delay between automatically cycling an item. If set to 0 or a negative number, carousel will not automatically cycle.|
+| width | `number` | `1200` | Width of the carousel in pixels (default is 16:9 ratio). |
+| height | `number` | `675` | Height of the carousel in pixels (default is 16:9 ratio). |
+| crop | `string` | `'fill'` | How to crop the images in the slider. Value can be `'fill'`, `'limit'`, `'fit'`, `'fill'`, or `'pad'`. |
+| indicators | `boolean` | `true` | Whether to show the indicators. |
+| controls | `boolean`   | `true` | Whether to show the directional arrow controls. |
+| interval | `number`    | `5000` | The amount of time in milliseconds to delay between automatically cycling a slide. If set to 0 or a negative number, carousel will not automatically cycle.|
+| slides | `array` | `[]` | Array of slides. See below. |
 
 ### Slide Options
 
 | Name | Type | Default | Description |
 |:---- |:---- |:------- |:----------- |
-| title | `string`    | - | Title text to show in the slide. |
-| caption | `string`  | - | Caption text to show in the slide. |
-| image | `string`    | - | Url used for the slides src attribute. |
+| image | `string`    | - | Image url used for the slides src attribute. |
+| rawHtml | `string`  | - | HTML content to show in the slide. |
+| link | `string`  | - | Link url to use when the slide is clicked. |
+| newWindowOnClick | `boolean` | `true` | Whether to open a new window when slide link is clicked. |
 
 <a class="guide-link"></a>
 
