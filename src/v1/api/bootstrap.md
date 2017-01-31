@@ -13,13 +13,14 @@ order: 2
 Is replaced by
 ```html
 <div jframe carousel id="jId">
-  <carousel>
+  <carousel :interval="interval || 0" :indicators="indicators" :controls="controls">
     <slider v-for="slide in slides">
-      <img :src="slide.image"/>
-      <div class="carousel-caption">
-        <h3 v-text="slide.title"></h3>
-        <p v-text="slide.caption"></p>
-      </div>
+      <a :href="slide.url" :target="slide.target">
+        <img :src="slide.image"/>
+        <div class="carousel-caption">
+          <div v-html="slide.rawHtml"></div>
+        </div>
+      </a>
     </slider>
   </carousel>
 </div>
@@ -43,7 +44,7 @@ Is replaced by
 |:---- |:---- |:------- |:----------- |
 | image | `string`    | - | Image url used for the slides src attribute. |
 | rawHtml | `string`  | - | HTML content to show in the slide. |
-| link | `string`  | - | Link url to use when the slide is clicked. |
+| url | `string`  | - | Link url to use when the slide is clicked. |
 | newWindowOnClick | `boolean` | `true` | Whether to open a new window when slide link is clicked. |
 
 <a class="guide-link"></a>
