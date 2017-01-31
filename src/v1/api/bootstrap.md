@@ -4,7 +4,7 @@ type: api
 order: 2
 ---
 
-## Carousel (Slider)
+## Carousel (Slider) Foobar
 
 ### Structure
 ``` html
