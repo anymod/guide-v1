@@ -8,11 +8,11 @@ order: 2
 
 ### Structure
 ``` html
-<jframe carousel id="jId"></jframe>
+<component carousel id="jId"></component>
 ```
 Is replaced by
 ```html
-<div jframe carousel id="jId">
+<div content carousel id="jId">
   <carousel>
     <slider v-for="slide in slides">
       <a :href="slide.url" :target="slide.target">
