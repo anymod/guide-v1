@@ -65,5 +65,5 @@ In this case, `Component('hello')` gives access to the text component. This type
 
 {% raw %}
 <!-- Component IO script -->
-<script src="https://cdn.component.io/v1" project="component-io-team"></script>
+<script project="component-io-team" src="https://cdn.component.io/v1"></script>
 {% endraw %}

@@ -28,7 +28,7 @@ If you want to try this component in your own project, you can simply create an 
 <component carousel id="demo"></component>
 
 <!-- Component IO script -->
-<script src="https://cdn.component.io/v1" project="PROJECT-ID"></script>
+<script project="PROJECT-ID" src="https://cdn.component.io/v1"></script>
 ```
 
 The [Quickstart](quickstart.html) page provides a basic text example using Component IO.
@@ -137,7 +137,7 @@ Get started creating your own components!
 
 {% raw %}
 <!-- Component IO script -->
-<script src="https://cdn.component.io/v1" project="component-io-guide"></script>
+<script project="component-io-team" src="https://cdn.component.io/v1"></script>
 <script>
   Component.ready(function() {
     if (!dashboard1 || !Component("dropdown").panels) return

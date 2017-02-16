@@ -21,7 +21,7 @@ Simply add the basic `hello` component to one of your projects or view the [jsfi
 <component text id="hello"></component>
 
 <!-- Component IO script -->
-<script src="https://cdn.component.io/v1" project="PROJECT-ID"></script>
+<script project="PROJECT-ID" src="https://cdn.component.io/v1"></script>
 ```
 This code puts a simple text component on the page:
 
@@ -41,5 +41,5 @@ To create your own components, sign up and choose components from the Component 
 
 {% raw %}
 <!-- Component IO script -->
-<script src="https://cdn.component.io/v1" project="component-io-team"></script>
+<script project="component-io-team" src="https://cdn.component.io/v1"></script>
 {% endraw %}
