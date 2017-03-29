@@ -64,12 +64,15 @@ and you want to be able to change its content easily. With Component IO, it's as
 
 {% raw %}
 <div id="dashboard-1" class="demo" style="padding: 0px; border-radius: 7px; overflow: hidden;">
-  <form>
-    <img src="https://res.cloudinary.com/component/image/upload/c_crop,g_north,h_50,w_705/v1481595881/mock_chrome-window.png"/>
-    <div style="margin: 20px;">
-      <input type="text" class="form-control" style="max-width: 90%;" v-model="header" :change="setDropdownText()" placeholder="Header">
-      <textarea class="form-control" style="max-width: 90%; min-height: 110px;" v-model="body" :change="setDropdownText()" placeholder="Body"></textarea>
+  <div class="card">
+    <img src="https://res.cloudinary.com/component/image/upload/c_crop,g_north,h_200,w_900/c_scale,w_600/v1489347018/dashboard_screenshot.png"/>
+    <div class="card-block" style="padding: 0.5rem">
+      <input type="text" class="form-control" style="max-width: 95%; margin-bottom: 3px;" v-model="header" :change="setDropdownText()" placeholder="Header">
+      <textarea class="form-control" style="max-width: 95%; min-height: 110px;" v-model="body" :change="setDropdownText()" placeholder="Body"></textarea>
     </div>
+  </div>
+  <form>
+
   </form>
 </div>
 <script>
