@@ -1,7 +1,7 @@
 ---
 title: Contact Form
 type: examples
-order: 2
+order: 3
 ---
 
 > This example displays a simple, functional contact form for a user to send a message. Messages sent through this component are visible in the Component IO dashboard.
