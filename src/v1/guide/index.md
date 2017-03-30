@@ -156,6 +156,10 @@ Get started creating your own components!
           dashboard1.body = editor.getContent()
           dashboard1.setDropdownText()
         })
+        editor.on('keyup', function (e) {
+          dashboard1.body = editor.getContent()
+          dashboard1.setDropdownText()
+        })
       }
     })
   })
