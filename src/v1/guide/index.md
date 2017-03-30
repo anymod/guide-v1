@@ -147,10 +147,11 @@ Get started creating your own components!
     dashboard1.body = Component("dropdown").items[0].body
     tinymce.init({
       selector: '#mock-dashboard-textarea',    
-      min_height: 120,
-      plugins: ['paste', 'code', 'hr', 'link', 'fullscreen'],
-      menubar: 'edit insert format tools',
+      min_height: 80,
+      plugins: ['paste', 'code', 'hr', 'link'],
+      menubar: false,
       toolbar: 'formatselect | bold italic | link hr code',
+      statusbar: false,
       init_instance_callback: function (editor) {
         editor.on('change', function (e) {
           dashboard1.body = editor.getContent()
