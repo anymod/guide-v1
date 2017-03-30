@@ -57,7 +57,7 @@ Component IO makes it incredibly easy to manage content remotely through the das
 
 {% raw %}
 <br>
-<component accordion id="dropdown"></component>
+<component accordion key="dropdown"></component>
 {% endraw %}
 
 and you want to be able to change its content easily. With Component IO, it's as simple as editing in the dashboard. In this case, the dashboard would look something like
@@ -67,24 +67,21 @@ and you want to be able to change its content easily. With Component IO, it's as
   <div class="card">
     <img src="https://res.cloudinary.com/component/image/upload/c_crop,g_north,h_200,w_900/c_scale,w_600/v1489347018/dashboard_screenshot.png"/>
     <div class="card-block" style="padding: 0.5rem">
-      <input type="text" class="form-control" style="max-width: 95%; margin-bottom: 3px;" v-model="header" :change="setDropdownText()" placeholder="Header">
-      <textarea class="form-control" style="max-width: 95%; min-height: 110px;" v-model="body" :change="setDropdownText()" placeholder="Body"></textarea>
+      <input type="text" class="form-control" style="max-width: 95%; margin-bottom: 3px; color: black;" v-model="title" :change="setDropdownText()" placeholder="Header">
+      <textarea id="mock-dashboard-textarea" class="form-control" style="max-width: 95%; min-height: 110px;" v-model="body" placeholder="Body"></textarea>
     </div>
   </div>
-  <form>
-
-  </form>
 </div>
 <script>
   var dashboard1 = new Vue({
     el: '#dashboard-1',
-    data: { header: '', body: '' },
+    data: { title: '', body: '' },
     methods: {
       setDropdownText: function() {
         if (!window.Component) return
         Component.ready(function() {
-          Component("dropdown").panels[0].header = dashboard1.header || 'Add a header'
-          Component("dropdown").panels[0].body = dashboard1.body || 'Add a body'
+          Component("dropdown").items[0].title = dashboard1.title || 'Add a header'
+          Component("dropdown").items[0].body = dashboard1.body || 'Add a body'
         })
       }
     }
@@ -139,13 +136,44 @@ Get started creating your own components!
 </div>
 
 {% raw %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.5/tinymce.min.js"></script>
 <!-- Component IO script -->
 <script project="component-io-team" src="https://cdn.component.io/v1"></script>
 <script>
   Component.ready(function() {
-    if (!dashboard1 || !Component("dropdown").panels) return
-    dashboard1.header = Component("dropdown").panels[0].header
-    dashboard1.body = Component("dropdown").panels[0].body
+    if (!dashboard1 || !Component("dropdown").items) return
+    Component("dropdown").items[0].isOpen = true
+    dashboard1.title = Component("dropdown").items[0].title
+    dashboard1.body = Component("dropdown").items[0].body
+    tinymce.init({
+      selector: '#mock-dashboard-textarea',    
+      min_height: 120,
+      plugins: ['paste', 'code', 'hr', 'link', 'fullscreen'],
+      menubar: 'edit insert format tools',
+      toolbar: 'formatselect | bold italic | link hr code',
+      init_instance_callback: function (editor) {
+        editor.on('change', function (e) {
+          dashboard1.body = editor.getContent()
+          dashboard1.setDropdownText()
+        })
+      }
+    })
   })
 </script>
 {% endraw %}
+
+<style>
+  .mce-tinymce { border-color: #f2f2f2 !important; }
+  .mce-tinymce .mce-container { border-color: #cfd8dc !important; }
+  textarea[id*='ui-tinymce-'] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  @media (max-width: 640px) {
+    .mce-floatpanel {
+      max-width: 100% !important;
+      overflow-x: scroll;
+    }
+  }
+</style>
