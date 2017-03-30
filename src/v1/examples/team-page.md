@@ -1,7 +1,7 @@
 ---
 title: Team Page
 type: examples
-order: 1
+order: 2
 ---
 
 > A custom team page element.
