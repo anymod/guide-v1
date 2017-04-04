@@ -2,17 +2,29 @@
 <!-- <li><a href="/v1/components/" class="nav-link<%- page.path.match(/components/) ? ' current' : '' %>">Components</a></li> -->
 <li><a href="/v1/api/" class="nav-link<%- page.path.match(/api/) ? ' current' : '' %>">API</a></li>
 <li><a href="/v1/examples/" class="nav-link<%- page.path.match(/examples/) ? ' current' : '' %>">Examples</a></li>
-<li><a href="https://component.io/auth" class="nav-link">Sign Up</a></li>
-<li>
+<li style="margin-right: 0;">
   <form id="search-form">
     <input type="text" id="search-query-<%- context %>" class="search-query st-default-search-input">
   </form>
 </li>
-
-<!--
-<li>Guide coming soon</li>
--->
+<li id="signup-button">
+  <a href="https://component.io/signup"
+    class="button nav-link"
+    style="padding: 8px 22px !important; line-height: 20px; font-weight: bold; border-radius: 5px; border: none;">
+    Sign Up Free
+  </a>
+</li>
 
 <!--
 <%- partial('partials/ecosystem_dropdown') %>
 -->
+
+<script>
+  // TODO hide sign up button if signed in
+  (function () {
+    if (document.cookie && document.cookie.indexOf('cio.signin=') > -1) {
+      var signupButton = document.getElementById('signup-button')
+      if (signupButton) signupButton.style.display = 'none'
+    }
+  })()
+</script>
