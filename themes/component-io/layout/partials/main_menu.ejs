@@ -7,8 +7,10 @@
     <input type="text" id="search-query-<%- context %>" class="search-query st-default-search-input">
   </form>
 </li>
-<li id="signup-button">
+
+<li>
   <a href="https://component.io/signup"
+    id="signup-button"
     class="button nav-link"
     style="padding: 8px 22px !important; line-height: 20px; font-weight: bold; border-radius: 5px; border: none;">
     Sign Up Free
@@ -20,11 +22,14 @@
 -->
 
 <script>
-  // TODO hide sign up button if signed in
+  // Change sign up button to dashboard if signed in
   (function () {
     if (document.cookie && document.cookie.indexOf('cio.signin=') > -1) {
       var signupButton = document.getElementById('signup-button')
-      if (signupButton) signupButton.style.display = 'none'
+      if (signupButton) {
+        signupButton.href = 'https://dashboard.component.io'
+        signupButton.innerHTML = 'Dashboard'
+      }
     }
   })()
 </script>
