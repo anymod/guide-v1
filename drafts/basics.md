@@ -1,6 +1,6 @@
 ---
 title: Basics
-type: guide
+type: draft
 order: 3
 ---
 

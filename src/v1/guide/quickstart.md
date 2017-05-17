@@ -15,19 +15,19 @@ Component IO does **not** support IE8 and below, because it uses ECMAScript 5 fe
 
 ## Hello World
 
-Simply add the basic `hello` component to one of your projects or view the [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).
+Simply add the basic `Hello World!` component to one of your projects or view the [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).
 
 ``` html
-<component text id="hello"></component>
+<component key=ranno></component>
 
 <!-- Component IO script -->
-<script project="PROJECT-ID" src="https://cdn.component.io/v1"></script>
+<script project="component-io-team" src="https://cdn.component.io/v1"></script>
 ```
 This code puts a simple text component on the page:
 
 {% raw %}
 <div class="demo">
-  <component text id="hello"></component>
+  <component key=ranno></component>
 </div>
 {% endraw %}
 
