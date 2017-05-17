@@ -5,8 +5,7 @@ order: 2
 ---
 
 ## What is Component IO?
-<component content id="wjpkw"></component>
-<style>#wjpkw{display:block !important;}</style>
+<component key=wjpkw></component>
 
 <!-- Component IO makes it easy to use all kinds of web components to build websites and applications.  Unlike platforms like Wordpress, Component IO **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, Component IO **does not require any external styling or javascript**.
 
@@ -20,16 +19,25 @@ The goal of the Component IO platform is to provide components that are **simple
 <p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a simple web page working first.  Once you have a web page, you're ready to use Component IO.</p>
 <!-- TODO add a link to a tutorial for getting a basic Component IO template up and running -->
 
-The easiest way to try Component IO is to use our carousel web component example. Open [this link](https://jsfiddle.net/component/jqhv3e1h/) to take a look under the hood of Component IO and see how easy it is to get a component working on your web page.
-
-If you want to try this component in your own project, you can simply create an `.html` file and paste the following code:
+The easiest way to try Component IO is by example. If you want to try a component in your own project, you can simply create an `.html` file and paste the following code:
 
 ``` html
-<component carousel id="demo"></component>
+<component key=dkaal></component>
 
 <!-- Component IO script -->
-<script project="PROJECT-ID" src="https://cdn.component.io/v1"></script>
+<script project="component-io-team" src="https://cdn.component.io/v1"></script>
 ```
+
+This will give you the functional carousel component below. We have just created our very first component! It's as easy as copy & paste to get a component working on your web page.
+
+{% raw %}
+<div class="demo">
+  <component key=dkaal></component>
+</div>
+{% endraw %}
+
+
+You can also open [this link](https://jsfiddle.net/component/jqhv3e1h/) to see the same example in a jsfiddle.
 
 The [Quickstart](quickstart.html) page provides a basic text example using Component IO.
 
@@ -38,17 +46,17 @@ The [Quickstart](quickstart.html) page provides a basic text example using Compo
 At the core of Component IO is a system that enables components to be delivered to any platform.
 
 ``` html
-<component text id="hello"></component>
+<component key=ranno></component>
 ```
 This code puts a simple text component on the page:
 
 {% raw %}
 <div class="demo">
-  <component text id="hello"></component>
+  <component key=ranno></component>
 </div>
 {% endraw %}
 
-We have just created our very first component! This looks pretty similar to just rendering some basic text, but Component IO has done a lot of work under the hood. The text `Hello World!` is not hard-coded. Instead it's coming from the component, and that means it can be edited without touching the code on the page. This is done with an easy-to-use online dashboard.
+This looks pretty similar to just rendering some basic text, but Component IO has done a lot of work under the hood. The text `Hello World!` is not hard-coded. Instead it's coming from the component, and that means it can be edited without touching the code on the page. This is done with an easy-to-use online dashboard.
 
 ## Manage Content
 
@@ -57,7 +65,7 @@ Component IO makes it incredibly easy to manage content remotely through the das
 
 {% raw %}
 <br>
-<component accordion key="dropdown"></component>
+<component key=nkddb></component>
 {% endraw %}
 
 and you want to be able to change its content easily. With Component IO, it's as simple as editing in the dashboard. In this case, the dashboard would look something like
@@ -80,8 +88,8 @@ and you want to be able to change its content easily. With Component IO, it's as
       setDropdownText: function() {
         if (!window.Component) return
         Component.ready(function() {
-          Component("dropdown").items[0].title = dashboard1.title || 'Add a header'
-          Component("dropdown").items[0].body = dashboard1.body || 'Add a body'
+          Component("nkddb").items[0].title = dashboard1.title || ''
+          Component("nkddb").items[0].body = dashboard1.body || ''
         })
       }
     }
@@ -95,9 +103,20 @@ The dashboard makes Component IO excellent for teams that have non-technical mem
 
 ## Adapt on the Fly
 
-Component IO does more than just deliver content. It actually links data from components with the DOM, meaning everything is **reactive**. How do we know? Just open up your browser's developer console and type `Component('hello').text = 'The text has changed'`. You should see the rendered `Hello World!` example above update accordingly.
+Component IO does more than just deliver content. It actually links data from components with the DOM, meaning everything is **reactive**. How do we know? Just try it with this next component.
 
-Similarly, you can get values from a component at any time. Try typing `Component('hello').text` into your developer console to see for yourself.
+``` html
+<component key=orllm></component>
+```
+{% raw %}
+<div class="demo">
+  <component key=orllm></component>
+</div>
+{% endraw %}
+
+Open up your browser's developer console and type `Component('orllm').text = 'Foobar'`. You should see the rendered `Change me in the console` example here update accordingly.
+
+Similarly, you can get values from a component at any time. Try typing `Component('orllm').text` into your developer console to see for yourself.
 
 <!-- ## The Component IO library
 
@@ -141,10 +160,9 @@ Get started creating your own components!
 <script project="component-io-team" src="https://cdn.component.io/v1"></script>
 <script>
   Component.ready(function() {
-    if (!dashboard1 || !Component("dropdown").items) return
-    Component("dropdown").items[0].isOpen = true
-    dashboard1.title = Component("dropdown").items[0].title
-    dashboard1.body = Component("dropdown").items[0].body
+    if (!dashboard1 || !Component("nkddb").items) return
+    dashboard1.title = Component("nkddb").items[0].title
+    dashboard1.body = Component("nkddb").items[0].body
     tinymce.init({
       selector: '#mock-dashboard-textarea',    
       min_height: 80,
