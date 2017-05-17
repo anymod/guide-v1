@@ -8,12 +8,12 @@ order: 1
 
 ### Structure
 ``` html
-<component content id="jId"></component>
+<component key=ranno></component>
 ```
 Is replaced by
 ```html
-<div content content id="jId">
-  <!-- rawHtml -->
+<div component ranno component-reg-020511005 class="c19">
+  <!-- Component contents -->
 </div>
 ```
 
