@@ -5,7 +5,7 @@ order: 2
 ---
 
 ## What is Component IO?
-<component key=wjpkw></component>
+<component key=wjpkw style="font-family: inherit; color: inherit;"></component>
 
 <!-- Component IO makes it easy to use all kinds of web components to build websites and applications.  Unlike platforms like Wordpress, Component IO **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, Component IO **does not require any external styling or javascript**.
 
@@ -28,7 +28,9 @@ The easiest way to try Component IO is by example. If you want to try a componen
 <script project="component-io-team" src="https://cdn.component.io/v1"></script>
 ```
 
-This will give you the functional carousel component below. We have just created our very first component! It's as easy as copy & paste to get a component working on your web page.
+This will give you the functional carousel component below. It's as easy as copy & paste to get a component working on your web page.
+
+We have just created our very first component!
 
 {% raw %}
 <div class="demo">
