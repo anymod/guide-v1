@@ -139,13 +139,13 @@ Components are cached on the server side, which means they get delivered instant
 
 <!-- ## Speed vs CDN -->
 
-## Component Library
+<!-- ## Component Library
 
 The Component IO library is organized into sections based on the type of component:
 
 - [Basic Components](/v1/guide/basics.html) - the basic building blocks of content, like text and images.
 - [Form Components](/v1/guide/form.html) - parts used to build forms, like inputs and check boxes.
-- [Bootstrap Components](/v1/guide/bootstrap.html) - components from the Bootstrap framework.
+- [Bootstrap Components](/v1/guide/bootstrap.html) - components from the Bootstrap framework. -->
 <!-- - [Other Components](/v1/guide/other.html) - components that don't easily fit into other categories. -->
 
 ## Ready for More?
