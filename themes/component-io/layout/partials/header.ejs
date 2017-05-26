@@ -6,3 +6,15 @@
     <%- partial('partials/main_menu', { context: 'nav' }) %>
   </ul>
 </div>
+
+<script>
+  // Change logo link
+  (function () {
+    var isSignedIn = (document.cookie && document.cookie.indexOf('cio.signin=') > -1)
+    ,   isLocal = window.location.href.indexOf('localhost') > -1
+    ,   logoLink = document.getElementById('logo')
+    if (isSignedIn) { logoLink.href = 'https://dashboard.component.io' }
+    if (isLocal && isSignedIn) { logoLink.href = 'http://localhost:4000' }
+    if (isLocal && !isSignedIn) { logoLink.href = 'http://localhost:3000' }
+  })()
+</script>

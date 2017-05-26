@@ -1,7 +1,8 @@
 ---
 title: Contributing
 type: guide
-order: 51
+order: 501
+published: true
 ---
 
 <p class="tip">We will be open sourcing our component library soon. To learn about updates, email us at team[at]component.io and we'll put you on the list.</p>

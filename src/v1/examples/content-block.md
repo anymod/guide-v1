@@ -1,7 +1,8 @@
 ---
 title: Content Block
 type: examples
-order: 1
+order: 101
+published: true
 ---
 
 > With content blocks, you can put content anywhere and it's editable in the Component IO dashboard.

@@ -1,13 +1,22 @@
-<li><a href="/v1/guide/" class="nav-link<%- page.path.match(/guide/) ? ' current' : '' %>">Guide</a></li>
-<!-- <li><a href="/v1/components/" class="nav-link<%- page.path.match(/components/) ? ' current' : '' %>">Components</a></li> -->
-<li><a href="/v1/api/" class="nav-link<%- page.path.match(/api/) ? ' current' : '' %>">API</a></li>
-<li><a href="/v1/examples/" class="nav-link<%- page.path.match(/examples/) ? ' current' : '' %>">Examples</a></li>
+<li id="project-li" style="display: none;">
+  <a id="project-link" href="https://component.io/" class="nav-link">Project</a>
+</li>
+<li>
+  <a id="library-link" href="https://component.io/library" class="nav-link">Library</a>
+</li>
+<li id="pricing-li">
+  <a id="pricing-link" href="https://component.io/pricing" class="nav-link">Pricing</a>
+</li>
+<li>
+  <a href="/v1/introduction/" class="nav-link current">Guide</a>
+</li>
+
 <li style="margin-right: 0;">
   <form id="search-form">
     <input type="text" id="search-query-<%- context %>" class="search-query st-default-search-input">
   </form>
 </li>
-
+<!--
 <li>
   <a href="https://component.io/signup"
     id="signup-button"
@@ -16,20 +25,27 @@
     Sign Up Free
   </a>
 </li>
-
-<!--
-<%- partial('partials/ecosystem_dropdown') %>
 -->
 
 <script>
-  // Change sign up button to dashboard if signed in
+  // Change buttons
   (function () {
-    if (document.cookie && document.cookie.indexOf('cio.signin=') > -1) {
-      var signupButton = document.getElementById('signup-button')
-      if (signupButton) {
-        signupButton.href = 'https://dashboard.component.io'
-        signupButton.innerHTML = 'Dashboard'
-      }
+    var isSignedIn = (document.cookie && document.cookie.indexOf('cio.signin=') > -1)
+    ,   isLocal = window.location.href.indexOf('localhost') > -1
+    ,   projectLi   = document.getElementById('project-li')
+    ,   projectLink = document.getElementById('project-link')
+    ,   libraryLink = document.getElementById('library-link')
+    ,   pricingLi   = document.getElementById('pricing-li')
+    ,   pricingLink = document.getElementById('pricing-link')
+
+    if (isLocal) { projectLink.href = 'http://localhost:4000/' }
+    if (isLocal) { libraryLink.href = 'http://localhost:3000/library' }
+    if (isLocal) { pricingLink.href = 'http://localhost:3000/pricing' }
+
+    if (isSignedIn) {
+      pricingLi.style.display = 'none'
+      projectLi.style.display = 'inline-block'
     }
+
   })()
 </script>

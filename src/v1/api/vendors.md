@@ -1,7 +1,8 @@
 ---
 title: Included libraries
-type: api
-order: 0
+type: guide
+order: 201
+published: true
 ---
 
 ## Vue.js

@@ -1,7 +1,8 @@
 ---
 title: Component API
-type: api
-order: 0
+type: guide
+order: 200
+published: true
 ---
 
 `Component` is a global object that provides access to all of the components on a page. You can interact with it to read and write data in the browser and to hook into component events.

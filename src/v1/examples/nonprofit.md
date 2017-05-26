@@ -1,7 +1,8 @@
 ---
 title: Nonprofit
 type: examples
-order: 3
+order: 103
+published: true
 ---
 
 > Engage donors and link directly to your donation pages.  Edits are simple in the dashboard: add, remove, or update any item easily.

@@ -1,7 +1,8 @@
 ---
 title: Kitchen Sink
 type: examples
-order: 0
+order: 100
+published: true
 ---
 
 > Here are several components all being used together.  Note in the HTML that the &lt;script&gt; tag is only needed once.

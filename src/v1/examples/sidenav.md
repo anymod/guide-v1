@@ -1,7 +1,8 @@
 ---
 title: Sidenav
 type: examples
-order: 6
+order: 106
+published: true
 ---
 
 > This is the side navigation we use at <a href="https://component.io">https://component.io</a>! It's really easy to add new examples to our landing page, because we can just update all the links and titles through the dashboard instead of pushing changes to our code every time.

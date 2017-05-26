@@ -1,7 +1,8 @@
 ---
 title: Carousel (Slideshow)
 type: examples
-order: 5
+order: 105
+published: true
 ---
 
 > This example displays a simple carousel, sometimes called a slideshow or slider. Slide images, content, size, and cycle speed are all editable in the Component IO dashboard.

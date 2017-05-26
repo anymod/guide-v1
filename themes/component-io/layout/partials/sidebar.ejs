@@ -1,66 +1,19 @@
 <div class="sidebar">
-    <ul class="main-menu">
-        <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+  <ul class="main-menu">
+    <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+  </ul>
+  <div class="list">
+    <ul class="menu-root">
+      <% site.pages.find({ published: true }).sort('order').each(function (p) { %>
+        <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+        <% if (p.order === 0) { %><li><h3>Introduction</h3></li><% } %>
+        <% if (p.order === 100) { %><li><h3>Examples</h3></li><% } %>
+        <% if (p.order === 200) { %><li><h3>API</h3></li><% } %>
+        <% if (p.order === 500) { %><li><h3>Community</h3></li><% } %>
+        <li>
+          <a href="/<%- p.path %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+        </li>
+      <% }) %>
     </ul>
-    <div class="list">
-        <!--
-        <div class="main-sponsor">
-            <span>Sponsored By</span><br>
-            <a href="http://www.foobar.io/" target="_blank"
-                style="background-color: #f3f3f3; padding: 10px 0">
-                <img src="/images/tde.png">
-            </a>
-        </div>
-        <a class="become-backer" href="/support-component-io">
-            Become a Backer
-        </a>
-        -->
-        <h2>
-            <%- type === 'api' ? 'API' : (type.charAt(0).toUpperCase() + type.slice(1)) %>
-        </h2>
-        <ul class="menu-root">
-            <% site.pages.find({type: type}).sort('order').each(function (p) { %>
-                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
-                <% if (type === 'guide') { %>
-                    <% if (fileName === 'installation') { %>
-                      <li><h3>Essentials</h3></li>
-                    <% } %>
-                    <% if (fileName === 'reactivity') { %>
-                      <li><h3>Advanced</h3></li>
-                    <% } %>
-                    <% if (fileName === 'migration') { %>
-                      <li><h3>Migrating</h3></li>
-                    <% } %>
-                    <% if (fileName === 'comparison') { %>
-                      <li><h3>Meta</h3></li>
-                    <% } %>
-                    <% if (fileName === 'basics') { %>
-                      <li><h3>Components</h3></li>
-                    <% } %>
-                    <% if (fileName === 'requests') { %>
-                      <li><h3>Community</h3></li>
-                    <% } %>
-                <% } %>
-                <% if (type === 'cookbook') { %>
-                    <% if (p.order === 1.1) { %>
-                      <li><h3>Vue Instance</h3></li>
-                    <% } %>
-                    <!-- Move cookbook sections here once they have -->
-                    <!-- at least one recipe -->
-                <% } %>
-                <li>
-                    <a href="/<%- p.path %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
-                </li>
-            <% }) %>
-            <% if (type === 'cookbook') { %>
-                <li><h3>Components</h3></li>
-                <li><h4>Form Inputs</h4></li>
-                <li><h4>3rd-Party Integrations</h4></li>
-                <li><h3>Transitions</h3></li>
-                <li><h3>Directives</h3></li>
-                <li><h3>Vue Router</h3></li>
-                <li><h3>Vuex</h3></li>
-            <% } %>
-        </ul>
-    </div>
+  </div>
 </div>
