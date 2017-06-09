@@ -1,15 +1,13 @@
 ---
 title: React
 type: usage
-order: 101
+order: 102
 published: true
 ---
 
-> __TL;DR__ use data-key & data-load, and place the Component.render() method in `componentDidMount`
-
 ## Setup
 
-To use components with [React](https://facebook.github.io/react/), add the component via React's `render` and call `Component.render()` when the React component is ready:
+To use components with [React](https://facebook.github.io/react/), add the component tag via React's `render` and call `Component.render()` when the React component has mounted:
 
 ```js
 componentDidMount () {
