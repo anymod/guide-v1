@@ -1,7 +1,7 @@
 ---
 title: Sidenav
 type: examples
-order: 106
+order: 306
 published: true
 ---
 

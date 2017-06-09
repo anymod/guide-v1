@@ -6,7 +6,7 @@ published: true
 ---
 
 ## What is Component IO?
-<component key=wjpkw style="font-family: inherit; color: inherit;"></component>
+<component key=wjpkw></component>
 
 <!-- Component IO makes it easy to use all kinds of web components to build websites and applications.  Unlike platforms like Wordpress, Component IO **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, Component IO **does not require any external styling or javascript**.
 

@@ -13,7 +13,7 @@
     <h1><%- page.title %><%- page.type === 'examples' ? ' Example' : '' %></h1>
   <% } %>
   <%- page.content %>
-  <% if (['introduction','guide', 'examples'].indexOf(page.type) > -1) { %>
+  <% if (['introduction','guide','usage','examples'].indexOf(page.type) > -1) { %>
     <div class="guide-links">
       <% site.pages.find({ type: page.type, order: page.order - 1 }).each(function (page) { %>
         <span>← <a href="<%- url_for(page.path) %>"><%- page.title %></a></span>

@@ -1,7 +1,7 @@
 ---
 title: Kitchen Sink
 type: examples
-order: 100
+order: 300
 published: true
 ---
 
