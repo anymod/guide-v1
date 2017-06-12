@@ -1,5 +1,5 @@
 ---
-title: Angular 1
+title: AngularJS 1
 type: usage
 order: 101
 published: true
@@ -7,9 +7,9 @@ published: true
 
 ## Setup
 
-To use components with [Angular 1](https://angularjs.org/), add the component tag in an Angular template and call `Component.render()` when the template has rendered.
+To use components with [AngularJS v1](https://angularjs.org/), add the component tag in an Angular template and call `Component.render()` to render the components.
 
-One way to do this is by placing the `<component>` in your HTML and then calling `Component.render()` in your controller:
+One way to do this is in your HTML template and your controller:
 
 ```html
 <div ng-controller="myCtrl">
