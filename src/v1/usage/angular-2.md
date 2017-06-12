@@ -17,7 +17,7 @@ To use components with [Angular 2](https://angular.io/), add the component as a 
 export class ComponentDemo {
   ...
   ngOnInit() {
-    window.Component.render(null, { dataComponent: true })
+    window.Component.render({ dataComponent: true })
   }
 }
 ```
@@ -48,7 +48,7 @@ With this approach, you can reference the global Component IO object in your app
 export class ComponentDemo {
   ...
   ngOnInit() {
-    ComponentIO.render(null, { dataComponent: true })
+    ComponentIO.render({ dataComponent: true })
   }
 }
 ```
@@ -77,7 +77,7 @@ You can render multiple components the same way as a single component, and you o
 export class ComponentDemo {
   ...
   ngOnInit() {
-    ComponentIO.render(null, { dataComponent: true })
+    ComponentIO.render({ dataComponent: true })
   }
 }
 ```

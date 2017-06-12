@@ -77,7 +77,7 @@ Multiple functions can be registered with `ready()` and they will all be execute
   })
   ```
 
-## Component.render( _function_ )
+## Component.render( _function, { options }_ )
 
 Renders any `<component>` tags that have not been rendered.
 
@@ -100,6 +100,8 @@ Renders any `<component>` tags that have not been rendered.
 
 The `Component.render()` method runs automatically when the Component IO script loads. However, you may not have all components on the page at that point, so you can call `Component.render()` at any time to render any components that have been added. There are a few scenarios that may happen, and the behavior for each is shown below:
 
+<p class="tip">__TL;DR__ If a component's data has already been fetched, that data will be reused on subsequent renders without making additional API calls.</p>
+
 | Scenario | Behavior |
 |:---------|:---------|
 | No unrendered components | Execute promise or callback, if any. |
@@ -107,7 +109,14 @@ The `Component.render()` method runs automatically when the Component IO script 
 | Previously fetched (but now unrendered) components | Use the existing data from `Component.Store` to render unrendered components, then execute promise or callback, if any. |
 | Mixed components (some previously fetched, some new) | Fetch data with single API call for new components, then add data to `Component.Store`, then use `Component.Store` to render all unrendered components, then execute promise or callback, if any. |
 
-<p class="tip">__TL;DR__ If a component's data has already been fetched, that data will be reused on subsequent renders without making additional API calls.</p>
+- Options
+
+| Property | Type | Default | Description |
+|:---------|:-----|:--------|:------------|
+| dataComponent | `boolean` | `false` | If true, use `<div data-component></div>` pattern instead of `<component></component>` |
+
+> Options can be passed as the first parameter if no callback is needed, e.g. `Component.render({ dataComponent: true })`
+
 
 ## Component.buildImage( _image, { options }_ )
 

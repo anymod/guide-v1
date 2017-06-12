@@ -18,7 +18,7 @@ Calling `Component('_key_')` returns a Vue instance for a given component. The V
 In the dashboard JavaScript editor, you can access the component instance with the `scope` keyword. For example, to add a method to a component, you can enter the following into the JavaScript editor:
 
 ```JS
-scope.methods = {
+component.methods = {
   sayHello: function () {
     console.log('Hello World!')
   }

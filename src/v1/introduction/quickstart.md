@@ -31,8 +31,8 @@ This code puts a simple text component on the page:
 
 To create your own components, sign up and choose components from the Component IO library.
 
-<div id="downloads">
-  <a class="button" href="https://component.io/auth">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
+<div>
+  <a class="button" href="https://component.io">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
 </div>
 
 {% raw %}

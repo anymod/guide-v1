@@ -145,7 +145,7 @@ Components are cached on the server side, which means they get delivered instant
 Get started creating your own components!
 
 <div id="downloads">
-  <a class="button" href="https://component.io/auth">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
+  <a class="button" href="https://component.io">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
 </div>
 
 {% raw %}
