@@ -50,7 +50,7 @@ You can add as many components as you want to a page and you only need to add th
 
 You can use the dashboard to edit both the content of a component and its code.
 
-- __Content__ is the text, images, and attributes that show for a component, like a title or the text of a button. You do not need to know how to code to edit the content; it is
+- __Content__ is the text, images, and attributes that show for a component, like a title or the text of a button. You do not need to know how to code to edit the content.
 
 - __Code__ is the HTML, CSS, and JavaScript that give a component its overall look and behavior.
 

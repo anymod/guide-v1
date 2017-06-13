@@ -1,11 +1,11 @@
 ---
-title: Component API
+title: Global methods
 type: guide
 order: 200
 published: true
 ---
 
-`Component` is a global object that provides access to all of the components on a page. You can interact with it to read and write data in the browser and to hook into component events.
+`Component` is a global JavaScript object that provides access to all of the components on a page along with several useful utility functions. You can interact with it to read and write data, hook into component events, load and render components, and more.
 
 <p class="tip">To use the global `Component` object in your own JavaScript, be sure that the Component IO `<script>` tag is placed in your HTML before (above) your JavaScript so that the Component IO script executes first.</p>
 
@@ -98,18 +98,18 @@ Renders any `<component>` tags that have not been rendered.
   })
   ```
 
-The `Component.render()` method runs automatically when the Component IO script loads. However, you may not have all components on the page at that point, so you can call `Component.render()` at any time to render any components that have been added. There are a few scenarios that may happen, and the behavior for each is shown below:
+The `Component.render()` method runs automatically when the Component IO script loads. However, you may not have all components on the page at that time, so you can call `Component.render()` at any time to render components that have been added since initial page load. There are a few scenarios where this may happen, and the behavior for each is shown below:
 
 <p class="tip">__TL;DR__ If a component's data has already been fetched, that data will be reused on subsequent renders without making additional API calls.</p>
 
 | Scenario | Behavior |
 |:---------|:---------|
 | No unrendered components | Execute promise or callback, if any. |
-| New, unrendered components | Fetch data with single API call for new components, then render unrendered components, then execute promise or callback, if any. |
+| New, unrendered components | Fetch data with single API call for all new components, then render unrendered components, then execute promise or callback, if any. |
 | Previously fetched (but now unrendered) components | Use the existing data from `Component.Store` to render unrendered components, then execute promise or callback, if any. |
 | Mixed components (some previously fetched, some new) | Fetch data with single API call for new components, then add data to `Component.Store`, then use `Component.Store` to render all unrendered components, then execute promise or callback, if any. |
 
-- Options
+- **Options**
 
 | Property | Type | Default | Description |
 |:---------|:-----|:--------|:------------|
@@ -169,86 +169,46 @@ Resizes and crops an `image` based on `options` inputs.
   ```
   <img src="https://res.cloudinary.com/component/image/upload/c_crop,w_150,h_150,g_face/v1495041211/ctrl3kv9nb1gyhhhmcnz.jpg"/>
 
-## Component.Event
+## Component.loadScript( _url, callback, { opts }_ )
 
-Component IO comes with a built-in message bus you can use for communication between components or within your application. It is based on the [event system](https://vuejs.org/v2/api/#Instance-Methods-Events) available to Vue.js components.
-
-### Component.Event.$on( _event, callback_ )
+Loads a script as denoted by `url` and executes an optional `callback` function once the script is loaded.
 
 - **Usage:**
 
-  Listen for a custom event. Events can be triggered by `Component.Event.$emit`. The callback will receive all the additional arguments passed into these event-triggering methods.
-
-- **Example:**
-
-  ```JS
-  Component.Event.$on('test', function (msg) {
-    console.log(msg)
+  ```js
+  Component.loadScript('https://www.google.com/recaptcha/api.js', function () {
+    console.log('reCaptcha script has loaded.')
   })
-  Component.Event.$emit('test', 'hi')
-  // -> "hi"
   ```
 
-### Component.Event.$once( _event, callback_ )
+- **Options**
+
+| Property | Type | Default | Description |
+|:---------|:-----|:--------|:------------|
+| id | `string` | none | Sets the `id` attribute for the `<script>` tag. |
+
+<p class="tip">If a `<script>` tag with the specified `url` or `id` already exists, a new tag will not be added, and the `callback` function will be invoked immediately if present.</p>
+
+
+## Component.loadStylesheet( _url, callback, { opts }_ )
+
+Loads a stylesheet as denoted by `url` and then executes a `callback` function once the script is loaded.
 
 - **Usage:**
 
-  Listen for a custom event, but only once. The listener will be removed once it triggers for the first time.
-
-### Component.Event.$off( _event, callback_ )
-
-- **Usage:**
-
-  Remove custom event listener(s).
-
-  - If no arguments are provided, remove all event listeners;
-  - If only the event is provided, remove all listeners for that event;
-  - If both event and callback are given, remove the listener for that specific callback only.
-
-### Component.Event.$emit( _event, data_ )
-
-- **Usage:**
-
-  Trigger an event. Any additional arguments will be passed into the listener’s callback function.
-
-- **Example:**
-
-  ```JS
-  Component.Event.$on('test', function (data) {
-    console.log(data.foo + data.baz)
+  ```js
+  Component.loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css', function () {
+    console.log('Bulma CSS has loaded.')
   })
-  Component.Event.$emit('test', { foo: 'bar', baz: 'qux' })
-  // -> "barqux"
   ```
 
-### Example in a component
+- **Options**
 
-We've created a component with key `mldrn` that has the following JavaScript code:
+| Property | Type | Default | Description |
+|:---------|:-----|:--------|:------------|
+| id | `string` | none | Sets the `id` attribute for the `<script>` tag. |
 
-```JS
-Component.Event.$on('updateComponent', function(data) {
-  component.data.title = data.title
-  component.data.content = data.content
-})
-```
-
-This code was added via the dashboard code editor, so now the component will respond to the `updateComponent` event by updating its `title` and `content`. Note that there is nothing special about the name `updateComponent` -- the event can be named anything.
-
-Now in our application code we can call `Component.Event.$emit('updateComponent', ...)` and our component will respond accordingly. Below we have a button set to run the following when it is clicked:
-
-```JS
-Component.Event.$emit('updateComponent', {
-  title: 'New title',
-  content: 'New content at ' + new Date().toLocaleTimeString() + '<br><br>'
-})
-```
-
-Thus clicking the button will cause the `updateComponent` event to fire, which is then picked up by our component, and the `title` and `content` are updated:
-
-<iframe width="100%" height="500" src="//jsfiddle.net/component/L1ugm6gn/embedded/result,html,js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-With this approach, you can send events to any component from your application code or from other components.
-
+<p class="tip">If a `<link>` tag with the specified `url` or `id` already exists, a new tag will not be added, and the `callback` function will be invoked immediately if present.</p>
 
 <!-- Component IO script -->
 <script project="component-io-team" src="https://cdn.component.io/v1"></script>

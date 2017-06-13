@@ -6,19 +6,29 @@ published: true
 ---
 
 ## What is Component IO?
-<component key=wjpkw></component>
 
-<!-- Component IO makes it easy to use all kinds of web components to build websites and applications.  Unlike platforms like Wordpress, Component IO **works with every web technology** (including Wordpress), and unlike frameworks like Bootstrap, Component IO **does not require any external styling or javascript**.
+<h4 style="font-size: 20px;">Component IO is a component-based content management system.</h4>
 
-The goal of the Component IO platform is to provide components that are **simple to use** with other libraries or existing projects.  That means Component IO is simple to set up, and is also perfectly capable of powering sophisticated Single-Page Applications. -->
-<!--- when used in combination with [modern tooling](single-file-components.html) and [supporting libraries](https://github.com/vuejs/awesome-vue#libraries--plugins). -->
+The basic idea is simple: add components anywhere on your website, and then edit those components through an online dashboard. You can edit the content and the underlying code for any component without having to make changes to your website's code.
 
-<!-- If you are an experienced frontend developer and want to know how Component IO compares to other libraries/frameworks, check out the [Comparison with Other Frameworks](comparison.html). -->
+Component IO also has a library of ready-to-use website components that you can copy into your project and then customize to your needs.
+
+<h4 style="font-size: 20px;">Component IO is for technical and non-technical users.</h4>
+
+For non-technical users, Component IO has a simple WYSIWYG (what-you-see-is-what-you-get) editor for making changes to text, images, colors, order, and more. No coding skills are needed to use the content editor, and a live preview gives instant feedback.
+
+For technical users, Component IO has a rich API for building and customizing component code as well as binding data, triggering events, rendering components, and more.
+
+<h4 style="font-size: 20px;">Component IO works with every web platform & technology.</h4>
+
+The goal of Component IO is to provide components that are simple to use with other libraries and existing projects, from traditional CMS systems like WordPress to modern frontend libraries like React. That means Component IO is simple to set up and is also perfectly capable of powering sophisticated Single-Page Applications.
+
+If you are an experienced developer and want to know how Component IO works with other frontend libraries/frameworks, you can jump to the following:
+[AngularJS 1](/v1/usage/angular-1.html) - [Angular 2](/v1/usage/angular-2.html) - [React](/v1/usage/react.html) - [Vue.js](/v1/usage/vue.html) - [Bootstrap](/v1/usage/bootstrap.html)
 
 ## Getting Started
 
 <p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a simple web page working first.  Once you have a web page, you're ready to use Component IO.</p>
-<!-- TODO add a link to a tutorial for getting a basic Component IO template up and running -->
 
 The easiest way to try Component IO is by example. If you want to try a component in your own project, you can simply create an `.html` file and paste the following code:
 
