@@ -24,7 +24,7 @@ For technical users, Component IO has a rich API for building and customizing co
 The goal of Component IO is to provide components that are simple to use with other libraries and existing projects, from traditional CMS systems like WordPress to modern frontend libraries like React. That means Component IO is simple to set up and is also perfectly capable of powering sophisticated Single-Page Applications.
 
 If you are an experienced developer and want to know how Component IO works with other frontend libraries/frameworks, you can jump to the following:
-[AngularJS 1](/v1/usage/angular-1.html) - [Angular 2](/v1/usage/angular-2.html) - [React](/v1/usage/react.html) - [Vue.js](/v1/usage/vue.html) - [Bootstrap](/v1/usage/bootstrap.html)
+[AngularJS 1](/v1/usage/angular-1.html) - [Angular 2](/v1/usage/angular-2.html) - [React](/v1/usage/react.html) - [Vue.js](/v1/usage/vue.html) - [Bootstrap](/v1/usage/bootstrap.html) - [Data only](/v1/usage/data.html)
 
 ## Getting Started
 

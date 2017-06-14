@@ -5,7 +5,7 @@ order: 106
 published: true
 ---
 
-You can forego the Component IO script and rendering framework entirely and use Component IO as a data source instead.  To do so, send a `GET` request with the appropriate parameters to the **/data** endpoint.
+You can forego the Component IO script and rendering framework entirely and use the Component IO dashboard as a data source instead. To do so, send a `GET` request with the appropriate parameters to the **/data** endpoint.
 
 There are 2 types of requests:
 
