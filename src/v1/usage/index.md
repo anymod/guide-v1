@@ -1,11 +1,11 @@
 ---
-title: General
+title: General usage
 type: usage
 order: 100
 published: true
 ---
 
-> To use components in your project, copy & paste the install code.
+<p class="tip">To use components in your project, copy & paste the install code.</p>
 
 ## Installing a component
 

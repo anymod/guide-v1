@@ -158,6 +158,13 @@ Get started creating your own components!
   <a class="button" href="https://component.io">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
 </div>
 
+Or learn more about using Component IO:
+
+- [General usage](/v1/usage/index.html)
+- [API](/v1/api/index.html)
+- [Examples](/v1/examples/index.html)
+
+<!-- End scripts: -->
 {% raw %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.5/tinymce.min.js"></script>
 <!-- Component IO script -->
