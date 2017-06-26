@@ -14,7 +14,7 @@
 </ul>
 
 <form id="search-form">
-  <input type="text" id="search-query-nav" class="search-query">
+  <input type="text" id="<%= locals.context == 'sidebar' ? 'search-query-sidebar' : 'search-query-nav' %>" class="search-query">
 </form>
 <!--
 <li>
