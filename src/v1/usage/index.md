@@ -22,7 +22,7 @@ To make your new component show on the page, paste this code into your HTML wher
 <br>
 <component key=ekaob load=b></component>
 
-If you have multiple components on your page, you don't need to paste the `<script>` tag multiple times.  You should include it only once at the bottom of your HTML page, just before the closing `</body>` tag.
+If you have multiple components on your page, you don't need to paste the `<script>` tag multiple times.  Include it only once at the bottom of your HTML page, just before the closing `</body>` tag.
 
 ```html
 <body>

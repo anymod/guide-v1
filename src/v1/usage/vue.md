@@ -22,7 +22,7 @@ new Vue({
   }
 })
 ```
-<p class="tip">Because `key` is a reserved attribute in Vue.js, you should use `data-key` and `data-load` instead.</p>
+<p class="tip">Because `key` is a reserved attribute in Vue.js, use `data-key` and `data-load` instead.</p>
 
 ## Console warning
 

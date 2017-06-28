@@ -17,7 +17,7 @@ render () {
   return <component data-key="mladl" data-load="md-mi"></component>
 }
 ```
-<p class="tip">Because React does not handle "custom" attributes like `key` and `load`, you should use `data-key` and `data-load` instead. React also requires you to use quotation marks (`"`) for attributes.</p>
+<p class="tip">Because React does not handle "custom" attributes like `key` and `load`, use `data-key` and `data-load` instead. React also requires you to use quotation marks (`"`) for attributes.</p>
 
 You can use `Component.render()` by itself or with a callback or promise. See the section on [Component.render](/v1/api/index.html#Component-render-function) for more.
 

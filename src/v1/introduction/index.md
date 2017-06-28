@@ -7,24 +7,24 @@ published: true
 
 ## What is Component IO?
 
-<h4 style="font-size: 20px;">Component IO has website components you can manage online.</h4>
+<h4 style="font-size: 20px;">Building blocks that will make your web development simpler.</h4>
 
-The basic idea is simple: add components anywhere on your website, and then edit those components through an online dashboard. You can edit the content and the underlying code for any component without having to make changes to your website's code.
+Component IO lets you add content and functionality to your website and make live changes with an online dashboard. You can edit your content and the underlying code for any component on your site without having to change or redeploy your website's code. This workflow is simple & robust, and it makes managing your website easier.
 
-Component IO has a library of ready-to-use website components that you can copy into your project and customize to your needs. You can also build your own components from scratch.
+Component IO also has a library of ready-to-use website components that you can copy into your project with one click and customize to your needs. If you want even more customization, you can build components entirely from scratch and still manage them online.
 
-<h4 style="font-size: 20px;">Component IO is for technical and non-technical users.</h4>
+<h4 style="font-size: 20px;">Tools for technical and non-technical users.</h4>
 
-For non-technical users, Component IO has a simple WYSIWYG (what-you-see-is-what-you-get) editor for making changes to text, images, colors, ordering, and more. No coding skills are needed to use the content editor, and a live preview gives instant feedback.
+For non-technical users, Component IO has a simple WYSIWYG (what-you-see-is-what-you-get) editor for making changes to text, images, colors, order, and more. No coding skills are needed to use the content editor, and a live preview gives instant feedback.
 
-For technical users, Component IO has a rich API for building and customizing component code as well as binding data, triggering events, rendering components, and more.
+For technical users, Component IO is simple to set up and has a well-documented API for building and customizing component HTML, CSS, and JavaScript, as well as for binding data, triggering events, rendering content, and more.
 
-<h4 style="font-size: 20px;">Component IO works with every web platform & technology.</h4>
+<h4 style="font-size: 20px;">Works with every platform & technology.</h4>
 
-The goal of Component IO is to provide components that are simple to use with other libraries and existing projects, from traditional CMS systems like WordPress to modern frontend libraries like React. That means Component IO is simple to set up and is also perfectly capable of powering sophisticated Single-Page Applications.
+Component IO was built with other libraries and existing projects in mind, from traditional CMS systems like WordPress to modern frontend libraries like React. That means Component IO is easy to set up on any platform and is also perfectly capable of powering sophisticated Single-Page Applications.
 
-If you are an experienced developer and want to know how Component IO works with other frontend libraries/frameworks, you can jump to the following:
-[AngularJS 1](/v1/usage/angular-1.html) - [Angular 2](/v1/usage/angular-2.html) - [React](/v1/usage/react.html) - [Vue.js](/v1/usage/vue.html) - [Bootstrap](/v1/usage/bootstrap.html) - [Data only](/v1/usage/data.html)
+If you are an experienced developer and want to know how Component IO works with other frontend libraries & frameworks, you can jump to the following:
+[AngularJS 1](/v1/usage/angular-1.html) - [Angular 2+](/v1/usage/angular-2.html) - [React](/v1/usage/react.html) - [Vue.js](/v1/usage/vue.html) - [Bootstrap](/v1/usage/bootstrap.html) - [JSON (data only)](/v1/usage/data.html)
 
 ## Getting Started
 
@@ -110,7 +110,7 @@ and you want to be able to change its content easily. With Component IO, it's as
 </script>
 {% endraw %}
 
-Try editing the content with the form. You should see it change in the dropdown above the form. This is what it's like editing in the dashboard: **updated content is automatically reflected on your site**.
+Try editing the content with the form, and notice how it changes the text in the dropdown above the form. This is what it's like editing in the dashboard: **updated content is automatically reflected on your site**.
 
 The dashboard makes Component IO excellent for teams that have non-technical members and for advanced developers who want to focus on other parts of the codebase. It also means you can handle edits from your phone while sitting next to a pool, which is a nice side effect.
 

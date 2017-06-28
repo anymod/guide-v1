@@ -22,7 +22,7 @@ export class ComponentDemo {
 }
 ```
 
-<p class="tip">Because Angular 2 does not allow external "custom" elements like `component`, you should use `data-component` as an attribute instead.</p>
+<p class="tip">Because Angular 2 does not allow external "custom" elements like `component`, use `data-component` as an attribute instead.</p>
 
 You can use `Component.render()` by itself or with a callback or promise. See the section on [Component.render](/v1/api/index.html#Component-render-function) for more.
 

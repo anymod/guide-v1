@@ -7,7 +7,7 @@ published: true
 
 ## Setup
 
-To use components with [Bootstrap 3](http://getbootstrap.com/) or [Bootstrap 4](https://v4-alpha.getbootstrap.com/), add `<component>` tags where desired, and the script should load your component(s) automatically:
+To use components with [Bootstrap 3](http://getbootstrap.com/) or [Bootstrap 4](https://v4-alpha.getbootstrap.com/), add `<component>` tags where desired, and the script will load your component(s) automatically:
 
 ```html
 <component key=nkdnb load=md></component>
