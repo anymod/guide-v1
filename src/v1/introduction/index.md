@@ -7,15 +7,15 @@ published: true
 
 ## What is Component IO?
 
-<h4 style="font-size: 20px;">Component IO is a component-based content management system.</h4>
+<h4 style="font-size: 20px;">Component IO has website components you can manage online.</h4>
 
 The basic idea is simple: add components anywhere on your website, and then edit those components through an online dashboard. You can edit the content and the underlying code for any component without having to make changes to your website's code.
 
-Component IO also has a library of ready-to-use website components that you can copy into your project and then customize to your needs.
+Component IO has a library of ready-to-use website components that you can copy into your project and customize to your needs. You can also build your own components from scratch.
 
 <h4 style="font-size: 20px;">Component IO is for technical and non-technical users.</h4>
 
-For non-technical users, Component IO has a simple WYSIWYG (what-you-see-is-what-you-get) editor for making changes to text, images, colors, order, and more. No coding skills are needed to use the content editor, and a live preview gives instant feedback.
+For non-technical users, Component IO has a simple WYSIWYG (what-you-see-is-what-you-get) editor for making changes to text, images, colors, ordering, and more. No coding skills are needed to use the content editor, and a live preview gives instant feedback.
 
 For technical users, Component IO has a rich API for building and customizing component code as well as binding data, triggering events, rendering components, and more.
 
