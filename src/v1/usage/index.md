@@ -56,7 +56,7 @@ You can use the dashboard to edit both the content of a component and its code.
 
 ### Edit content
 
-To edit content, log into your project at https://dashboard.component.io and use the search bar or browse to find the component you want to edit. Click the button marked `Edit`, and you will see a screen like the following:
+To edit content, log into your project at https://component.io and use the search bar or browse to find the component you want to edit. Click the button marked `Edit`, and you will see a screen like the following:
 
 <img id="edit-example" src="https://res.cloudinary.com/component/image/upload/v1496964722/guide-edit-example.png"/>
 
@@ -66,7 +66,7 @@ Changes you make in the dashboard are live and are immediately used wherever the
 
 ### Edit code
 
-To edit code, log into your project at https://dashboard.component.io and use the search bar or browse to find the component you want to edit. Click the button marked `Code`, and you will see a screen like the following:
+To edit code, log into your project at https://component.io and use the search bar or browse to find the component you want to edit. Click the button marked `Code`, and you will see a screen like the following:
 
 <img id="code-example" src="https://res.cloudinary.com/component/image/upload/v1496966022/guide-code-example.png"/>
 
