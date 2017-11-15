@@ -27,7 +27,7 @@ You can use `Component.render()` by itself or with a callback or promise. See th
 
 ## Rendering multiple components
 
-You can render multiple components the same way as a single component. However, React does require that its internal `render` function returns a single element. So to render multiple Component IO components in a single React component, you can wrap them in a common element such as a `<div>`, like so:
+You can render multiple components the same way as a single component. However, React does require that its internal `render` function returns a single element. So to render multiple Anymod components in a single React component, you can wrap them in a common element such as a `<div>`, like so:
 
 ```js
 render () {

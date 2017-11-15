@@ -151,7 +151,7 @@ Unlike the key and load attributes above, the project attribute sometimes starts
 
 ### The defaults attribute (optional)
 
-By default, the Component IO script delivers Bootstrap CSS for styling components. If you want to turn off this behavior, you can include `defaults="false"` on your script tag, like so:
+By default, the Anymod script delivers Bootstrap CSS for styling components. If you want to turn off this behavior, you can include `defaults="false"` on your script tag, like so:
 
 ```html
 <script project="876MN8" defaults="false" src="https://cdn.component.io/v1"></script>

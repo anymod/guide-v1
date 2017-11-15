@@ -34,7 +34,7 @@ background: red;
 color: white;
 ```
 
-Component IO will generate CSS that applies only to that component:
+Anymod will generate CSS that applies only to that component:
 
 ```css
 [elkoo] {

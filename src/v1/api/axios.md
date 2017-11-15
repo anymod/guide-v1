@@ -5,7 +5,7 @@ order: 207
 published: true
 ---
 
-Component IO uses [Axios](https://github.com/mzabriskie/axios), a small, promise-based HTTP client, to make AJAX requests for things like sending back form data.
+Anymod uses [Axios](https://github.com/mzabriskie/axios), a small, promise-based HTTP client, to make AJAX requests for things like sending back form data.
 
 ## Using Axios to make a request
 
@@ -43,4 +43,4 @@ You can read more about the Axios API [here](https://github.com/mzabriskie/axios
 
 ## Accessing the Axios library
 
-If you want to use Axios alongside Component IO, you don't need to include both (though you can). The Component IO script automatically includes Axios, available globally as `Component.axios`.
+If you want to use Axios alongside Anymod, you don't need to include both (though you can). The Anymod script automatically includes Axios, available globally as `Component.axios`.

@@ -28,7 +28,7 @@ You can use `Component.render()` by itself or with a callback or promise. See th
 
 ## Namespacing
 
-Because Angular 2 uses the word `Component` internally, you may want to namespace the global Component IO object rather than reference it with `window.Component` as shown above. To do this, you can load the Component IO script and namespace it before your Angular scripts:
+Because Angular 2 uses the word `Component` internally, you may want to namespace the global Anymod object rather than reference it with `window.Component` as shown above. To do this, you can load the Anymod script and namespace it before your Angular scripts:
 
 ```html
 <script project="cio-library" src="https://cdn.component.io/v1"></script>
@@ -38,7 +38,7 @@ Because Angular 2 uses the word `Component` internally, you may want to namespac
 <!-- ... -->
 ```
 
-With this approach, you can reference the global Component IO object in your application as `ComponentIO`:
+With this approach, you can reference the global Anymod object in your application as `ComponentIO`:
 
 ```ts
 @Component({

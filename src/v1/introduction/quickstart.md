@@ -7,7 +7,7 @@ published: true
 
 ### Compatibility Note
 
-Component IO does **not** support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all [ECMAScript 5 compliant browsers](http://caniuse.com/#feat=es5).
+Anymod does **not** support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all [ECMAScript 5 compliant browsers](http://caniuse.com/#feat=es5).
 
 ## Hello World
 
@@ -16,7 +16,7 @@ Simply add the basic `Hello World!` component to one of your projects or view th
 ``` html
 <component key=ranno></component>
 
-<!-- Component IO script -->
+<!-- Anymod script -->
 <script project="component-io-team" src="https://cdn.component.io/v1"></script>
 ```
 This code puts a simple text component on the page:
@@ -29,13 +29,13 @@ This code puts a simple text component on the page:
 
 ## Create your own
 
-To create your own components, sign up and choose components from the Component IO library.
+To create your own components, sign up and choose components from the Anymod library.
 
 <div>
   <a class="button" href="https://component.io">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
 </div>
 
 {% raw %}
-<!-- Component IO script -->
+<!-- Anymod script -->
 <script project="component-io-team" src="https://cdn.component.io/v1"></script>
 {% endraw %}

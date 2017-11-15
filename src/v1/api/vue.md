@@ -5,7 +5,7 @@ order: 206
 published: true
 ---
 
-Component IO is built on top of [Vue.js version 2](https://vuejs.org), a lightweight JavaScript framework for building components. That means that any methods available in a Vue.js instance are available in all components on Component IO.
+Anymod is built on top of [Vue.js version 2](https://vuejs.org), a lightweight JavaScript framework for building components. That means that any methods available in a Vue.js instance are available in all components on Anymod.
 
 ## Accessing a component instance
 
@@ -36,7 +36,7 @@ In the HTML portion of the component editor, you could call that method whenever
 
 ## Accessing the Vue library
 
-If you want to use Vue.js alongside Component IO, you don't need to include both (though you can). The Component IO script automatically includes Vue.js, available globally as `Component.Vue`.
+If you want to use Vue.js alongside Anymod, you don't need to include both (though you can). The Anymod script automatically includes Vue.js, available globally as `Component.Vue`.
 
 For example, you could create a new Vue instance like so:
 

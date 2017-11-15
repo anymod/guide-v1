@@ -5,7 +5,7 @@ order: 205
 published: true
 ---
 
-Component IO comes with a built-in message bus you can use for communication between components or within your application. It is based on the [event system](https://vuejs.org/v2/api/#Instance-Methods-Events) available to Vue.js components.
+Anymod comes with a built-in message bus you can use for communication between components or within your application. It is based on the [event system](https://vuejs.org/v2/api/#Instance-Methods-Events) available to Vue.js components.
 
 ## $on( _event, callback_ )
 
@@ -86,5 +86,5 @@ Thus clicking the button will cause the `updateComponent` event to fire, which i
 With this approach, you can send events to any component from your application code or from other components.
 
 
-<!-- Component IO script -->
+<!-- Anymod script -->
 <script project="component-io-team" src="https://cdn.component.io/v1"></script>

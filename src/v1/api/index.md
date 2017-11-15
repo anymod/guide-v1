@@ -7,7 +7,7 @@ published: true
 
 `Component` is a global JavaScript object that provides access to all of the components on a page along with several useful utility functions. You can interact with it to read and write data, hook into component events, load and render components, and more.
 
-<p class="tip">To use the global `Component` object in your own JavaScript, be sure that the Component IO `<script>` tag is placed in your HTML before (above) your JavaScript so that the Component IO script executes first.</p>
+<p class="tip">To use the global `Component` object in your own JavaScript, be sure that the Anymod `<script>` tag is placed in your HTML before (above) your JavaScript so that the Anymod script executes first.</p>
 
 ## Component( _key_ )
 
@@ -98,7 +98,7 @@ Renders any `<component>` tags that have not been rendered.
   })
   ```
 
-The `Component.render()` method runs automatically when the Component IO script loads. However, you may not have all components on the page at that time, so you can call `Component.render()` at any time to render components that have been added since initial page load. There are a few scenarios where this may happen, and the behavior for each is shown below:
+The `Component.render()` method runs automatically when the Anymod script loads. However, you may not have all components on the page at that time, so you can call `Component.render()` at any time to render components that have been added since initial page load. There are a few scenarios where this may happen, and the behavior for each is shown below:
 
 <p class="tip">__TL;DR__ If a component's data has already been fetched, that data will be reused on subsequent renders without making additional API calls.</p>
 
@@ -125,12 +125,12 @@ Resizes and crops an `image` based on `options` inputs.
 - **Usage:**
 
   ``` html
-  <!-- Inside of Component IO editor HTML panel -->
+  <!-- Inside of Anymod editor HTML panel -->
   <img :src="buildImage(image, options)" />
   ```
 
   ``` js
-  // Inside of Component IO editor JavaScript panel
+  // Inside of Anymod editor JavaScript panel
   Component.buildImage(image, options)
   ```
 
@@ -210,5 +210,5 @@ Loads a stylesheet as denoted by `url` and then executes a `callback` function o
 
 <p class="tip">If a `<link>` tag with the specified `url` or `id` already exists, a new tag will not be added, and the `callback` function will be invoked immediately if present.</p>
 
-<!-- Component IO script -->
+<!-- Anymod script -->
 <script project="component-io-team" src="https://cdn.component.io/v1"></script>
