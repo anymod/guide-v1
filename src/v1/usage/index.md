@@ -14,7 +14,7 @@ When you add a component to your project, you are directed to a page with the in
 ```html
 <component key=ekaob load=b></component>
 <!-- Paste script once per page at the bottom -->
-<script project="cio-library" src="https://cdn.component.io/v1"></script>
+<script project="cio-library" src="https://cdn.anymod.com/v1"></script>
 ```
 
 To make your new component show on the page, paste this code into your HTML where you would like the component to show. For example, we've pasted the same code here, and it delivers the component:
@@ -32,7 +32,7 @@ If you have multiple components on your page, you don't need to paste the `<scri
   ...
 
   <!-- Paste script once per page at the bottom -->
-  <script project="cio-library" src="https://cdn.component.io/v1"></script>
+  <script project="cio-library" src="https://cdn.anymod.com/v1"></script>
 </body>
 ```
 
@@ -56,7 +56,7 @@ You can use the dashboard to edit both the content of a component and its code.
 
 ### Edit content
 
-To edit content, log into your project at https://component.io and use the search bar or browse to find the component you want to edit. Click the button marked `Edit`, and you will see a screen like the following:
+To edit content, log into your project at https://anymod.com and use the search bar or browse to find the component you want to edit. Click the button marked `Edit`, and you will see a screen like the following:
 
 <img id="edit-example" src="https://res.cloudinary.com/component/image/upload/v1496964722/guide-edit-example.png"/>
 
@@ -66,7 +66,7 @@ Changes you make in the dashboard are live and are immediately used wherever the
 
 ### Edit code
 
-To edit code, log into your project at https://component.io and use the search bar or browse to find the component you want to edit. Click the button marked `Code`, and you will see a screen like the following:
+To edit code, log into your project at https://anymod.com and use the search bar or browse to find the component you want to edit. Click the button marked `Code`, and you will see a screen like the following:
 
 <img id="code-example" src="https://res.cloudinary.com/component/image/upload/v1496966022/guide-code-example.png"/>
 
@@ -86,7 +86,7 @@ Looking again at the install code for a component, we can see it has several att
 ```html
 <component key=ekaob load=b></component>
 <!-- Paste script once per page at the bottom -->
-<script project="cio-library" src="https://cdn.component.io/v1"></script>
+<script project="cio-library" src="https://cdn.anymod.com/v1"></script>
 ```
 
 ### The key attribute (optional)
@@ -154,7 +154,7 @@ Unlike the key and load attributes above, the project attribute sometimes starts
 By default, the Anymod script delivers Bootstrap CSS for styling components. If you want to turn off this behavior, you can include `defaults="false"` on your script tag, like so:
 
 ```html
-<script project="876MN8" defaults="false" src="https://cdn.component.io/v1"></script>
+<script project="876MN8" defaults="false" src="https://cdn.anymod.com/v1"></script>
 ```
 
 <style>
@@ -170,4 +170,4 @@ By default, the Anymod script delivers Bootstrap CSS for styling components. If 
 </style>
 
 <!-- Paste script once per page at the bottom -->
-<script project="cio-library" src="https://cdn.component.io/v1"></script>
+<script project="cio-library" src="https://cdn.anymod.com/v1"></script>

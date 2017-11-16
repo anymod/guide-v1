@@ -1,5 +1,5 @@
 ---
-title: Component HTML
+title: Anymod HTML
 type: guide
 order: 201
 published: true

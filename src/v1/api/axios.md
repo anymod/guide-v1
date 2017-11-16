@@ -1,5 +1,5 @@
 ---
-title: Component.axios
+title: Anymod.axios
 type: guide
 order: 207
 published: true
@@ -9,11 +9,11 @@ Anymod uses [Axios](https://github.com/mzabriskie/axios), a small, promise-based
 
 ## Using Axios to make a request
 
-You can make a request with Axios by calling `Component.axios` to access the underlying Axios instance. For example, to make a request to save data to your component, you could do something like the following:
+You can make a request with Axios by calling `Anymod.axios` to access the underlying Axios instance. For example, to make a request to save data to your component, you could do something like the following:
 
 ```JS
-Component.axios.post(Component.ApiUrl + 'posts', {
-  project: Component.Project,
+Anymod.axios.post(Anymod.ApiUrl + 'posts', {
+  project: Anymod.Project,
   component: this.componentKey,
   data: {
     email: this.email
@@ -30,7 +30,7 @@ Component.axios.post(Component.ApiUrl + 'posts', {
 Or for a simple GET request:
 
 ```JS
-Component.axios.get('https://guide.component.io')
+Anymod.axios.get('https://guide.anymod.com')
 .then(function (response) {
   console.log(response)
 })
@@ -43,4 +43,4 @@ You can read more about the Axios API [here](https://github.com/mzabriskie/axios
 
 ## Accessing the Axios library
 
-If you want to use Axios alongside Anymod, you don't need to include both (though you can). The Anymod script automatically includes Axios, available globally as `Component.axios`.
+If you want to use Axios alongside Anymod, you don't need to include both (though you can). The Anymod script automatically includes Axios, available globally as `Anymod.axios`.

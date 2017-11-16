@@ -7,7 +7,7 @@ published: true
 
 ## Setup
 
-To use components with [Vue.js](https://vuejs.org/), add the component tag with `data-key` and `data-load` and call `Component.render()` when the Vue instance has mounted:
+To use components with [Vue.js](https://vuejs.org/), add the component tag with `data-key` and `data-load` and call `Anymod.render()` when the Vue instance has mounted:
 
 ```html
 <div id="demo">
@@ -18,7 +18,7 @@ To use components with [Vue.js](https://vuejs.org/), add the component tag with 
 new Vue({
   el: '#demo',
   mounted: function () {
-    Component.render()
+    Anymod.render()
   }
 })
 ```
@@ -34,13 +34,13 @@ The above example will work; however, Vue.js will log a warning to the console a
 </div>
 ```
 
-When using this approach, specify that `Component.render` should use `data-component`:
+When using this approach, specify that `Anymod.render` should use `data-component`:
 
 ```js
 new Vue({
   el: '#demo',
   mounted: function () {
-    Component.render({ dataComponent: true })
+    Anymod.render({ dataComponent: true })
   }
 })
 ```
@@ -62,7 +62,7 @@ Vue.component('component', {
 new Vue({
   el: '#demo',
   mounted: function () {
-    Component.render({ dataComponent: true })
+    Anymod.render({ dataComponent: true })
   }
 })
 ```
@@ -90,13 +90,13 @@ Vue.component('component', {
 new Vue({
   el: '#demo',
   mounted: function () {
-    Component.render({ dataComponent: true })
+    Anymod.render({ dataComponent: true })
   }
 })
 ```
 
 ## Re-rendering
 
-You can call `Component.render()` as often as you'd like in your Vue.js application (or elsewhere). This method will not lead to an API call every time; if a component has already been fetched once, `Component.render()` will use that data instead of making another API call.
+You can call `Anymod.render()` as often as you'd like in your Vue.js application (or elsewhere). This method will not lead to an API call every time; if a component has already been fetched once, `Anymod.render()` will use that data instead of making another API call.
 
-See the section on [Component.render](/v1/api/index.html#Component-render-function) for more.
+See the section on [Anymod.render](/v1/api/index.html#Component-render-function) for more.

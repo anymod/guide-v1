@@ -1,5 +1,5 @@
 ---
-title: Component.Event
+title: Anymod.Event
 type: guide
 order: 205
 published: true
@@ -11,16 +11,16 @@ Anymod comes with a built-in message bus you can use for communication between c
 
 - **Usage:**
 
-  Listen for a custom event. Events can be triggered by `Component.Event.$emit`. The callback will receive all the additional arguments passed into these event-triggering methods.
+  Listen for a custom event. Events can be triggered by `Anymod.Event.$emit`. The callback will receive all the additional arguments passed into these event-triggering methods.
 
 - **Example:**
 
   ```JS
-  Component.Event.$on('test', function (msg) {
+  Anymod.Event.$on('test', function (msg) {
     console.log(msg)
   })
 
-  Component.Event.$emit('test', 'hi')
+  Anymod.Event.$emit('test', 'hi')
   // -> "hi"
   ```
 
@@ -49,11 +49,11 @@ Anymod comes with a built-in message bus you can use for communication between c
 - **Example:**
 
   ```JS
-  Component.Event.$on('test', function (data) {
+  Anymod.Event.$on('test', function (data) {
     console.log(data.foo + data.baz)
   })
 
-  Component.Event.$emit('test', { foo: 'bar', baz: 'qux' })
+  Anymod.Event.$emit('test', { foo: 'bar', baz: 'qux' })
   // -> "barqux"
   ```
 
@@ -62,7 +62,7 @@ Anymod comes with a built-in message bus you can use for communication between c
 We've created a component with key `mldrn` that has the following JavaScript code:
 
 ```JS
-Component.Event.$on('updateComponent', function(data) {
+Anymod.Event.$on('updateComponent', function(data) {
   component.data.title = data.title
   component.data.content = data.content
 })
@@ -70,10 +70,10 @@ Component.Event.$on('updateComponent', function(data) {
 
 This code was added via the dashboard code editor, so now the component will respond to the `updateComponent` event by updating its `title` and `content`. Note that there is nothing special about the name `updateComponent` -- the event can be named anything.
 
-Now in our application code we can call `Component.Event.$emit('updateComponent', ...)` and our component will respond accordingly. Below we have a button set to run the following when it is clicked:
+Now in our application code we can call `Anymod.Event.$emit('updateComponent', ...)` and our component will respond accordingly. Below we have a button set to run the following when it is clicked:
 
 ```JS
-Component.Event.$emit('updateComponent', {
+Anymod.Event.$emit('updateComponent', {
   title: 'New title',
   content: 'New content at ' + new Date().toLocaleTimeString() + '<br><br>'
 })
@@ -87,4 +87,4 @@ With this approach, you can send events to any component from your application c
 
 
 <!-- Anymod script -->
-<script project="component-io-team" src="https://cdn.component.io/v1"></script>
+<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>

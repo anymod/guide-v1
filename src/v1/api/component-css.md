@@ -1,5 +1,5 @@
 ---
-title: Component CSS
+title: Anymod CSS
 type: guide
 order: 202
 published: true
@@ -23,7 +23,7 @@ gets processed in the DOM as
 
 ```html
 <div component elkoo ...>
-  <!-- Component HTML -->
+  <!-- Section HTML -->
 </div>
 ```
 

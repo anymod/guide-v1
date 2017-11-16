@@ -20,7 +20,7 @@ Request data for a single component from your project.
 
 - **Route**
 
-  `GET` https://<span></span>api.component.io/v0/data/{ **projectId** }/component/{ **key** }
+  `GET` https://<span></span>api.anymod.com/v0/data/{ **projectId** }/component/{ **key** }
 
 - **Returns**
 
@@ -30,7 +30,7 @@ Request data for a single component from your project.
 
 For component `key=errba` in `project="cio-library"`
 
-`GET` https://api.component.io/v0/data/cio-library/component/errba
+`GET` https://api.anymod.com/v0/data/cio-library/component/errba
 
 ```json
 {
@@ -48,7 +48,7 @@ Request data for one or more components from your project.
 
 - **Route**
 
-  `GET` https://<span></span>api.component.io/v0/data/{ **projectId** }/components/{ **key1,key2,key3** }
+  `GET` https://<span></span>api.anymod.com/v0/data/{ **projectId** }/components/{ **key1,key2,key3** }
   _*Note the "s" at the end of components_
 
   Here, the keys for each component are separated by a comma (no space).
@@ -61,7 +61,7 @@ Request data for one or more components from your project.
 
 - **Example**
 
-`GET` https://api.component.io/v0/data/cio-library/components/errba,elarm
+`GET` https://api.anymod.com/v0/data/cio-library/components/errba,elarm
 
 ```json
 [
@@ -88,7 +88,7 @@ Request data for one or more components from your project.
 
   In this example, we have duplicated the `elarm` component, and the `foobar` component does not exist:
 
-  `GET` https://api.component.io/v0/data/cio-library/components/elarm,foobar,elarm
+  `GET` https://api.anymod.com/v0/data/cio-library/components/elarm,foobar,elarm
 
   ```json
   [

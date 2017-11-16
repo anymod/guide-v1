@@ -5,13 +5,13 @@ order: 200
 published: true
 ---
 
-`Component` is a global JavaScript object that provides access to all of the components on a page along with several useful utility functions. You can interact with it to read and write data, hook into component events, load and render components, and more.
+`Anymod` is a global JavaScript object that provides access to all of the components on a page along with several useful utility functions. You can interact with it to read and write data, hook into component events, load and render components, and more.
 
-<p class="tip">To use the global `Component` object in your own JavaScript, be sure that the Anymod `<script>` tag is placed in your HTML before (above) your JavaScript so that the Anymod script executes first.</p>
+<p class="tip">To use the global `Anymod` object in your own JavaScript, be sure that the Anymod `<script>` tag is placed in your HTML before (above) your JavaScript so that the Anymod script executes first.</p>
 
-## Component( _key_ )
+## Anymod( _key_ )
 
-All components are built using the underlying API for [vue.js](https://vuejs.org). Calling `Component('_key_')`, where `_key_` is the key of the component, will give a handle to the Vue instance for that component.
+All components are built using the underlying API for [vue.js](https://vuejs.org). Calling `Anymod('_key_')`, where `_key_` is the key of the component, will give a handle to the Vue instance for that component.
 
 For example, the component below renders the text `Hello World!`
 
@@ -24,35 +24,35 @@ For example, the component below renders the text `Hello World!`
 </div>
 {% endraw %}
 
-In this case, `Component('ranno')` gives access to the component. This type of access is the basis for interacting with components programmatically.
+In this case, `Anymod('ranno')` gives access to the component. This type of access is the basis for interacting with components programmatically.
 
-## Component( _key_ ).attr
+## Anymod( _key_ ).attr
 
 A getter method that returns a value held by a component.
 
 - **Usage:**
 
   ``` js
-  Component('ranno').text
+  Anymod('ranno').text
   // -> "Hello World!"
   ```
 
 The properties available to get vary by component.
 
-## Component( _key_ ).attr =
+## Anymod( _key_ ).attr =
 
 A setter method that sets a component property locally. Does not save the value for future page loads.
 
 - **Usage:**
 
   ``` js
-  Component('ranno').text = 'New text'
+  Anymod('ranno').text = 'New text'
   // -> "New text"
   ```
 
 The properties available to set vary by component.
 
-## Component.ready( _function_ )
+## Anymod.ready( _function_ )
 
 Executes a function once all components have been loaded.
 
@@ -61,44 +61,44 @@ Multiple functions can be registered with `ready()` and they will all be execute
 - **Usage with callback:**
 
   ``` js
-  Component.ready(function () {
-    console.log('Components are ready (callback)')
-    Component('ranno').text = 'New text'
+  Anymod.ready(function () {
+    console.log('Anymod is ready (callback)')
+    Anymod('ranno').text = 'New text'
   })
   ```
 
 - **Usage with promise:**
 
   ``` js
-  Component.ready()
+  Anymod.ready()
   .then(function () {
-    console.log('Components are ready (promise)')
-    Component('ranno').text = 'New text'
+    console.log('Anymod is ready (promise)')
+    Anymod('ranno').text = 'New text'
   })
   ```
 
-## Component.render( _function, { options }_ )
+## Anymod.render( _function, { options }_ )
 
 Renders any `<component>` tags that have not been rendered.
 
 - **Usage with callback:**
 
   ``` js
-  Component.render(function () {
-    console.log('Components were rendered (callback)')
+  Anymod.render(function () {
+    console.log('Anymod rendered (callback)')
   })
   ```
 
 - **Usage with promise:**
 
   ``` js
-  Component.render()
+  Anymod.render()
   .then(function () {
-    console.log('Components were rendered (promise)')
+    console.log('Anymod rendered (promise)')
   })
   ```
 
-The `Component.render()` method runs automatically when the Anymod script loads. However, you may not have all components on the page at that time, so you can call `Component.render()` at any time to render components that have been added since initial page load. There are a few scenarios where this may happen, and the behavior for each is shown below:
+The `Anymod.render()` method runs automatically when the Anymod script loads. However, you may not have all components on the page at that time, so you can call `Anymod.render()` at any time to render components that have been added since initial page load. There are a few scenarios where this may happen, and the behavior for each is shown below:
 
 <p class="tip">__TL;DR__ If a component's data has already been fetched, that data will be reused on subsequent renders without making additional API calls.</p>
 
@@ -106,8 +106,8 @@ The `Component.render()` method runs automatically when the Anymod script loads.
 |:---------|:---------|
 | No unrendered components | Execute promise or callback, if any. |
 | New, unrendered components | Fetch data with single API call for all new components, then render unrendered components, then execute promise or callback, if any. |
-| Previously fetched (but now unrendered) components | Use the existing data from `Component.Store` to render unrendered components, then execute promise or callback, if any. |
-| Mixed components (some previously fetched, some new) | Fetch data with single API call for new components, then add data to `Component.Store`, then use `Component.Store` to render all unrendered components, then execute promise or callback, if any. |
+| Previously fetched (but now unrendered) components | Use the existing data from `Anymod.Store` to render unrendered components, then execute promise or callback, if any. |
+| Mixed components (some previously fetched, some new) | Fetch data with single API call for new components, then add data to `Anymod.Store`, then use `Anymod.Store` to render all unrendered components, then execute promise or callback, if any. |
 
 - **Options**
 
@@ -115,10 +115,10 @@ The `Component.render()` method runs automatically when the Anymod script loads.
 |:---------|:-----|:--------|:------------|
 | dataComponent | `boolean` | `false` | If true, use `<div data-component></div>` pattern instead of `<component></component>` |
 
-> Options can be passed as the first parameter if no callback is needed, e.g. `Component.render({ dataComponent: true })`
+> Options can be passed as the first parameter if no callback is needed, e.g. `Anymod.render({ dataComponent: true })`
 
 
-## Component.buildImage( _image, { options }_ )
+## Anymod.buildImage( _image, { options }_ )
 
 Resizes and crops an `image` based on `options` inputs.
 
@@ -131,7 +131,7 @@ Resizes and crops an `image` based on `options` inputs.
 
   ``` js
   // Inside of Anymod editor JavaScript panel
-  Component.buildImage(image, options)
+  Anymod.buildImage(image, options)
   ```
 
 | Option | Type | Default | Description |
@@ -154,7 +154,7 @@ Resizes and crops an `image` based on `options` inputs.
   ```
   OR
   ```js
-  var newImage = Component.buildImage(component.data.image, { w: 400, h: 150, c: 'fill' })
+  var newImage = Anymod.buildImage(component.data.image, { w: 400, h: 150, c: 'fill' })
   ```
   <img src="https://res.cloudinary.com/component/image/upload/c_fill,w_400,h_150/v1495041211/ctrl3kv9nb1gyhhhmcnz.jpg"/>
 
@@ -165,18 +165,18 @@ Resizes and crops an `image` based on `options` inputs.
   ```
   OR
   ```js
-  var newImage = Component.buildImage(component.data.image, { w: 150, h: 150, c: 'crop', g: 'face' })
+  var newImage = Anymod.buildImage(component.data.image, { w: 150, h: 150, c: 'crop', g: 'face' })
   ```
   <img src="https://res.cloudinary.com/component/image/upload/c_crop,w_150,h_150,g_face/v1495041211/ctrl3kv9nb1gyhhhmcnz.jpg"/>
 
-## Component.loadScript( _url, callback, { opts }_ )
+## Anymod.loadScript( _url, callback, { opts }_ )
 
 Loads a script as denoted by `url` and executes an optional `callback` function once the script is loaded.
 
 - **Usage:**
 
   ```js
-  Component.loadScript('https://www.google.com/recaptcha/api.js', function () {
+  Anymod.loadScript('https://www.google.com/recaptcha/api.js', function () {
     console.log('reCaptcha script has loaded.')
   })
   ```
@@ -190,14 +190,14 @@ Loads a script as denoted by `url` and executes an optional `callback` function 
 <p class="tip">If a `<script>` tag with the specified `url` or `id` already exists, a new tag will not be added, and the `callback` function will be invoked immediately if present.</p>
 
 
-## Component.loadStylesheet( _url, callback, { opts }_ )
+## Anymod.loadStylesheet( _url, callback, { opts }_ )
 
 Loads a stylesheet as denoted by `url` and then executes a `callback` function once the script is loaded.
 
 - **Usage:**
 
   ```js
-  Component.loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css', function () {
+  Anymod.loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css', function () {
     console.log('Bulma CSS has loaded.')
   })
   ```
@@ -211,4 +211,4 @@ Loads a stylesheet as denoted by `url` and then executes a `callback` function o
 <p class="tip">If a `<link>` tag with the specified `url` or `id` already exists, a new tag will not be added, and the `callback` function will be invoked immediately if present.</p>
 
 <!-- Anymod script -->
-<script project="component-io-team" src="https://cdn.component.io/v1"></script>
+<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>

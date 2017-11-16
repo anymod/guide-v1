@@ -7,7 +7,7 @@ published: true
 
 ## Setup
 
-To use components with [AngularJS v1](https://angularjs.org/), add the component tag in an Angular template and call `Component.render()` to render the components.
+To use components with [AngularJS v1](https://angularjs.org/), add the component tag in an Angular template and call `Anymod.render()` to render the components.
 
 One way to do this is in your HTML template and your controller:
 
@@ -18,7 +18,7 @@ One way to do this is in your HTML template and your controller:
 ```
 ```js
 angular.module('myApp').controller('myCtrl', [function () {
-  Component.render()
+  Anymod.render()
 }])
 ```
 
@@ -34,7 +34,7 @@ angular.module('myApp').directive('demo', [function () {
   return {
     template: '<component key=mladl load=md-mi></component>',
     link: function (scope, ele, attrs) {
-      Component.render()
+      Anymod.render()
     }
   }
 }])
@@ -42,7 +42,7 @@ angular.module('myApp').directive('demo', [function () {
 
 Either way works equally well, so you can use whichever method you prefer.
 
-You can use `Component.render()` by itself or with a callback or promise. See the section on [Component.render](/v1/api/index.html#Component-render-function) for more.
+You can use `Anymod.render()` by itself or with a callback or promise. See the section on [Anymod.render](/v1/api/index.html#Component-render-function) for more.
 
 ## Example
 
@@ -52,7 +52,7 @@ The following example shows 2 components being rendered: 1 with the controller a
 
 ## Rendering multiple components
 
-You can render multiple components the same way as a single component, and you only need to call `Component.render()` once:
+You can render multiple components the same way as a single component, and you only need to call `Anymod.render()` once:
 
 ```html
 <div ng-controller="myCtrl">
@@ -62,12 +62,12 @@ You can render multiple components the same way as a single component, and you o
 ```
 ```js
 angular.module('myApp').controller('myCtrl', [function () {
-  Component.render()
+  Anymod.render()
 }])
 ```
 
 ## Re-rendering
 
-You can call `Component.render()` as often as you'd like in your Angular code (or elsewhere). This method will not lead to an API call every time; if a component has already been fetched once, `Component.render()` will use that data instead of making another API call.
+You can call `Anymod.render()` as often as you'd like in your Angular code (or elsewhere). This method will not lead to an API call every time; if a component has already been fetched once, `Anymod.render()` will use that data instead of making another API call.
 
-See the section on [Component.render](/v1/api/index.html#Component-render-function) for more.
+See the section on [Anymod.render](/v1/api/index.html#Component-render-function) for more.

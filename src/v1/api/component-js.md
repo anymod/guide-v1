@@ -1,5 +1,5 @@
 ---
-title: Component JavaScript
+title: Anymod JavaScript
 type: guide
 order: 203
 published: true
@@ -75,7 +75,7 @@ If `message` is defined as "Hello World!" in the Content Editor, it will render 
 <p>Hello World!</p>
 <p>!dlroW olleH</p>
 ```
-If `message` is changed after render (for example, by `Component(_key_).message = 'Foobar')`, the value for `reversedMessage` will also update.
+If `message` is changed after render (for example, by `Anymod(_key_).message = 'Foobar')`, the value for `reversedMessage` will also update.
 
 See Vue.js [Computed Properties](https://vuejs.org/v2/guide/computed.html#Computed-Properties) for more
 
@@ -117,7 +117,7 @@ component.methods = {
       return
     }
     component.data.answer = 'Thinking...'
-    Component.axios.get('https://yesno.wtf/api')
+    Anymod.axios.get('https://yesno.wtf/api')
     .then(function (response) {
       component.data.answer = response.data.answer
     })

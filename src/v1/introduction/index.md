@@ -36,7 +36,7 @@ The easiest way to try Anymod is by example. If you want to try a component in y
 <component key=dkaal></component>
 
 <!-- Anymod script -->
-<script project="component-io-team" src="https://cdn.component.io/v1"></script>
+<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>
 ```
 
 This will give you the functional carousel component below. It's as easy as copy & paste to get a component working on your web page.
@@ -99,10 +99,10 @@ and you want to be able to change its content easily. With Anymod, it's as simpl
     data: { title: '', body: '' },
     methods: {
       setDropdownText: function() {
-        if (!window.Component) return
-        Component.ready(function() {
-          Component("nkddb").items[0].title = dashboard1.title || ''
-          Component("nkddb").items[0].body = dashboard1.body || ''
+        if (!window.Anymod) return
+        Anymod.ready(function() {
+          Anymod("nkddb").items[0].title = dashboard1.title || ''
+          Anymod("nkddb").items[0].body = dashboard1.body || ''
         })
       }
     }
@@ -127,9 +127,9 @@ Anymod does more than just deliver content. It actually links data from componen
 </div>
 {% endraw %}
 
-Open up your browser's developer console and type `Component('orllm').text = 'Foobar'`. You should see the rendered `Change me in the console` example here update accordingly.
+Open up your browser's developer console and type `Anymod('orllm').text = 'Foobar'`. You should see the rendered `Change me in the console` example here update accordingly.
 
-Similarly, you can get values from a component at any time. Try typing `Component('orllm').text` into your developer console to see for yourself.
+Similarly, you can get values from a component at any time. Try typing `Anymod('orllm').text` into your developer console to see for yourself.
 
 <!-- ## The Anymod library
 
@@ -155,7 +155,7 @@ Components are cached on the server side, which means they get delivered instant
 Get started creating your own components!
 
 <div id="downloads">
-  <a class="button" href="https://component.io">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
+  <a class="button" href="https://anymod.com">Sign up</a><span class="light info">Once logged in, you can create your own components</span>
 </div>
 
 Or learn more about using Anymod:
@@ -168,12 +168,12 @@ Or learn more about using Anymod:
 {% raw %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.5/tinymce.min.js"></script>
 <!-- Anymod script -->
-<script project="component-io-team" src="https://cdn.component.io/v1"></script>
+<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>
 <script>
-  Component.ready(function() {
-    if (!dashboard1 || !Component("nkddb").items) return
-    dashboard1.title = Component("nkddb").items[0].title
-    dashboard1.body = Component("nkddb").items[0].body
+  Anymod.ready(function() {
+    if (!dashboard1 || !Anymod("nkddb").items) return
+    dashboard1.title = Anymod("nkddb").items[0].title
+    dashboard1.body = Anymod("nkddb").items[0].body
     tinymce.init({
       selector: '#mock-dashboard-textarea',    
       min_height: 80,
