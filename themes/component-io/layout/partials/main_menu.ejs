@@ -1,16 +1,16 @@
 <ul id="nav">
-  <li id="project-li" style="display: none;">
-    <a id="project-link" href="https://component.io/" class="nav-link">Project</a>
-  </li>
-  <li>
-    <a id="library-link" href="https://component.io/library" class="nav-link">Library</a>
+  <!-- <li id="project-li" style="display: none;">
+    <a id="project-link" href="https://anymod.com/" class="nav-link">Project</a>
+  </li> -->
+  <!-- <li>
+    <a id="library-link" href="https://anymod.com/library" class="nav-link">Library</a>
   </li>
   <li id="pricing-li">
-    <a id="pricing-link" href="https://component.io/pricing" class="nav-link">Pricing</a>
-  </li>
-  <li>
+    <a id="pricing-link" href="https://anymod.com/pricing" class="nav-link">Pricing</a>
+  </li> -->
+  <!-- <li>
     <a id="guide-link" href="/v1/introduction/" class="nav-link current">Guide</a>
-  </li>
+  </li> -->
 </ul>
 
 <form id="search-form">
@@ -18,7 +18,7 @@
 </form>
 <!--
 <li>
-  <a href="https://component.io/signup"
+  <a href="https://anymod.com/signup"
     id="signup-button"
     class="button nav-link"
     style="padding: 8px 22px !important; line-height: 20px; font-weight: bold; border-radius: 5px; border: none;">
@@ -29,23 +29,23 @@
 
 <script>
   // Change buttons
-  (function () {
-    var isSignedIn = (document.cookie && document.cookie.indexOf('cio.signin=') > -1)
-    ,   isLocal = window.location.href.indexOf('localhost') > -1
-    ,   projectLi   = document.getElementById('project-li')
-    ,   projectLink = document.getElementById('project-link')
-    ,   libraryLink = document.getElementById('library-link')
-    ,   pricingLi   = document.getElementById('pricing-li')
-    ,   pricingLink = document.getElementById('pricing-link')
+  // (function () {
+  //   var isSignedIn = (document.cookie && document.cookie.indexOf('cio.signin=') > -1)
+  //   ,   isLocal = window.location.href.indexOf('localhost') > -1
+  //   ,   projectLi   = document.getElementById('project-li')
+  //   ,   projectLink = document.getElementById('project-link')
+  //   ,   libraryLink = document.getElementById('library-link')
+  //   ,   pricingLi   = document.getElementById('pricing-li')
+  //   ,   pricingLink = document.getElementById('pricing-link')
 
-    if (isLocal) { projectLink.href = 'http://localhost:3000/projects' }
-    if (isLocal) { libraryLink.href = 'http://localhost:3000/library' }
-    if (isLocal) { pricingLink.href = 'http://localhost:3000/pricing' }
+  //   if (isLocal) { projectLink.href = 'http://localhost:3000/projects' }
+  //   if (isLocal) { libraryLink.href = 'http://localhost:3000/library' }
+  //   if (isLocal) { pricingLink.href = 'http://localhost:3000/pricing' }
 
-    if (isSignedIn) {
-      pricingLi.style.display = 'none'
-      projectLi.style.display = 'inline-block'
-    }
+  //   if (isSignedIn) {
+  //     pricingLi.style.display = 'none'
+  //     projectLi.style.display = 'inline-block'
+  //   }
 
-  })()
+  // })()
 </script>
