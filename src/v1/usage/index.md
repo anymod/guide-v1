@@ -14,7 +14,7 @@ When you add a component to your project, you are directed to a page with the in
 ```html
 <component key=ekaob load=b></component>
 <!-- Paste script once per page at the bottom -->
-<script project="cio-library" src="https://cdn.anymod.com/v1"></script>
+<script project="anm-library" src="https://cdn.anymod.com/v1"></script>
 ```
 
 To make your new component show on the page, paste this code into your HTML where you would like the component to show. For example, we've pasted the same code here, and it delivers the component:
@@ -32,7 +32,7 @@ If you have multiple components on your page, you don't need to paste the `<scri
   ...
 
   <!-- Paste script once per page at the bottom -->
-  <script project="cio-library" src="https://cdn.anymod.com/v1"></script>
+  <script project="anm-library" src="https://cdn.anymod.com/v1"></script>
 </body>
 ```
 
@@ -86,7 +86,7 @@ Looking again at the install code for a component, we can see it has several att
 ```html
 <component key=ekaob load=b></component>
 <!-- Paste script once per page at the bottom -->
-<script project="cio-library" src="https://cdn.anymod.com/v1"></script>
+<script project="anm-library" src="https://cdn.anymod.com/v1"></script>
 ```
 
 ### The key attribute (optional)
@@ -170,4 +170,4 @@ By default, the Anymod script delivers Bootstrap CSS for styling components. If 
 </style>
 
 <!-- Paste script once per page at the bottom -->
-<script project="cio-library" src="https://cdn.anymod.com/v1"></script>
+<script project="anm-library" src="https://cdn.anymod.com/v1"></script>

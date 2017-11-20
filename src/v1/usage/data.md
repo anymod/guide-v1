@@ -28,14 +28,14 @@ Request data for a single component from your project.
 
 - **Example**
 
-For component `key=errba` in `project="cio-library"`
+For component `key=errba` in `project="anm-library"`
 
-`GET` https://api.anymod.com/v0/data/cio-library/component/errba
+`GET` https://api.anymod.com/v0/data/anm-library/component/errba
 
 ```json
 {
   "key": "errba",
-  "project": "cio-library",
+  "project": "anm-library",
   "data": {
     "content": "<h2>Lorem ipsum dolor sit amet</h2>\n<p>Consectetur adipiscing elit. Duis accumsan elementum vehicula. Praesent semper libero eu sapien imperdiet, quis sollicitudin erat maximus. Mauris semper consequat bibendum. Vestibulum eget vehicula justo. Vivamus id urna at libero tincidunt varius et sed ante. Sed tincidunt odio non urna ultricies lacinia. Nullam consequat leo eu diam maximus rutrum ac a sapien. Integer eget enim id tortor suscipit faucibus vel at urna. Sed luctus eget diam in facilisis...</p>"
   }
@@ -61,20 +61,20 @@ Request data for one or more components from your project.
 
 - **Example**
 
-`GET` https://api.anymod.com/v0/data/cio-library/components/errba,elarm
+`GET` https://api.anymod.com/v0/data/anm-library/components/errba,elarm
 
 ```json
 [
   {
     "key": "errba",
-    "project": "cio-library",
+    "project": "anm-library",
     "data": {
       "content": "<h2>Lorem ipsum dolor sit amet</h2>\n<p>Consectetur adipiscing elit. Duis accumsan elementum vehicula. Praesent semper libero eu sapien imperdiet, quis sollicitudin erat maximus. Mauris semper consequat bibendum. Vestibulum eget vehicula justo. Vivamus id urna at libero tincidunt varius et sed ante. Sed tincidunt odio non urna ultricies lacinia. Nullam consequat leo eu diam maximus rutrum ac a sapien. Integer eget enim id tortor suscipit faucibus vel at urna. Sed luctus eget diam in facilisis...</p>"
     }
   },
   {
     "key": "elarm",
-    "project": "cio-library",
+    "project": "anm-library",
     "data": {
       "image": "https://res.cloudinary.com/component/image/upload/v1493739852/c0y1myh38wdbxunuyeef.png"
     }
@@ -88,26 +88,26 @@ Request data for one or more components from your project.
 
   In this example, we have duplicated the `elarm` component, and the `foobar` component does not exist:
 
-  `GET` https://api.anymod.com/v0/data/cio-library/components/elarm,foobar,elarm
+  `GET` https://api.anymod.com/v0/data/anm-library/components/elarm,foobar,elarm
 
   ```json
   [
     {
       "key": "elarm",
-      "project": "cio-library",
+      "project": "anm-library",
       "data": {
         "image": "https://res.cloudinary.com/component/image/upload/v1493739852/c0y1myh38wdbxunuyeef.png"
       }
     },
     {
       "key": "foobar",
-      "project": "cio-library",
+      "project": "anm-library",
       "data": {},
       "notFound": true
     },
     {
       "key": "elarm",
-      "project": "cio-library",
+      "project": "anm-library",
       "data": {
         "image": "https://res.cloudinary.com/component/image/upload/v1493739852/c0y1myh38wdbxunuyeef.png"
       }
