@@ -211,4 +211,4 @@ Loads a stylesheet as denoted by `url` and then executes a `callback` function o
 <p class="tip">If a `<link>` tag with the specified `url` or `id` already exists, a new tag will not be added, and the `callback` function will be invoked immediately if present.</p>
 
 <!-- Anymod script -->
-<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>
+<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>

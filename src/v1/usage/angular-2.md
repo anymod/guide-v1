@@ -31,7 +31,7 @@ You can use `Anymod.render()` by itself or with a callback or promise. See the s
 Because Angular 2 uses the word `Component` internally, you may want to namespace the global Anymod object rather than reference it with `window.Anymod` as shown above. To do this, you can load the Anymod script and namespace it before your Angular scripts:
 
 ``html
-<script project="anm-library" src="https://cdn.anymod.com/v1"></script>
+<script project="cio-library" src="https://cdn.anymod.com/v1"></script>
 <script>Anymod = Component</script>
 ``
 

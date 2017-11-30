@@ -87,4 +87,4 @@ With this approach, you can send events to any component from your application c
 
 
 <!-- Anymod script -->
-<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>
+<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>

@@ -17,7 +17,7 @@ Simply add the basic `Hello World!` component to one of your projects or view th
 <component key=ranno></component>
 
 <!-- Anymod script -->
-<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>
+<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>
 ```
 This code puts a simple text component on the page:
 
@@ -37,5 +37,5 @@ To create your own components, sign up and choose components from the Anymod lib
 
 {% raw %}
 <!-- Anymod script -->
-<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>
+<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>
 {% endraw %}

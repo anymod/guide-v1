@@ -36,7 +36,7 @@ The easiest way to try Anymod is by example. If you want to try a component in y
 <component key=dkaal></component>
 
 <!-- Anymod script -->
-<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>
+<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>
 ```
 
 This will give you the functional carousel component below. It's as easy as copy & paste to get a component working on your web page.
@@ -168,7 +168,7 @@ Or learn more about using Anymod:
 {% raw %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.5/tinymce.min.js"></script>
 <!-- Anymod script -->
-<script project="anymod-team" src="https://cdn.anymod.com/v1"></script>
+<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>
 <script>
   Anymod.ready(function() {
     if (!dashboard1 || !Anymod("nkddb").items) return
