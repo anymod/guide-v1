@@ -5,6 +5,6 @@ order: 50
 published: true
 ---
 
-<component key=ldnoo></component>
+<section id=anymod-ldnoo></section>
 
 <script project="8PP6M2" src="https://cdn.anymod.com/v1"></script>

@@ -7,21 +7,21 @@ published: true
 
 ## Setup
 
-To use components with [Bootstrap 3](http://getbootstrap.com/) or [Bootstrap 4](https://v4-alpha.getbootstrap.com/), add `<component>` tags where desired, and the script will load your component(s) automatically:
+To use sections with [Bootstrap 3](http://getbootstrap.com/) or [Bootstrap 4](https://v4-alpha.getbootstrap.com/), add Anymod where desired, and the Anymod script will load your section(s) automatically:
 
 ```html
-<component key=nkdnb load=md></component>
+<section id=anymod-nkdnb data-load=md></section>
 ```
 
 ## Example
 
 Contact, signup, or message forms can be a nice addition to modals:
 
-<iframe width="100%" height="450" src="https://jsfiddle.net/component/Lmrou1f8/embedded/html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jsfiddle.net/component/jyrb82as/embedded/html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## On-the-fly manipulation
 
-In the event that you're manipulating HTML on the fly, you can use `Anymod.render()` to render any components you've added since the initial page load. For example, if we want to render modal content dynamically:
+In the event that you're manipulating HTML on the fly, you can use `Anymod.render()` to render any sections you've added since the initial page load. For example, if we want to render modal content dynamically:
 
 ```html
 <div id="myBtn" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-key="nkdnb" data-load="md">
@@ -37,8 +37,8 @@ $(document).ready(function () {
     var load = button.data('load')
     var modal = $(this)
     modal
-    	.find('.modal-body')
-      .html('<component key=' + key + ' load=' + load + '></component>')
+      .find('.modal-body')
+      .html('<section id=anymod-' + key + ' data-load=' + load + '></section>')
     Anymod.render()
   })
 })
@@ -46,12 +46,12 @@ $(document).ready(function () {
 
 ## On-the-fly example
 
-The example below works the same as the prior example, but this example uses `Anymod.render` to render the component after its HTML is added by the modal initialization:
+The example below works the same as the prior example, but this example uses `Anymod.render` to render the section after its HTML is added by the modal initialization:
 
-<iframe width="100%" height="450" src="https://jsfiddle.net/component/devLohgo/embedded/html,js,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="450" src="https://jsfiddle.net/component/31u2qy30/embedded/html,js,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## Re-rendering
 
-You can call `Anymod.render()` as often as you'd like in your code. This method will not lead to an API call every time; if a component has already been fetched once, `Anymod.render()` will use that data instead of making another API call.
+You can call `Anymod.render()` as often as you'd like in your code. This method will not lead to an API call every time; if a section has already been fetched once, `Anymod.render()` will use that data instead of making another API call.
 
-See the section on [Anymod.render](/v1/api/index.html#Component-render-function) for more.
+See the section on [Anymod.render](/v1/api/index.html#Anymod-render-function-options) for more.

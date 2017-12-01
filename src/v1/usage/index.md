@@ -5,29 +5,29 @@ order: 100
 published: true
 ---
 
-<p class="tip">To use components in your project, copy & paste the install code.</p>
+<p class="tip">To use sections in your project, copy & paste the install code.</p>
 
-## Installing a component
+## Installing a section
 
-When you add a component to your project, you are directed to a page with the install code for the component you've just added. It will look something like this:
+When you add a section to your project, you are directed to a page with the install code for the section you've just added. It will look something like this:
 
 ```html
-<component key=ekaob load=b></component>
+<section id=anymod-ekaob data-load=b></section>
 <!-- Paste script once per page at the bottom -->
 <script project="cio-library" src="https://cdn.anymod.com/v1"></script>
 ```
 
-To make your new component show on the page, paste this code into your HTML where you would like the component to show. For example, we've pasted the same code here, and it delivers the component:
+To make your new section show on the page, paste this code into your HTML where you would like the section to show. For example, we've pasted the same code here, and it delivers the section:
 
 <br>
-<component key=ekaob load=b></component>
+<section id=anymod-ekaob data-load=b></section>
 
-If you have multiple components on your page, you don't need to paste the `<script>` tag multiple times.  Include it only once at the bottom of your HTML page, just before the closing `</body>` tag.
+If you have multiple sections on your page, you don't need to paste the `<script>` tag multiple times.  Include it only once at the bottom of your HTML page, just before the closing `</body>` tag.
 
 ```html
 <body>
-  <component key=ekaob load=b></component>
-  <component key=aldlk load=md></component>
+  <section id=anymod-ekaob data-load=b></section>
+  <section id=anymod-aldlk data-load=md></section>
 
   ...
 
@@ -36,37 +36,37 @@ If you have multiple components on your page, you don't need to paste the `<scri
 </body>
 ```
 
-The above code delivers both components:
+The above code delivers both sections:
 
 <br>
-<component key=ekaob load=b></component>
-<component key=aldlk load=md></component>
+<section id=anymod-ekaob data-load=b></section>
+<section id=anymod-aldlk data-load=md></section>
 
-You can add as many components as you want to a page and you only need to add the `<script>` tag once. It's also not a problem to add the same component multiple times.
+You can add as many sections as you want to a page and you only need to add the `<script>` tag once. It's also not a problem to add the same section multiple times.
 
-<p class="tip">Add as many components as you want to a page. All components are delivered together in a single request, so delivery of 10 components is just as fast as delivery of 1 component.</p>
+<p class="tip">Add as many sections as you want to a page. All sections are delivered together in a single request, so delivery of 10 sections is just as fast as delivery of 1 section.</p>
 
-## Editing a component
+## Editing a section
 
-You can use the dashboard to edit both the content of a component and its code.
+You can use the dashboard to edit both the content of a section and its code.
 
-- __Content__ is the text, images, and attributes that show for a component, like a title or the text of a button. You do not need to know how to code to edit the content.
+- __Content__ is the text, images, and attributes that show for a section, like a title or the text of a button. You do not need to know how to code to edit the content.
 
-- __Code__ is the HTML, CSS, and JavaScript that give a component its overall look and behavior.
+- __Code__ is the HTML, CSS, and JavaScript that give a section its overall look and behavior.
 
 ### Edit content
 
-To edit content, log into your project at https://anymod.com and use the search bar or browse to find the component you want to edit. Click the button marked `Edit`, and you will see a screen like the following:
+To edit content, log into your project at https://anymod.com and use the search bar or browse to find the section you want to edit. Click the button marked `Edit`, and you will see a screen like the following:
 
 <img id="edit-example" src="https://res.cloudinary.com/component/image/upload/v1496964722/guide-edit-example.png"/>
 
-The left side of the page allows you to edit your content, and the right side of the page is a live preview of your component. Click a field on the left side to change it, and click `Save` when you are finished. The preview on the right side of the page will update.
+The left side of the page allows you to edit your content, and the right side of the page is a live preview of your section. Click a field on the left side to change it, and click `Save` when you are finished. The preview on the right side of the page will update.
 
-Changes you make in the dashboard are live and are immediately used wherever the component is delivered.
+Changes you make in the dashboard are live and are immediately used wherever the section is delivered.
 
 ### Edit code
 
-To edit code, log into your project at https://anymod.com and use the search bar or browse to find the component you want to edit. Click the button marked `Code`, and you will see a screen like the following:
+To edit code, log into your project at https://anymod.com and use the search bar or browse to find the section you want to edit. Click the button marked `Code`, and you will see a screen like the following:
 
 <img id="code-example" src="https://res.cloudinary.com/component/image/upload/v1496966022/guide-code-example.png"/>
 
@@ -77,39 +77,37 @@ The page is divided into four quadrants:
 - Bottom-left is for __JavaScript__
 - Bottom-right is a __Live preview__
 
-Each time you make edits, you can click the `Save` button or press `ctrl+s` (or `command+s` on mac) to save your changes. Changes you make in the dashboard are live and are immediately used wherever the component is delivered.
+Each time you make edits, you can click the `Save` button or press `ctrl+s` (or `command+s` on mac) to save your changes. Changes you make in the dashboard are live and are immediately used wherever the section is delivered.
 
-## Component attributes
+## Section attributes
 
-Looking again at the install code for a component, we can see it has several attributes:
+Looking again at the install code for a section, we can see it has several attributes:
 
 ```html
-<component key=ekaob load=b></component>
+<section id=anymod-ekaob data-load=b></section>
 <!-- Paste script once per page at the bottom -->
 <script project="cio-library" src="https://cdn.anymod.com/v1"></script>
 ```
 
-### The key attribute (optional)
+### The id attribute
 
 ```html
-<component key=ekaob ...></component>
+<section id=anymod-ekaob ...></section>
 ```
 
-The key attribute identifies the component so that it can be delivered to the page. Following HTML convention, you can use this attribute with or without quotes (in this example, `key=ekaob` or `key="ekaob"`), as both will work.
+The id attribute identifies the section so that it can be delivered to the page. Following HTML convention, you can use this attribute with or without quotes (in this example, `id=anymod-ekaob` or `id="anymod-ekaob"`), as both will work.
 
-You may also omit the key if you have added a __Page__ in your dashboard with components on it. If you omit the key attribute, components will be delivered according to the order on your __Page__ in the dashboard.
+You may also use `id=anymod-blank` if you have added a __URL rule__ in your dashboard with sections in it. If you use `anymod-blank`, sections will be delivered according to the order in your __URL rule__ in the dashboard.
 
-<p class="tip">If you are using a system that does not handle custom attributes (e.g. React), you can use `data-key` instead of `key`.</p>
+Each section has a unique key.
 
-Each component has a unique key.
-
-### The load attribute (optional)
+### The data-load attribute (optional)
 
 ```html
-<component ... load=md-mi></component>
+<section ... data-load=md-mi></section>
 ```
 
-The load attribute determines which external stylesheets the script will load, which include:
+The `data-load` attribute determines which external stylesheets the script will load. These include:
 
 |  |  |  |
 |:- |:- |:-|
@@ -118,26 +116,26 @@ The load attribute determines which external stylesheets the script will load, w
 | __fa__ | Font Awesome Icons | <a href="http://fontawesome.io/icons/" target=_blank><i class="fa fa-external-link"></i></a> |
 | __mi__ | Material Design Icons | <a href="https://material.io/icons/" target=_blank><i class="fa fa-external-link"></i></a> |
 
-For example, including `load=md-mi` with a component will cause the script to load the Material Design CSS and Material Design Icons. Even if multiple components include the same load attributes, those resources will only be loaded once.
+For example, including `data-load=md-mi` with a section will cause the script to load the Material Design CSS and Material Design Icons. Even if multiple sections include the same load attributes, those resources will only be loaded once.
 
-Load attributes are populated automatically based on the dropdown settings in the CSS code editor in the dashboard, so if you use the dropdown to edit your external CSS, be sure to update your component tag(s) accordingly.
+Load attributes are populated automatically based on the dropdown settings in the CSS code editor in the dashboard, so if you use the dropdown to edit your external CSS, be sure to update your section tag(s) accordingly.
 
-<p class="tip">If you are using a system that does not handle custom attributes (e.g. React), you can use `data-load` instead of `load`.</p>
+### Other section attributes
 
-### Other component attributes
+Any attributes you place on a section (such as `class`, `style`, `data-toggle`, etc) will be kept during the render process.
 
-Any attributes you place on a component (such as `id`, `class`, `style`, `data-toggle`, etc) will be kept during the render process.
-
-For example, if you add `style="color:green;"` to a component like so:
+For example, if you add `style="color:green;"` to a section like so:
 
 ```html
-<component key=ekaob style="color:green;"></component>
+<section id=anymod-ekaob style="color:green;"></section>
 ```
 
-That style will be kept and applied to the component.
+That style will be kept and applied to the section.
 
 <br>
-<component key=ekaob style="color:green;"></component>
+<section id=anymod-ekaob style="color:green;"></section>
+
+## Script attributes
 
 ### The project attribute (required)
 
@@ -145,13 +143,13 @@ That style will be kept and applied to the component.
 <script project="876MN8" ...></script>
 ```
 
-The project attribute lets the script know which project to request components for. This attribute will be the same for all components in a given project. However, if you have multiple projects, each one will use a different value.
+The project attribute lets the script know which project to request sections for. This attribute will be the same for all sections in a given project. However, if you have multiple projects, each one will use a different value.
 
 Unlike the key and load attributes above, the project attribute sometimes starts with a number, so it must always be used inside of quotation marks (`project="876MN8"` __NOT__ `project=876MN8`).
 
 ### The defaults attribute (optional)
 
-By default, the Anymod script delivers Bootstrap CSS for styling components. If you want to turn off this behavior, you can include `defaults="false"` on your script tag, like so:
+By default, the Anymod script delivers Bootstrap CSS for styling sections. If you want to turn off this behavior, you can include `defaults="false"` on your script tag, like so:
 
 ```html
 <script project="876MN8" defaults="false" src="https://cdn.anymod.com/v1"></script>

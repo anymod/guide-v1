@@ -8,12 +8,12 @@ order: 1
 
 ### Structure
 ``` html
-<component key=ranno></component>
+<section id=anymod-ranno></section>
 ```
 Is replaced by
 ```html
-<div component ranno data-anymod-reg-020511005 class="c19">
-  <!-- Component contents -->
+<div id=anymod-ranno component ranno data-anymod-reg-020511005 class="c19">
+  <!-- Section contents -->
 </div>
 ```
 
@@ -24,7 +24,7 @@ Is replaced by
 
 ### Example
   ``` html
-  <component content id="xgzdg"></component>
+  <section id=anymod-ranno></section>
   ```
   Becomes
   ``` html

@@ -5,24 +5,24 @@ order: 202
 published: true
 ---
 
-<p class="tip">When editing components in the dashboard, you can use CSS or SCSS.</p>
+<p class="tip">When editing in the dashboard, you can use CSS or SCSS.</p>
 
-## Styling components
+## Styling sections
 
-When you add style rules to a component via the code editor, they are namespaced so that they only apply to that component.
+When you add style rules to a section via the code editor, they are namespaced so that they only apply to that section.
 
 - **Example**
 
-A component tag with `key=elkoo`
+A section tag with `id=anymod-elkoo`
 
 ```html
-<component key=elkoo></component>
+<section id=anymod-elkoo></section>
 ```
 
 gets processed in the DOM as
 
 ```html
-<div component elkoo ...>
+<div id=anymod-elkoo component elkoo ...>
   <!-- Section HTML -->
 </div>
 ```
