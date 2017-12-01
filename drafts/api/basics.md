@@ -12,7 +12,7 @@ order: 1
 ```
 Is replaced by
 ```html
-<div component ranno component-reg-020511005 class="c19">
+<div component ranno data-anymod-reg-020511005 class="c19">
   <!-- Component contents -->
 </div>
 ```
