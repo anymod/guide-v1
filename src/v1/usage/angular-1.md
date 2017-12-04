@@ -46,7 +46,7 @@ You can use `Anymod.render()` by itself or with a callback or promise. See the s
 
 ## Example
 
-The following example shows 2 sections being rendered: 1 with the controller approach (aldlk: the card) and 1 with the directive approach (mladl: the side menu).
+The following example shows 2 sections being rendered: 1 with the directive approach (ekaob: the top card) and 1 with the controller approach (aldlk: the bottom card).
 
 <iframe width="100%" height="650" src="https://jsfiddle.net/component/dm483s04/embedded/js,html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
