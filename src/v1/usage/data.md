@@ -5,18 +5,18 @@ order: 106
 published: true
 ---
 
-You can forego the Anymod script and rendering framework entirely and use the Anymod dashboard as a data source instead. To do so, send a `GET` request with the appropriate parameters to the **/data** endpoint.
+You can forego the Anymod script and rendering framework entirely and use Anymod as a data source instead. To do so, send a `GET` request with the appropriate parameters to the **/data** endpoint.
 
 There are 2 types of requests:
 
-- **Single component request** for one component returned as an `Object`
-- **Multiple component request** for one or more components returned as an `Array`
+- **Single section request** for one section returned as an `Object`
+- **Multiple section request** for one or more sections returned as an `Array`
 
 <p class="tip">All requests should be made to the endpoint via **https**.</p>
 
-## Single component request
+## Single section request
 
-Request data for a single component from your project.
+Request data for a single section from your project.
 
 - **Route**
 
@@ -28,7 +28,7 @@ Request data for a single component from your project.
 
 - **Example**
 
-For component `key=errba` in `project="cio-library"`
+For section `id=anymod-errba` in `project="cio-library"`
 
 `GET` https://api.anymod.com/v0/data/cio-library/component/errba
 
@@ -42,22 +42,22 @@ For component `key=errba` in `project="cio-library"`
 }
 ```
 
-## Multiple component request
+## Multiple section request
 
-Request data for one or more components from your project.
+Request data for one or more sections from your project.
 
 - **Route**
 
   `GET` https://<span></span>api.anymod.com/v0/data/{ **projectId** }/components/{ **key1,key2,key3** }
   _*Note the "s" at the end of components_
 
-  Here, the keys for each component are separated by a comma (no space).
+  Here, the ids for each section are separated by a comma (no space).
 
 - **Returns**
 
   `Array` (JSON)
 
-   Component order is preserved in the response, even if there are duplicates or components missing.
+   Component order is preserved in the response, even if there are duplicates or sections missing.
 
 - **Example**
 
@@ -82,11 +82,11 @@ Request data for one or more components from your project.
 ]
 ```
 
-- **Example with duplicates and missing components**
+- **Example with duplicates and missing sections**
 
-  If a component key is duplicated in the request, it will be returned in the response in the same index locations. If a component is missing, it will be returned in the same index location with an empty `data` object and a property `notFound` set to `true`.
+  If a section key is duplicated in the request, it will be returned in the response in the same index locations. If a section is missing, it will be returned in the same index location with an empty `data` object and a property `notFound` set to `true`.
 
-  In this example, we have duplicated the `elarm` component, and the `foobar` component does not exist:
+  In this example, we have duplicated the `elarm` section, and the `foobar` section does not exist:
 
   `GET` https://api.anymod.com/v0/data/cio-library/components/elarm,foobar,elarm
 

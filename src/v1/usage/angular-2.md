@@ -18,7 +18,7 @@ Now you can add your `section` and call `Anymod.render()` to render the section(
 ```ts
 @Component({
   ...
-  template: `<section id=anymod-mladl data-load=md-mi></section>`,
+  template: `<section id=anymod-aldlk data-load=md-mi></section>`,
 })
 export class AnymodDemo {
   ...
