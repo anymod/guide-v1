@@ -12,7 +12,7 @@
     var isSignedIn = (document.cookie && document.cookie.indexOf('anm.signin=') > -1)
     ,   isLocal = window.location.href.indexOf('localhost') > -1
     ,   logoLink = document.getElementById('logo')
-    if (isLocal && isSignedIn) { logoLink.href = 'http://localhost:3000/ui' }
+    if (isLocal && isSignedIn) { logoLink.href = 'http://localhost:3000/projects' }
     if (isLocal && !isSignedIn) { logoLink.href = 'http://localhost:3000' }
   })()
 </script>
