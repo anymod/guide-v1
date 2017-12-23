@@ -17,7 +17,7 @@ Simply add the basic `Hello World!` section to one of your projects or view the 
 <section id=anymod-ranno></section>
 
 <!-- Anymod script -->
-<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>
+<script project="anymod" src="https://cdn.anymod.com/v1"></script>
 ```
 This code puts a simple text section on the page:
 
@@ -37,5 +37,5 @@ To create your own sections, sign up and choose sections from the Anymod library
 
 {% raw %}
 <!-- Anymod script -->
-<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>
+<script project="anymod" src="https://cdn.anymod.com/v1"></script>
 {% endraw %}

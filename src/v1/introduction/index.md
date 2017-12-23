@@ -7,9 +7,9 @@ published: true
 
 ## What is Anymod?
 
-<h4 style="font-size: 20px;">Building blocks that will make your web development simpler.</h4>
+<h4 style="font-size: 20px;">Content management you can add anywhere</h4>
 
-Anymod lets you add content and functionality to your website and make live changes with an online dashboard. You can edit your content and the underlying code for any section on your site without having to change or redeploy your website's code. This workflow is simple & robust, and it makes managing your website easier.
+Anymod lets you add content management functionality to your website and make live changes from your own site or from the Anymod dashboard. You can edit your content and the underlying code for any section without having to change or redeploy your website's code. This workflow is simple & robust, and it makes managing your website easier.
 
 Anymod also has a library of ready-to-use website sections that you can copy into your project with one click and customize to your needs. If you want even more customization, you can build sections entirely from scratch and still manage them online.
 
@@ -36,7 +36,7 @@ The easiest way to try Anymod is by example. If you want to try a section in you
 <section id=anymod-dkaal></section>
 
 <!-- Anymod script -->
-<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>
+<script project="anymod" src="https://cdn.anymod.com/v1"></script>
 ```
 
 This will give you the functional carousel section below. It's as easy as copy & paste to get a section working on your web page.
@@ -168,7 +168,7 @@ Or learn more about using Anymod:
 {% raw %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.5/tinymce.min.js"></script>
 <!-- Anymod script -->
-<script project="component-io-team" src="https://cdn.anymod.com/v1"></script>
+<script project="anymod" src="https://cdn.anymod.com/v1"></script>
 <script>
   Anymod.ready(function() {
     if (!dashboard1 || !Anymod("nkddb").items) return
