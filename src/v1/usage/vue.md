@@ -7,16 +7,37 @@ published: true
 
 ## Setup
 
-To use sections with [Vue.js](https://vuejs.org/), add the `<section>` tag and call `Anymod.render()` when the Vue instance has mounted:
+To use sections with [Vue.js](https://vuejs.org/), add the `<section>` tag and call like any other element:
 
 ```html
-<div id="demo">
-  <section id=anymod-mladl data-load=md-mi></section>
+<div id="example">
+  <section id="anymod-aldlk" data-load="md-mi"></section>
 </div>
 ```
 ```js
 new Vue({
-  el: '#demo',
+  el: '#demo'
+})
+```
+
+## Inside a custom Vue component
+
+To use sections inside a custom Vue component, call `Anymod.render()` once Vue has mounted:
+
+```html
+<div id="example">
+  <my-component></my-component>
+</div>
+```
+```js
+// register
+Vue.component('my-component', {
+  template: '<section id="anymod-aldlk" data-load="md-mi"></section>'
+})
+
+// create a root instance
+new Vue({
+  el: '#example',
   mounted: function () {
     Anymod.render()
   }
@@ -25,7 +46,8 @@ new Vue({
 
 ## Example
 
-<iframe width="100%" height="650" src="https://jsfiddle.net/component/2rdevyt5/embedded/js,html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe height='500' scrolling='no' title='Anymod with Vue.js' src='//codepen.io/anymod/embed/dJONGy/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
+</iframe>
 
 ## Rendering multiple sections
 
