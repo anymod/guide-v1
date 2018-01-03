@@ -13,6 +13,7 @@ When you add a section to your project, you are directed to a page with the inst
 
 ```html
 <section id=anymod-ekaob data-load=b></section>
+
 <!-- Paste script once per page at the bottom -->
 <script project="cio-library" src="https://cdn.anymod.com/v1"></script>
 ```
@@ -56,26 +57,32 @@ You can use the dashboard to edit both the content of a section and its code.
 
 ### Edit content
 
-To edit content, log into your project at https://anymod.com and use the search bar or browse to find the section you want to edit. Click the button marked `Edit`, and you will see a screen like the following:
+To edit content, log into your project at https://anymod.com and use the search bar or browse to find the section you want to edit. Click on it, and you will see a screen like the following:
 
-<img id="edit-example" src="https://res.cloudinary.com/component/image/upload/v1496964722/guide-edit-example.png"/>
+<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1515005084/guide-content-example.png"/>
 
-The left side of the page allows you to edit your content, and the right side of the page is a live preview of your section. Click a field on the left side to change it, and click `Save` when you are finished. The preview on the right side of the page will update.
+Clicking "Edit Content" allows you to make changes to the section's content:
 
-Changes you make in the dashboard are live and are immediately used wherever the section is delivered.
+<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1515005261/guide-content-example-2.png"/>
+
+Once you have made changes, click "Publish" to make the changes live.
 
 ### Edit code
 
-To edit code, log into your project at https://anymod.com and use the search bar or browse to find the section you want to edit. Click the button marked `Code`, and you will see a screen like the following:
+To edit content, log into your project at https://anymod.com and use the search bar or browse to find the section you want to edit. Click on it, and you will see a screen like the following:
 
-<img id="code-example" src="https://res.cloudinary.com/component/image/upload/v1496966022/guide-code-example.png"/>
+<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1515005084/guide-content-example.png"/>
 
-The page is divided into four quadrants:
+Clicking "Customize" allows you to make changes to the section's code (HTML, CSS, and JavaScript):
+
+<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1515005441/guide-code-example-1.png"/>
+
+The page is divided into four parts:
 
 - Top-left is for __HTML__
-- Top-right is for __CSS__
-- Bottom-left is for __JavaScript__
-- Bottom-right is a __Live preview__
+- Top-center is for __CSS__
+- Top-right is for __JavaScript__
+- Bottom is a __Live preview__
 
 Each time you make edits, you can click the `Save` button or press `ctrl+s` (or `command+s` on mac) to save your changes. Changes you make in the dashboard are live and are immediately used wherever the section is delivered.
 
@@ -85,6 +92,7 @@ Looking again at the install code for a section, we can see it has several attri
 
 ```html
 <section id=anymod-ekaob data-load=b></section>
+
 <!-- Paste script once per page at the bottom -->
 <script project="cio-library" src="https://cdn.anymod.com/v1"></script>
 ```
@@ -157,8 +165,7 @@ By default, the Anymod script delivers Bootstrap CSS for styling sections. If yo
 
 <style>
   [aldlk] h2 { border:none !important; }
-  #edit-example,
-  #code-example {
+  img.standout {
     border-radius: 5px;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
        -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

@@ -1,5 +1,5 @@
 ---
-title: Angular 2
+title: Angular 2+
 type: usage
 order: 102
 published: true
@@ -7,7 +7,7 @@ published: true
 
 ## Setup
 
-To use Anymod with [Angular 2](https://angular.io/), add the Anymod script tag before (above) your Angular script tags in your HTML. Then make `Anymod` available in your `.ts` file:
+To use Anymod with [Angular 2+](https://angular.io/), add the Anymod script tag before (above) your Angular script tags in your HTML. Then make `Anymod` available in your `.ts` file:
 
 ```ts
 declare var Anymod: any;

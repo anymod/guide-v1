@@ -86,9 +86,8 @@ and you want to be able to change its content easily. With Anymod, it's as simpl
 {% raw %}
 <div id="dashboard-1" class="demo" style="padding: 0px; border-radius: 7px; overflow: hidden;">
   <div class="card">
-    <img src="https://res.cloudinary.com/component/image/upload/c_crop,g_north,h_200,w_1400,q_100/c_scale,w_600,e_sharpen:10,q_100/v1494633540/dashboard_demo_yukbyj.png"/>
     <div class="card-block" style="padding: 0.5rem">
-      <input type="text" class="form-control" style="max-width: 95%; margin-bottom: 3px; color: black;" v-model="title" :change="setDropdownText()" placeholder="Header">
+      <input type="text" class="form-control" style="max-width: 95%; margin-bottom: 20px; color: black;" v-model="title" :change="setDropdownText()" placeholder="Header">
       <textarea id="mock-dashboard-textarea" class="form-control" style="max-width: 95%; min-height: 110px;" v-model="body" placeholder="Body"></textarea>
     </div>
   </div>
