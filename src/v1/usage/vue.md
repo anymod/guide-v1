@@ -7,11 +7,11 @@ published: true
 
 ## Setup
 
-To use sections with [Vue.js](https://vuejs.org/), add the `<section>` tag and call like any other element:
+To use mod with [Vue.js](https://vuejs.org/), add the mod's tag and call like any other element:
 
 ```html
 <div id="example">
-  <section id="anymod-aldlk" data-load="md-mi"></section>
+  <div id="anymod-aldlk" data-load="md-mi"></div>
 </div>
 ```
 ```js
@@ -22,7 +22,7 @@ new Vue({
 
 ## Inside a custom Vue component
 
-To use sections inside a custom Vue component, call `Anymod.render()` once Vue has mounted:
+To use mods inside a custom Vue component, call `Anymod.render()` once Vue has mounted:
 
 ```html
 <div id="example">
@@ -32,7 +32,7 @@ To use sections inside a custom Vue component, call `Anymod.render()` once Vue h
 ```js
 // register
 Vue.component('my-component', {
-  template: '<section id="anymod-aldlk" data-load="md-mi"></section>'
+  template: '<div id="anymod-aldlk" data-load="md-mi"></div>'
 })
 
 // create a root instance
@@ -49,15 +49,15 @@ new Vue({
 <iframe height='500' scrolling='no' title='Anymod with Vue.js' src='//codepen.io/anymod/embed/dJONGy/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
 </iframe>
 
-## Rendering multiple sections
+## Rendering multiple mods
 
-You can render multiple sections the same way as a single section, like so:
+You can render multiple mods the same way as a single mod, like so:
 
 ```html
 <div id="demo">
-  <section id=anymod-mladl data-load=md-mi></section>
-  <section id=anymod-ekaob data-load=b></section>
-  <section id=anymod-aldlk data-load=md></section>
+  <div id=anymod-mladl data-load=md-mi></div>
+  <div id=anymod-ekaob data-load=b></div>
+  <div id=anymod-aldlk data-load=md></div>
 </div>
 ```
 ```js
@@ -71,6 +71,6 @@ new Vue({
 
 ## Re-rendering
 
-You can call `Anymod.render()` as often as you'd like in your Vue.js application (or elsewhere). This method will not lead to an API call every time; if a section has already been fetched once, `Anymod.render()` will use that data instead of making another API call.
+You can call `Anymod.render()` as often as you'd like in your Vue.js application (or elsewhere). This method will not lead to an API call every time; if a mod has already been fetched once, `Anymod.render()` will use that data instead of making another API call.
 
 See the section on [Anymod.render](/v1/api/index.html#Anymod-render-function-options) for more.

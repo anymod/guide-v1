@@ -7,23 +7,23 @@ published: true
 
 <p class="tip">When editing in the dashboard, you can use CSS or SCSS.</p>
 
-## Styling sections
+## Styling mods
 
-When you add style rules to a section via the code editor, they are namespaced so that they only apply to that section.
+When you add style rules to a mod via the code editor, they are namespaced so that they only apply to that mod.
 
 - **Example**
 
-A section tag with `id=anymod-elkoo`
+A mod tag with `id=anymod-elkoo`
 
 ```html
-<section id=anymod-elkoo></section>
+<div id=anymod-elkoo></div>
 ```
 
 gets processed in the DOM as
 
 ```html
 <div id=anymod-elkoo component elkoo ...>
-  <!-- Section HTML -->
+  <!-- Mod HTML -->
 </div>
 ```
 

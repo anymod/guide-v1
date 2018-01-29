@@ -5,6 +5,6 @@ order: 50
 published: true
 ---
 
-<section id=anymod-aommr></section>
+<div id=anymod-aommr></div>
 
 <script project="8PP6M2" src="https://cdn.anymod.com/v1"></script>

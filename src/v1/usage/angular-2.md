@@ -13,12 +13,12 @@ To use Anymod with [Angular 2+](https://angular.io/), add the Anymod script tag 
 declare var Anymod: any;
 ```
 
-Now you can add your `section` and call `Anymod.render()` to render the section(s):
+Now you can add your mod and call `Anymod.render()` to render the mod(s):
 
 ```ts
 @Component({
   ...
-  template: `<section id=anymod-aldlk data-load=md-mi></section>`,
+  template: `<div id=anymod-aldlk data-load=md-mi></div>`,
 })
 export class AnymodDemo {
   ...
@@ -48,9 +48,9 @@ You can render multiple components the same way as a single component, and you o
 @Component({
   ...
   template: `
-    <section id=anymod-mladl data-load=md-mi></section>
-    <section id=anymod-ekaob data-load=b></section>
-    <section id=anymod-aldlk data-load=md></section>
+    <div id=anymod-mladl data-load=md-mi></div>
+    <div id=anymod-ekaob data-load=b></div>
+    <div id=anymod-aldlk data-load=md></div>
   `,
 })
 export class AnymodDemo {

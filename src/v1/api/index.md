@@ -5,30 +5,30 @@ order: 200
 published: true
 ---
 
-`Anymod` is a global JavaScript object that provides access to all of the sections on a page along with several useful utility functions. You can interact with it to read and write data, hook into section events, load and render sections, and more.
+`Anymod` is a global JavaScript object that provides access to all of the mods on a page along with several useful utility functions. You can interact with it to read and write data, hook into mod events, load and render mods, and more.
 
 <p class="tip">To use the global `Anymod` object in your own JavaScript, be sure that the Anymod `<script>` tag is placed in your HTML before (above) your JavaScript so that the Anymod script executes first.</p>
 
 ## Anymod( _id_ )
 
-All sections are built using the underlying API for [vue.js](https://vuejs.org). Calling `Anymod('_id_')`, where `_id_` is the id of the section, will give a handle to the Vue instance for that section.
+All mods are built using the underlying API for [vue.js](https://vuejs.org). Calling `Anymod('_id_')`, where `_id_` is the id of the mod, will give a handle to the Vue instance for that mod.
 
-For example, the section below renders the text `Hello World!`
+For example, the mod below renders the text `Hello World!`
 
 ``` html
-<section id=anymod-ranno></section>
+<div id=anymod-ranno></div>
 ```
 {% raw %}
 <div class="demo">
-  <section id=anymod-ranno></section>
+  <div id=anymod-ranno></div>
 </div>
 {% endraw %}
 
-In this case, `Anymod('ranno')` gives access to the section. This type of access is the basis for interacting with sections programmatically.
+In this case, `Anymod('ranno')` gives access to the mod. This type of access is the basis for interacting with mods programmatically.
 
 ## Anymod( _key_ ).attr
 
-A getter method that returns a value held by a section.
+A getter method that returns a value held by a mod.
 
 - **Usage:**
 
@@ -37,11 +37,11 @@ A getter method that returns a value held by a section.
   // -> "Hello World!"
   ```
 
-The properties available to get vary by section.
+The properties available to get vary by mod.
 
 ## Anymod( _key_ ).attr =
 
-A setter method that sets a section property locally. Does not save the value for future page loads.
+A setter method that sets a mod property locally. Does not save the value for future page loads.
 
 - **Usage:**
 
@@ -50,13 +50,13 @@ A setter method that sets a section property locally. Does not save the value fo
   // -> "New text"
   ```
 
-The properties available to set vary by section.
+The properties available to set vary by mod.
 
 ## Anymod.ready( _function_ )
 
-Executes a function once all sections have been loaded.
+Executes a function once all mods have been loaded.
 
-Multiple functions can be registered with `ready()` and they will all be executed when sections are done loading. Any functions registered after sections are ready will be executed immediately.
+Multiple functions can be registered with `ready()` and they will all be executed when mods are done loading. Any functions registered after mods are ready will be executed immediately.
 
 - **Usage with callback:**
 
@@ -98,22 +98,22 @@ Renders any Anymod tags that have not been rendered.
   })
   ```
 
-The `Anymod.render()` method runs automatically when the Anymod script loads. However, you may not have all sections on the page at that time, so you can call `Anymod.render()` at any time to render sections that have been added since initial page load. There are a few scenarios where this may happen, and the behavior for each is shown below:
+The `Anymod.render()` method runs automatically when the Anymod script loads. However, you may not have all mods on the page at that time, so you can call `Anymod.render()` at any time to render mods that have been added since initial page load. There are a few scenarios where this may happen, and the behavior for each is shown below:
 
-<p class="tip">__TL;DR__ If a section's data has already been fetched, that data will be reused on subsequent renders without making additional API calls.</p>
+<p class="tip">__TL;DR__ If a mod's data has already been fetched, that data will be reused on subsequent renders without making additional API calls.</p>
 
 | Scenario | Behavior |
 |:---------|:---------|
-| No unrendered sections | Execute promise or callback, if any. |
-| New, unrendered sections | Fetch data with single API call for all new sections, then render unrendered sections, then execute promise or callback, if any. |
-| Previously fetched (but now unrendered) sections | Use the existing data from `Anymod.Store` to render unrendered sections, then execute promise or callback, if any. |
-| Mixed sections (some previously fetched, some new) | Fetch data with single API call for new sections, then add data to `Anymod.Store`, then use `Anymod.Store` to render all unrendered sections, then execute promise or callback, if any. |
+| No unrendered mods | Execute promise or callback, if any. |
+| New, unrendered mods | Fetch data with single API call for all new mods, then render unrendered mods, then execute promise or callback, if any. |
+| Previously fetched (but now unrendered) mods | Use the existing data from `Anymod.Store` to render unrendered mods, then execute promise or callback, if any. |
+| Mixed mods (some previously fetched, some new) | Fetch data with single API call for new mods, then add data to `Anymod.Store`, then use `Anymod.Store` to render all unrendered mods, then execute promise or callback, if any. |
 
 <!-- - **Options**
 
 | Property | Type | Default | Description |
 |:---------|:-----|:--------|:------------|
-| dataComponent | `boolean` | `false` | If true, use `<div data-component></div>` pattern instead of `<section></section>` |
+| dataComponent | `boolean` | `false` | If true, use `<div data-component></div>` pattern instead of `<div></div>` |
 
 > Options can be passed as the first parameter if no callback is needed, e.g. `Anymod.render({ dataComponent: true })` -->
 

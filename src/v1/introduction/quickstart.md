@@ -11,28 +11,28 @@ Anymod does **not** support IE8 and below, because it uses ECMAScript 5 features
 
 ## Hello World
 
-Simply add the basic `Hello World!` section to one of your projects or view the [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).
+Simply add the basic `Hello World!` mod to one of your projects or view the [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).
 
 ``` html
-<section id=anymod-ranno></section>
+<div id=anymod-ranno></div>
 
 <!-- Anymod script -->
 <script project="anymod" src="https://cdn.anymod.com/v1"></script>
 ```
-This code puts a simple text section on the page:
+This code puts a simple text mod on the page:
 
 {% raw %}
 <div class="demo">
-  <section id=anymod-ranno></section>
+  <div id=anymod-ranno></div>
 </div>
 {% endraw %}
 
 ## Create your own
 
-To create your own sections, sign up and choose sections from the Anymod library.
+To create your own mods, sign up and choose mods from the Anymod library.
 
 <div>
-  <a class="button" href="https://anymod.com">Sign up</a><span class="light info">Once logged in, you can create your own sections</span>
+  <a class="button" href="https://anymod.com">Sign up</a><span class="light info">Once logged in, you can create your own mods</span>
 </div>
 
 {% raw %}

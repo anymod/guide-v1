@@ -9,14 +9,14 @@ You can forego the Anymod script and rendering framework entirely and use Anymod
 
 There are 2 types of requests:
 
-- **Single section request** for one section returned as an `Object`
-- **Multiple section request** for one or more sections returned as an `Array`
+- **Single mod request** for one mod returned as an `Object`
+- **Multiple mod request** for one or more mods returned as an `Array`
 
 <p class="tip">All requests should be made to the endpoint via **https**.</p>
 
-## Single section request
+## Single mod request
 
-Request data for a single section from your project.
+Request data for a single mod from your project.
 
 - **Route**
 
@@ -28,7 +28,7 @@ Request data for a single section from your project.
 
 - **Example**
 
-For section `id=anymod-errba` in `project="cio-library"`
+For mod `id=anymod-errba` in `project="cio-library"`
 
 `GET` https://api.anymod.com/v0/data/cio-library/component/errba
 
@@ -42,22 +42,22 @@ For section `id=anymod-errba` in `project="cio-library"`
 }
 ```
 
-## Multiple section request
+## Multiple mod request
 
-Request data for one or more sections from your project.
+Request data for one or more mods from your project.
 
 - **Route**
 
   `GET` https://<span></span>api.anymod.com/v0/data/{ **projectId** }/components/{ **key1,key2,key3** }
   _*Note the "s" at the end of components_
 
-  Here, the ids for each section are separated by a comma (no space).
+  Here, the ids for each mod are separated by a comma (no space).
 
 - **Returns**
 
   `Array` (JSON)
 
-   Component order is preserved in the response, even if there are duplicates or sections missing.
+   Component order is preserved in the response, even if there are duplicates or mods missing.
 
 - **Example**
 
@@ -82,11 +82,11 @@ Request data for one or more sections from your project.
 ]
 ```
 
-- **Example with duplicates and missing sections**
+- **Example with duplicates and missing mods**
 
-  If a section key is duplicated in the request, it will be returned in the response in the same index locations. If a section is missing, it will be returned in the same index location with an empty `data` object and a property `notFound` set to `true`.
+  If a mod key is duplicated in the request, it will be returned in the response in the same index locations. If a mod is missing, it will be returned in the same index location with an empty `data` object and a property `notFound` set to `true`.
 
-  In this example, we have duplicated the `elarm` section, and the `foobar` section does not exist:
+  In this example, we have duplicated the `elarm` mod, and the `foobar` mod does not exist:
 
   `GET` https://api.anymod.com/v0/data/cio-library/components/elarm,foobar,elarm
 
