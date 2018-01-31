@@ -9,7 +9,9 @@ published: true
 
 <h4 style="font-size: 20px;">Content management you can add anywhere</h4>
 
-Anymod lets you add content management functionality to your website and make live changes from your own site or from the Anymod dashboard. You can edit your content and the underlying code for any mod without having to change or redeploy your website's code. This workflow is simple & robust, and it makes managing your website easier.
+Anymod lets you add content management functionality to your website and make live changes from your own site or from the Anymod dashboard. 
+
+You can edit your content and the underlying code for modules (mods) without having to change or redeploy your website's code. This workflow is simple & robust, and it makes managing your website easier.
 
 Anymod also has a library of ready-to-use mods that you can copy into your project with one click and customize to your needs. If you want even more customization, you can build mods entirely from scratch and still manage them online.
 
@@ -17,7 +19,7 @@ Anymod also has a library of ready-to-use mods that you can copy into your proje
 
 For non-technical users, Anymod has a simple WYSIWYG (what-you-see-is-what-you-get) editor for making changes to text, images, colors, order, and more. No coding skills are needed to use the content editor, and a live preview gives instant feedback.
 
-For technical users, Anymod is simple to set up and has a well-documented API for building and customizing mod HTML, CSS, and JavaScript, as well as for binding data, triggering events, rendering content, and more.
+For technical users, Anymod is simple to set up and has a well-documented API for building and customizing HTML, CSS, and JavaScript, as well as for binding data, triggering events, rendering content, and more.
 
 <h4 style="font-size: 20px;">Works with every platform & technology.</h4>
 

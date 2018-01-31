@@ -11,7 +11,7 @@ Anymod does **not** support IE8 and below, because it uses ECMAScript 5 features
 
 ## Hello World
 
-Simply add the basic `Hello World!` mod to one of your projects or view the [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).
+Simply add the basic `Hello World!` module to one of your projects or view the [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).
 
 ``` html
 <div id=anymod-ranno></div>
@@ -19,7 +19,7 @@ Simply add the basic `Hello World!` mod to one of your projects or view the [jsf
 <!-- Anymod script -->
 <script project="anymod" src="https://cdn.anymod.com/v1"></script>
 ```
-This code puts a simple text mod on the page:
+This code puts a simple text module (mod) on the page:
 
 {% raw %}
 <div class="demo">

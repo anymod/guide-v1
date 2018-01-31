@@ -59,25 +59,25 @@ You can use the dashboard to edit both the content of a mod and its code.
 
 To edit content, log into your project at https://anymod.com and use the search bar or browse to find the mod you want to edit. Click on it, and you will see a screen like the following:
 
-<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1515005084/guide-content-example.png"/>
+<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1517367744/Preview_ikl6l2.png"/>
 
-Clicking "Edit Content" allows you to make changes to the mod's content:
+Clicking the "Content" tab allows you to make changes to the mod's content:
 
-<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1515005261/guide-content-example-2.png"/>
+<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1517367743/Content_h1faaw.png"/>
 
 Once you have made changes, click "Publish" to make the changes live.
 
 ### Edit code
 
-To edit content, log into your project at https://anymod.com and use the search bar or browse to find the mod you want to edit. Click on it, and you will see a screen like the following:
+To edit code, log into your project at https://anymod.com and use the search bar or browse to find the mod you want to edit. Click on it, and you will see a screen like the following:
 
-<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1515005084/guide-content-example.png"/>
+<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1517367744/Preview_ikl6l2.png"/>
 
-Clicking "Customize" allows you to make changes to the mod's code (HTML, CSS, and JavaScript):
+Clicking the "Code" tab allows you to make changes to the mod's code (HTML, CSS, and JavaScript):
 
-<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1515005441/guide-code-example-1.png"/>
+<img class="standout" src="https://res.cloudinary.com/component/image/upload/v1517367744/Code_ugraby.png"/>
 
-The page is divided into four parts:
+The page is divided into four adjustable parts:
 
 - Top-left is for __HTML__
 - Top-center is for __CSS__

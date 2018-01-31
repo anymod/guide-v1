@@ -10,7 +10,7 @@
 
 <div class="content <%- page.type ? page.type + ' with-sidebar' : '' %> <%- page.type === 'guide' ? page.path.replace(/.+\//, '').replace('.html', '') + '-guide' : '' %> <%- page.interLink ? 'inter-linked' : '' %>">
   <% if (page.title.trim()) { %>
-    <h1><%- page.title %><%- page.type === 'examples' ? ' Example' : '' %></h1>
+    <h1><%- page.title %><%- page.type === 'examples' ? ' example' : '' %></h1>
   <% } %>
   <%- page.content %>
   <% if (['introduction','guide','usage','examples'].indexOf(page.type) > -1) { %>
