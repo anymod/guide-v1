@@ -1,5 +1,5 @@
 ---
-title: Content block anywhere
+title: Content anywhere
 type: examples
 order: 301
 published: true

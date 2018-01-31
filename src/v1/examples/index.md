@@ -5,7 +5,8 @@ order: 300
 published: true
 ---
 
-> Here are several components all being used together.  Note in the HTML that the &lt;script&gt; tag is only needed once.
+> Here are several mods all being used together.
+> Note that the &lt;script&gt; tag in the page's HTML is only needed once.
 
 The [jsfiddle](https://jsfiddle.net/component/6on8zpst) below contains several mods:
 - [Simple content](https://anymod.com/mod/preview?key=emnmn) ("This is an example...")

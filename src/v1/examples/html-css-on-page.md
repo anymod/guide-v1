@@ -7,7 +7,7 @@ published: true
 
 > This example uses HTML on the page instead of the mod's HTML.
 
-In this example, we add HTML & CSS manually on our page (see the [jsfiddle](https://jsfiddle.net/component/1hqag2zq)) instead of inside of [our mod](https://anymod.com/mod/code?key=eobke) code.
+In this example, we add HTML & CSS manually on the page (see the [jsfiddle](https://jsfiddle.net/component/1hqag2zq)) instead of inside of the [mod code](https://anymod.com/mod/code?key=eobke) (which is empty).
 
 When written this way, Anymod will automatically use the HTML on the page, and the page's CSS rules will also apply to mods when they match.  Note that the reverse is not true: a mod's CSS will not affect the rest of the page.
 
