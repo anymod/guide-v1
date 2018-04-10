@@ -11,7 +11,9 @@ Anymod does **not** support IE8 and below, because it uses ECMAScript 5 features
 
 ## Hello World
 
-Simply add the basic `Hello World!` module to one of your projects or view the [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).
+<p class="tip">You can fork this mod from the [Anymod editor](https://anymod.com/mod/ranno) or view it in a [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).</p>
+
+Add a basic `Hello World!` mod to one of your projects by pasting the following into your HTML:
 
 ``` html
 <div id=anymod-ranno></div>
@@ -19,7 +21,7 @@ Simply add the basic `Hello World!` module to one of your projects or view the [
 <!-- Anymod script -->
 <script project="anymod" src="https://cdn.anymod.com/v1"></script>
 ```
-This code puts a simple text module (mod) on the page:
+This code puts basic text on the page:
 
 {% raw %}
 <div class="demo">
@@ -27,9 +29,10 @@ This code puts a simple text module (mod) on the page:
 </div>
 {% endraw %}
 
+
 ## Create your own
 
-To create your own mods, sign up and choose mods from the Anymod library.
+Build your own mods from scratch or choose from the Anymod library.
 
 <div>
   <a class="button" href="https://anymod.com">Sign up</a><span class="light info">Once logged in, you can create your own mods</span>
