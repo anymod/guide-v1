@@ -41,6 +41,14 @@ render () {
 }
 ```
 
+## Create React App
+
+If you are using [Create React App](https://github.com/facebook/create-react-app) or another ESLint tool, you may encounter an error along the lines of `'Anymod' is not defined  no-undef`.  In this case, you should add the following to the top of any files using `Anymod.render()`:
+
+`/* global Anymod */`
+
+You can learn more about this solution [here](https://eslint.org/docs/rules/no-undef#rule-details).
+
 ## Re-rendering
 
 You can call `Anymod.render()` as often as you'd like in your React component (or elsewhere). This method will not lead to an API call every time; if a mod has already been fetched once, `Anymod.render()` will use that data instead of making another API call.
