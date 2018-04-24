@@ -15,7 +15,7 @@ When you add a mod to your project, you are directed to a page with the install 
 <div id=anymod-ekaob data-load=b></div>
 
 <!-- Paste script once per page at the bottom -->
-<script project="cio-library" src="https://cdn.anymod.com/v1"></script>
+<script project="library" src="https://cdn.anymod.com/v1"></script>
 ```
 
 To make your new mod show on the page, paste this code into your HTML where you would like the mod to show. For example, we've pasted the same code here, and it delivers the mod:
@@ -33,7 +33,7 @@ If you have multiple mods on your page, you don't need to paste the `<script>` t
   ...
 
   <!-- Paste script once per page at the bottom -->
-  <script project="cio-library" src="https://cdn.anymod.com/v1"></script>
+  <script project="library" src="https://cdn.anymod.com/v1"></script>
 </body>
 ```
 
@@ -94,7 +94,7 @@ Looking again at the install code for a mod, we can see it has several attribute
 <div id=anymod-ekaob data-load=b></div>
 
 <!-- Paste script once per page at the bottom -->
-<script project="cio-library" src="https://cdn.anymod.com/v1"></script>
+<script project="library" src="https://cdn.anymod.com/v1"></script>
 ```
 
 ### The id attribute
@@ -175,4 +175,4 @@ By default, the Anymod script delivers Bootstrap CSS for styling mods. If you wa
 </style>
 
 <!-- Paste script once per page at the bottom -->
-<script project="cio-library" src="https://cdn.anymod.com/v1"></script>
+<script project="library" src="https://cdn.anymod.com/v1"></script>
