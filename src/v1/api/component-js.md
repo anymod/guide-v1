@@ -5,7 +5,7 @@ order: 203
 published: true
 ---
 
-<p class="tip">When editing in the dashboard, you can use ES5 ("regular" JavaScript) or ES6.</p>
+<p class="tip">You can use ES5 ("regular" JavaScript) or ES6 in the Anymod editor. Code is automatically compiled to ES5 using Babel so that it works in all browsers.</p>
 
 Under the hood, each Anymod component is essentially a [Vue.js instance](https://vuejs.org/v2/guide/instance.html). That means that any methods available in a Vue.js instance are available in all components delivered by Anymod.
 

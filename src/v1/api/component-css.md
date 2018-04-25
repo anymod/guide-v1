@@ -5,7 +5,7 @@ order: 202
 published: true
 ---
 
-<p class="tip">When editing in the dashboard, you can use CSS or SCSS.</p>
+<p class="tip">You can use CSS or SCSS in the Anymod editor. Code is automatically compiled to CSS so that it works in all browsers.</p>
 
 ## Styling mods
 
