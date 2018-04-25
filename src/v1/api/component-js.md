@@ -5,9 +5,11 @@ order: 203
 published: true
 ---
 
+<p class="tip">When editing in the dashboard, you can use ES5 ("regular" JavaScript) or ES6.</p>
+
 Under the hood, each Anymod component is essentially a [Vue.js instance](https://vuejs.org/v2/guide/instance.html). That means that any methods available in a Vue.js instance are available in all components delivered by Anymod.
 
-<p class="tip">In the dashboard JavaScript editor, the component instance is available as `component`.</p>
+<p class="tip">In the dashboard JavaScript editor, the mod instance is available as `component`.</p>
 
 ## component.data
 
