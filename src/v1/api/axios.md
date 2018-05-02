@@ -9,12 +9,12 @@ Anymod uses [Axios](https://github.com/mzabriskie/axios), a small, promise-based
 
 ## Using Axios to make a request
 
-You can make a request with Axios by calling `Anymod.axios` to access the underlying Axios instance. For example, to make a request to save data to your component, you could do something like the following:
+You can make a request with Axios by calling `Anymod.axios` to access the underlying Axios instance. For example, to make a request to save data to your mod, you could do something like the following:
 
 ```JS
 Anymod.axios.post(Anymod.ApiUrl + 'posts', {
   project: Anymod.Project,
-  component: this.componentKey,
+  component: this.modKey,
   data: {
     email: this.email
   }
