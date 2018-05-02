@@ -22,7 +22,7 @@ A mod tag with `id=anymod-elkoo`
 gets processed in the DOM as
 
 ```html
-<div id=anymod-elkoo component elkoo ...>
+<div id=anymod-elkoo elkoo ...>
   <!-- Mod HTML -->
 </div>
 ```
@@ -34,7 +34,7 @@ background: red;
 color: white;
 ```
 
-Anymod will generate CSS that applies only to that component:
+Anymod will generate CSS that applies only to that mod:
 
 ```css
 [elkoo] {
@@ -85,7 +85,7 @@ See Sass [Nested Rules](http://sass-lang.com/documentation/file.SASS_REFERENCE.h
 
 ## CSS variables
 
-It's also possible to set variables with SCSS to be used throughout your component's styles. You do so with a `$`:
+It's also possible to set variables with SCSS to be used throughout your mod's styles. You do so with a `$`:
 
 ```css
 $width: 5em;

@@ -109,15 +109,6 @@ The `Anymod.render()` method runs automatically when the Anymod script loads. Ho
 | Previously fetched (but now unrendered) mods | Use the existing data from `Anymod.Store` to render unrendered mods, then execute promise or callback, if any. |
 | Mixed mods (some previously fetched, some new) | Fetch data with single API call for new mods, then add data to `Anymod.Store`, then use `Anymod.Store` to render all unrendered mods, then execute promise or callback, if any. |
 
-<!-- - **Options**
-
-| Property | Type | Default | Description |
-|:---------|:-----|:--------|:------------|
-| dataComponent | `boolean` | `false` | If true, use `<div data-component></div>` pattern instead of `<div></div>` |
-
-> Options can be passed as the first parameter if no callback is needed, e.g. `Anymod.render({ dataComponent: true })` -->
-
-
 ## Anymod.buildImage( _image, { options }_ )
 
 Resizes and crops an `image` based on `options` inputs.
@@ -154,7 +145,7 @@ Resizes and crops an `image` based on `options` inputs.
   ```
   OR
   ```js
-  var newImage = Anymod.buildImage(component.data.image, { w: 400, h: 150, c: 'fill' })
+  var newImage = Anymod.buildImage(mod.data.image, { w: 400, h: 150, c: 'fill' })
   ```
   <img src="https://res.cloudinary.com/component/image/upload/c_fill,w_400,h_150/v1495041211/ctrl3kv9nb1gyhhhmcnz.jpg"/>
 
@@ -165,7 +156,7 @@ Resizes and crops an `image` based on `options` inputs.
   ```
   OR
   ```js
-  var newImage = Anymod.buildImage(component.data.image, { w: 150, h: 150, c: 'crop', g: 'face' })
+  var newImage = Anymod.buildImage(mod.data.image, { w: 150, h: 150, c: 'crop', g: 'face' })
   ```
   <img src="https://res.cloudinary.com/component/image/upload/c_crop,w_150,h_150,g_face/v1495041211/ctrl3kv9nb1gyhhhmcnz.jpg"/>
 

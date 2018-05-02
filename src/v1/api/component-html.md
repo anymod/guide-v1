@@ -5,17 +5,17 @@ order: 201
 published: true
 ---
 
-When editing components in the dashboard, you can use the HTML attributes below to generate HTML and manipulate how content is displayed. These are roughly divided into the following groups:
+When editing mods in the dashboard, you can use the HTML attributes below to generate HTML and manipulate how content is displayed. These are roughly divided into the following groups:
 
 | Purpose | Name |
 |:--------|:-----------|
 | Display or style content | [v-text](#v-text) <br> [v-html](#v-html) <br> [v-bind (:)](#v-bind) |
-| Show or hide component parts | [v-if](#v-if) <br> [v-show](#v-show) |
+| Show or hide mod parts | [v-if](#v-if) <br> [v-show](#v-show) |
 | Loop / iterate over multiple items | [v-for](#v-for) |
 | Respond to user events (clicks, keystrokes, etc.) | [v-on (@)](#v-on) |
 | Record user form inputs | [v-model](#v-model) |
 
-<p class="tip">For attributes that reference a variable, the component should have a field with the same name as the variable. For example `v-text="msg"` should be used with a field named `msg`.</p>
+<p class="tip">For attributes that reference a variable, the mod should have a field with the same name as the variable. For example `v-text="msg"` should be used with a field named `msg`.</p>
 
 ## v-text
 
@@ -215,7 +215,7 @@ See also Vue.js [v-on](https://vuejs.org/v2/api/#v-on) and [Event Handling](http
 
 ## v-model
 
-Create a two-way binding on a form input element. Works with `<input>`, `<textarea>`, and `<select>` elements.  The component should have a `field` name corresponding to the bound variable.
+Create a two-way binding on a form input element. Works with `<input>`, `<textarea>`, and `<select>` elements.  The mod should have a `field` name corresponding to the bound variable.
 
 - **Examples**
 

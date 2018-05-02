@@ -5,7 +5,7 @@ order: 205
 published: true
 ---
 
-Anymod comes with a built-in message bus you can use for communication between components or within your application. It is based on the [event system](https://vuejs.org/v2/api/#Instance-Methods-Events) available to Vue.js components.
+Anymod comes with a built-in message bus you can use for communication between mods or within your application. It is based on the [event system](https://vuejs.org/v2/api/#Instance-Methods-Events) available to Vue.js components.
 
 ## $on( _event, callback_ )
 
@@ -59,31 +59,31 @@ Anymod comes with a built-in message bus you can use for communication between c
 
 ## Example
 
-We've created a component with key `mldrn` that has the following JavaScript code:
+We've created a mod with key `mldrn` that has the following JavaScript code:
 
 ```JS
-Anymod.Event.$on('updateComponent', function(data) {
-  component.data.title = data.title
-  component.data.content = data.content
+Anymod.Event.$on('updateMod', function(data) {
+  mod.data.title = data.title
+  mod.data.content = data.content
 })
 ```
 
-This code was added via the dashboard code editor, so now the component will respond to the `updateComponent` event by updating its `title` and `content`. Note that there is nothing special about the name `updateComponent` -- the event can be named anything.
+This code was added via the dashboard code editor, so now the mod will respond to the `updateMod` event by updating its `title` and `content`. Note that there is nothing special about the name `updateMod` -- the event can be named anything.
 
-Now in our application code we can call `Anymod.Event.$emit('updateComponent', ...)` and our component will respond accordingly. Below we have a button set to run the following when it is clicked:
+Now in our application code we can call `Anymod.Event.$emit('updateMod', ...)` and our mod will respond accordingly. Below we have a button set to run the following when it is clicked:
 
 ```JS
-Anymod.Event.$emit('updateComponent', {
+Anymod.Event.$emit('updateMod', {
   title: 'New title',
   content: 'New content at ' + new Date().toLocaleTimeString() + '<br><br>'
 })
 ```
 
-Thus clicking the button will cause the `updateComponent` event to fire, which is then picked up by our component, and the `title` and `content` are updated:
+Thus clicking the button will cause the `updateMod` event to fire, which is then picked up by our mod, and the `title` and `content` are updated:
 
 <iframe width="100%" height="500" src="//jsfiddle.net/component/L1ugm6gn/embedded/result,html,js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-With this approach, you can send events to any component from your application code or from other components.
+With this approach, you can send events to any mod from your application code or from other mods.
 
 
 <!-- Anymod script -->

@@ -5,11 +5,11 @@ order: 206
 published: true
 ---
 
-Anymod is built on top of [Vue.js version 2](https://vuejs.org), a lightweight JavaScript framework for building components. That means that any methods available in a Vue.js instance are available in all components on Anymod.
+Anymod is built on top of [Vue.js version 2](https://vuejs.org), a lightweight JavaScript framework for building components. That means that any methods available in a Vue.js instance are available in all mods on Anymod.
 
-## Accessing a component instance
+## Accessing a mod instance
 
-Calling `Anymod('_key_')` returns a Vue instance for a given component. The Vue team typically refers to these instances as `vm` in their [documentation](https://vuejs.org/v2/api/#Instance-Properties).
+Calling `Anymod('_key_')` returns a Vue instance for a given mod. The Vue team typically refers to these instances as `vm` in their [documentation](https://vuejs.org/v2/api/#Instance-Properties).
 
 ```js
 Anymod('orllm').text
@@ -18,17 +18,17 @@ Anymod('orllm').text
 
 ## Editing the JavaScript
 
-In the dashboard JavaScript editor, you can access the component instance with the `component` keyword. For example, to add a method to a component, you can enter the following into the JavaScript editor:
+In the dashboard JavaScript editor, you can access the mod instance with the `mod` keyword. For example, to add a method to a mod, you can enter the following into the JavaScript editor:
 
 ```JS
-component.methods = {
+mod.methods = {
   sayHello: function () {
     console.log('Hello World!')
   }
 }
 ```
 
-In the HTML portion of the component editor, you could call that method whenever a click occurs like so:
+In the HTML portion of the mod editor, you could call that method whenever a click occurs like so:
 
 ```HTML
 <div @click="sayHello">Click me</div>

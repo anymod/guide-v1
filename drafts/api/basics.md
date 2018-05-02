@@ -20,7 +20,7 @@ Is replaced by
 ### Options
 | Name | Type | Default | Description |
 |:---- |:---- |:------- |:----------- |
-| rawHtml | `String` | - | HTML content rendered by the component. |
+| rawHtml | `String` | - | HTML content rendered by the mod. |
 
 ### Example
   ``` html
@@ -78,7 +78,7 @@ Is replaced by
 ### Options
 | Name | Type | Default | Description |
 |:---- |:---- |:------- |:----------- |
-| text | `String` | - | Text rendered by the component. |
+| text | `String` | - | Text rendered by the mod. |
 
 ### Example
   ``` html

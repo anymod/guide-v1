@@ -57,7 +57,7 @@ Request data for one or more mods from your project.
 
   `Array` (JSON)
 
-   Component order is preserved in the response, even if there are duplicates or mods missing.
+   Mod order is preserved in the response, even if there are duplicates or mods missing.
 
 - **Example**
 
