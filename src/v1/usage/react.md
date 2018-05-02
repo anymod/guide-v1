@@ -14,7 +14,7 @@ componentDidMount () {
   Anymod.render()
 },
 render () {
-  return <div id="anymod-mladl" data-load="md-mi"></div>
+  return <div id="anymod-mldrn"></div>
 }
 ```
 <p class="tip">React requires you to use quotation marks (`"`) for attributes.</p>
@@ -33,9 +33,9 @@ You can render multiple mods the same way as a single mod. However, React does r
 render () {
   return (
     <div>
-      <div id="anymod-mladl" data-load="md-mi"></div>
-      <div id="anymod-ekaob" data-load="b"></div>
-      <div id="anymod-aldlk" data-load="md"></div>
+      <div id="anymod-mldrn"></div>
+      <div id="anymod-eoako"></div>
+      <div id="anymod-amkmr"></div>
     </div>
   )
 }

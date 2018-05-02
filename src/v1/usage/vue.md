@@ -11,7 +11,7 @@ To use mod with [Vue.js](https://vuejs.org/), add the mod's tag and call like an
 
 ```html
 <div id="example">
-  <div id="anymod-aldlk" data-load="md-mi"></div>
+  <div id="anymod-amkmr"></div>
 </div>
 ```
 ```js
@@ -32,7 +32,7 @@ To use mods inside a custom Vue component, call `Anymod.render()` once Vue has m
 ```js
 // register
 Vue.component('my-component', {
-  template: '<div id="anymod-aldlk" data-load="md-mi"></div>'
+  template: '<div id="anymod-amkmr"></div>'
 })
 
 // create a root instance
@@ -55,9 +55,9 @@ You can render multiple mods the same way as a single mod, like so:
 
 ```html
 <div id="demo">
-  <div id=anymod-mladl data-load=md-mi></div>
-  <div id=anymod-ekaob data-load=b></div>
-  <div id=anymod-aldlk data-load=md></div>
+  <div id=anymod-mldrn></div>
+  <div id=anymod-eoako></div>
+  <div id=anymod-amkmr></div>
 </div>
 ```
 ```js

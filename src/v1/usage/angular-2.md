@@ -18,9 +18,9 @@ Now you can add your mod and call `Anymod.render()` to render the mod(s):
 ```ts
 @Component({
   ...
-  template: `<div id=anymod-aldlk data-load=md-mi></div>`,
+  template: `<div id=anymod-mldrn></div>`,
 })
-export class AnymodDemo {
+class AnymodDemo {
   ...
   ngOnInit() {
     Anymod.render()
@@ -36,9 +36,7 @@ You can use `Anymod.render()` by itself or with a callback or promise. See the s
 
 The following example shows a component being rendered in typescript with `Anymod.render`:
 
-<iframe width="100%" height="650" src="https://embed.plnkr.co/mQU9elAt1PzqzHLjYUR7/?show=app.js,preview" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-
+<iframe width="100%" height="650" src="//jsfiddle.net/component/3nvx3kms/embedded/js,html,result/" allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## Rendering multiple components
 
@@ -48,12 +46,12 @@ You can render multiple components the same way as a single component, and you o
 @Component({
   ...
   template: `
-    <div id=anymod-mladl data-load=md-mi></div>
-    <div id=anymod-ekaob data-load=b></div>
-    <div id=anymod-aldlk data-load=md></div>
+    <div id=anymod-mldrn></div>
+    <div id=anymod-eoako></div>
+    <div id=anymod-klaln></div>
   `,
 })
-export class AnymodDemo {
+class AnymodDemo {
   ...
   ngOnInit() {
     Anymod.render()
