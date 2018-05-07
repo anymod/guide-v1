@@ -1,13 +1,21 @@
-# Anymod guide
+## Anymod Guide
+This app runs the guide based on Hexo, with app located at:
 
-This site is built with [hexo](http://hexo.io/). Site content is written in Markdown format located in `src`. Pull requests welcome!
+| NODE_ENV | URL |
+|---|---|
+| `production`  | https://guide.anymod.com |
+| `development`  | http://localhost:*TBD* |
 
-## Developing
+## Operations
 
-Start a dev server at `localhost:8888`:
+### Run local server
+`hexo server`
 
-```
-$ npm install -g hexo-cli
-$ npm install
-$ hexo server
-```
+### Clean local files
+`hexo clean`
+
+### Regenerate local files
+`hexo generate`
+
+### Deploy to live S3
+`hexo generate`
