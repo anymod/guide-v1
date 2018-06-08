@@ -1,7 +1,7 @@
 var fs = require('fs')
 var zlib = require('zlib')
 var version = require('./package.json').version
-var themeconfPath = 'themes/component-io/_config.yml'
+var themeconfPath = 'themes/anymod/_config.yml'
 var installPath = 'src/v1/guide/installation.md'
 var themeconfig = fs.readFileSync(themeconfPath, 'utf-8')
 var installation = fs.readFileSync(installPath, 'utf-8')
