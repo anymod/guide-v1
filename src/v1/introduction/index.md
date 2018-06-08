@@ -7,30 +7,34 @@ published: true
 
 ## What is Anymod?
 
-<h4 style="font-size: 20px;">Content management you can add anywhere</h4>
+<h4 style="font-size: 20px;">Building blocks for the modern web</h4>
 
-Anymod lets you add content management functionality to your website and make live changes from your own site or from the Anymod dashboard. 
+Anymod is a platform for building and sharing functional, ready-to-use web modules, which we call **mods**.
 
-You can edit your content and the underlying code for modules (mods) without having to change or redeploy your website's code. This workflow is simple & robust, and it makes managing your website easier.
+Mods can be added to any website.
 
-Anymod also has a library of ready-to-use mods that you can copy into your project with one click and customize to your needs. If you want even more customization, you can build mods entirely from scratch and still manage them online.
+<h4 style="font-size: 20px;">Simpler web development</h4>
 
-<h4 style="font-size: 20px;">Tools for technical and non-technical users.</h4>
+Our mantra is "Simplify web development". We believe the web makes humanity better, and we want to support the developers who power the web.
 
-For non-technical users, Anymod has a simple WYSIWYG (what-you-see-is-what-you-get) editor for making changes to text, images, colors, order, and more. No coding skills are needed to use the content editor, and a live preview gives instant feedback.
+To simplify development, we've built:
 
-For technical users, Anymod is simple to set up and has a well-documented API for building and customizing HTML, CSS, and JavaScript, as well as for binding data, triggering events, rendering content, and more.
+- A [library](https://anymod.com/library) of free, open source mods you can fork and tweak
+- A free, cloud-based code editor with build tools automatically configured
+- A platform for delivering mods, which makes adding them as simple as copy & paste
 
-<h4 style="font-size: 20px;">Works with every platform & technology.</h4>
+<h4 style="font-size: 20px;">Tools for non-developers, too</h4>
 
-Anymod was built with other libraries and existing projects in mind, from traditional CMS systems like WordPress to modern frontend libraries like React. That means Anymod is easy to set up on any platform and is also perfectly capable of powering sophisticated Single-Page Applications.
+Part of making life easy for web developers is helping teams & clients do more on their own.
 
-If you are an experienced developer and want to know how Anymod works with other frontend libraries & frameworks, you can jump to the following:
-[AngularJS 1](/v1/usage/angular-1.html) - [Angular 2+](/v1/usage/angular-2.html) - [React](/v1/usage/react.html) - [Vue.js](/v1/usage/vue.html) - [Bootstrap](/v1/usage/bootstrap.html) - [JSON (data only)](/v1/usage/data.html)
+Mods have a built-in WYSIWYG content editor that lets non-developers update text & images directly from their live web page. No coding skills are needed to use the content editor, and a live preview gives instant feedback.
 
 ## Getting Started
 
-<p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a simple web page working first.  Once you have a web page, you're ready to use Anymod.</p>
+<p class="tip">The official guide assumes basic knowledge of HTML. If you are totally new to web development, you may want to try getting a simple web page working first.  Once you have a web page, you're ready to use Anymod.
+
+If you are an experienced developer and want to know how Anymod works with other frontend libraries & frameworks, you can jump to the following:
+[AngularJS 1](/v1/usage/angular-1.html) - [Angular 2+](/v1/usage/angular-2.html) - [React](/v1/usage/react.html) - [Vue.js](/v1/usage/vue.html) - [Bootstrap](/v1/usage/bootstrap.html) - [JSON (data only)](/v1/usage/data.html)</p>
 
 The easiest way to try Anymod is by example. If you want to try a mod in your own project, you can simply create an `.html` file and paste the following code:
 
