@@ -39,7 +39,7 @@ If you are an experienced developer and want to know how Anymod works with other
 The easiest way to try Anymod is by example. If you want to try a mod in your own project, you can simply create an `.html` file and paste the following code:
 
 ``` html
-<div id=anymod-dkaal></div>
+<div id=anymod-moloo></div>
 
 <!-- Anymod script -->
 <script project="anymod" src="https://cdn.anymod.com/v1"></script>
@@ -47,11 +47,11 @@ The easiest way to try Anymod is by example. If you want to try a mod in your ow
 
 This will give you the functional carousel mod below. It's as easy as copy & paste to get a mod working on your web page.
 
-We have just created our very first mod!
+We have just added our very first mod!
 
 {% raw %}
 <div class="demo">
-  <div id=anymod-dkaal></div>
+  <div id=anymod-moloo></div>
 </div>
 {% endraw %}
 
