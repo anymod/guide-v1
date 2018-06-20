@@ -5,4 +5,8 @@ order: 500
 published: true
 ---
 
-<p class="tip">We're currently building out a more robust component request system. In the meantime, you can email team[at]anymod.com with any suggestions you may have.</p>
+If there is a mod idea or category that you'd like to see, let us know!
+
+<div id=anymod-nmamd style="margin-top: 30px;"></div>
+
+<script project="8PP6M2" src="https://cdn.anymod.com/v1"></script>
