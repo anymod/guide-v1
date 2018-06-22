@@ -2,7 +2,7 @@
 title: Anymod.Event
 type: guide
 order: 205
-published: true
+published: false
 ---
 
 Anymod comes with a built-in message bus you can use for communication between mods or within your application. It is based on the [event system](https://vuejs.org/v2/api/#Instance-Methods-Events) available to Vue.js components.

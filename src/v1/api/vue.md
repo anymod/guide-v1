@@ -2,7 +2,7 @@
 title: Anymod.Vue
 type: guide
 order: 206
-published: true
+published: false
 ---
 
 Anymod is built on top of [Vue.js version 2](https://vuejs.org), a lightweight JavaScript framework for building components. That means that any methods available in a Vue.js instance are available in all mods on Anymod.
