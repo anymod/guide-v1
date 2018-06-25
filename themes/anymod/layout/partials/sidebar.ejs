@@ -12,6 +12,7 @@
         <% if (p.order === 100) { %><li><h3>Usage</h3></li><% } %>
         <% if (p.order === 200) { %><li><h3>API</h3></li><% } %>
         <% if (p.order === 300) { %><li><h3>Examples</h3></li><% } %>
+        <% if (p.order === 400) { %><li><h3>Module Monday</h3></li><% } %>
         <% if (p.order === 500) { %><li><h3>Community</h3></li><% } %>
         <li>
           <a href="/<%- p.path %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
