@@ -4,7 +4,7 @@ This app runs the guide based on Hexo, with app located at:
 | NODE_ENV | URL |
 |---|---|
 | `production`  | https://guide.anymod.com |
-| `development`  | http://localhost:*TBD* |
+| `development`  | http://localhost:4444 |
 
 ## Operations
 
