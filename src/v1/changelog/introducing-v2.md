@@ -11,7 +11,7 @@ We've updated Anymod to dramatically improve speed & flexibility.
 
 Our primary goals for **v2** were:
 1. **Improve speed** - pages with Anymod now load [3-5x] faster
-2. **Make mod development more flexible** - now build mods with any web tools you want
+2. **Make mod development more flexible** - now you can build mods with any web tools you want
 
 We're really happy with the end result, and we think you'll enjoy using Anymod even more with **v2**.
 
