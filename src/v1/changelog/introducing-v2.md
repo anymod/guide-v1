@@ -29,13 +29,13 @@ The end result is dramatic: mod load times have dropped from [600ms] on average 
 
 ### Removed dependency on Vue
 
-For **v2**, we've removed the dependency on Vue.js. Now you can use plain JavaScript or any framework you want to build mods (including Vue!).
+For **v2**, we've removed the dependency on Vue.js. Now you can use plain JavaScript or any framework you want when building mods (including Vue!).
 
-This also means the underlying Anymod script is smaller & faster to load, giving you the choice to add frameworks like Vue, React, Angular, jQuery, and more when you need them.
+This also means the underlying Anymod script is smaller & faster to load, and you can still add frameworks like Vue, React, Angular, jQuery, and more when you need them.
 
-### HTML pre-compilation with [handlebars]
+### HTML pre-compilation with Handlebars
 
-Now you can add content directly to your mod HTML by using [handlebars] syntax, so you don't need to rely on a framework to get editable content in your HTML.
+Now you can add content directly to your mod HTML by using [Handlebars](https://handlebarsjs.com/expressions.html) syntax, so you don't need to rely on a framework to get editable content in your HTML.
 
 ```html
 <!-- Old syntax (based on Vue.js) -->
@@ -46,8 +46,6 @@ Now you can add content directly to your mod HTML by using [handlebars] syntax, 
 ```
 
 [See more examples](#Examples)
-
-We'll be introducing options for building mods with JSX & TypeScript soon too, in order to better support traditional syntax for React & Angular mods.
 
 ## Adding v2 to your page
 
@@ -88,7 +86,7 @@ As a nice bonus, the script loaded for **v2** weighs in at [19kB], roughly half 
 
 ### Anymod.Event
 
-`Anymod.Event` has been reimplemented using [Eev](https://github.com/chrisdavies/eev), a tiny (500 byte) library for events.
+`Anymod.Event` has been reimplemented using [Eev](https://github.com/chrisdavies/eev), a tiny (500 byte) library for events. You can use `Anymod.Event` to send data to or from mods in your project.
 - Old syntax (deprecated): `Anymod.Event.$on`, `Anymod.Event.$emit`, `Anymod.Event.$off`
 - New syntax ($ removed): `Anymod.Event.on`, `Anymod.Event.emit`, `Anymod.Event.off`
 
@@ -98,7 +96,7 @@ In **v1**, calling `Anymod('abcde')` returns the Vue instance for mod `abcde`.
 
 In **v2**, calling `Anymod('abcde')` returns an object containing data for mod `abcde`. 
 
-Unlike v1, v2 is no longer reactive by default.  For example, calling `Anymod('abcde').myField = 'foo'` no longer updates the `myField` value for the mod.  This was a feature of Vue.js, so you could re-enable this type of reactivity if needed by using a framework like Vue, React, or Angular.
+Unlike v1, v2 is no longer reactive by default.  For example, calling `Anymod('abcde').myField = 'foo'` no longer updates the `myField` value for the mod.  This was a feature of Vue.js, and you can re-enable this type of reactivity if needed by using a framework like Vue, React, or Angular.
 
 ## Legacy functionality
 
@@ -256,3 +254,7 @@ Hello, World!
 ```
 
 <!-- ### React Coming soon -->
+
+### Others
+
+We will introduce options for building mods with JSX & TypeScript soon, in order to better support traditional syntax for React & Angular mods. Stay tuned!
