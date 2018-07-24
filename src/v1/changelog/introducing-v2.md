@@ -39,7 +39,7 @@ Now you can add content directly to your mod HTML by using [handlebars] syntax, 
 
 ```html
 <!-- Old syntax (based on Vue.js) -->
-<div v-html="message"></div>
+<div v-text="message"></div>
 
 <!-- New syntax (handlebars) -->
 {{ message }}
@@ -134,24 +134,25 @@ Given the following fields, the below examples show several ways to add content.
 
 | Field name | Type | Value |
 |:-----------|:-----|:------|
-| message | Simple text | Hello, World! |
-| myHtml  | Rich text (HTML) | &lt;p&gt;I'm a P tag&lt;/p&gt; |
-| imgSrc  | Image | https://via.placeholder.com/90x90 |
-| myLink  | Link (URL) | https://example.com |
-| myColor | Color | #409CDC |
+| message  | Simple text | Hello, World! |
+| myHtml   | Rich text (HTML) | &lt;p&gt;I'm a P tag&lt;/p&gt; |
+| imgSrc   | Image | https://via.placeholder.com/90x90 |
+| myLink   | Link (URL) | https://example.com |
+| myColor  | Color | #409CDC |
+| repeatText | Simple text (with 3 repeat items) | ["Foo", "Bar", "Baz"] | 
 
-### Plain HTML (no JS framework)
+### Plain HTML with Handlebars (no JS framework)
 
-You can use [handlebars] syntax to add content without needing a JS framework.
+You can use [Handlebars](https://handlebarsjs.com/expressions.html) syntax to insert content without needing a JS framework.
 
-Adding the following to a mod's HTML:
+With values from the table above, adding the following to a mod's HTML:
 
 ```html
 <!-- Simple text -->
 {{ message }}
 
 <!-- Rich text (HTML) -->
-{{ myHtml }}
+{{{ myHtml }}}
 
 <!-- Image -->
 <img src="{{ imgSrc }}">
@@ -161,6 +162,11 @@ Adding the following to a mod's HTML:
 
 <!-- Color -->
 <span style="background: {{ myColor }}">My color</span>
+
+<!-- Repeat fields -->
+{{#each items}}
+  {{ repeatText }}
+{{/each}}
 ```
 
 would yield the following output:
@@ -180,11 +186,16 @@ Hello, World!
 
 <!-- Color -->
 <span style="background: #409CDC">My color</span>
+
+<!-- Repeat fields -->
+Foo
+Bar
+Baz
 ```
 
 ### Vue.js
 
-Field values are available in a mod's JS panel through the `mod.data` object, so you could add the above fields with Vue.js like so:
+Field values are also available in a mod's JS panel through the `mod.data` object, so you could add the above fields with [Vue.js](https://vuejs.org/v2/guide/syntax.html) instead of Handlebars like so:
 
 ```js
 // In the mod's JavaScript panel (be sure to include the Vue.js script URL)
@@ -198,7 +209,8 @@ new Vue({
 <!-- In the mod's HTML panel -->
 
 <!-- Simple text -->
-{{ message }}
+<!-- Escape curly braces with a leading backslash \{{ -->
+\{{ message }}
 
 <!-- Rich text (HTML) -->
 <div v-html="myHtml"></div>
@@ -211,8 +223,36 @@ new Vue({
 
 <!-- Color -->
 <span :style="{ background: myColor }">My color</span>
+
+<!-- Repeat fields -->
+<!-- Escape curly braces with a leading backslash \{{ -->
+<span v-for="item in items">
+  \{{ item.repeatText }}
+</span>
 ```
 
-<!-- ### React
+would yield the following output:
 
-Coming soon -->
+```html
+<!-- Simple text -->
+Hello, World!
+
+<!-- Rich text (HTML) -->
+<p>I'm a P tag</p>
+
+<!-- Image -->
+<img src="https://via.placeholder.com/90x90">
+
+<!-- Link -->
+<a href="https://example.com">My link</a>
+
+<!-- Color -->
+<span style="background: #409CDC">My color</span>
+
+<!-- Repeat fields -->
+<span>Foo</span>
+<span>Bar</span>
+<span>Baz</span>
+```
+
+<!-- ### React Coming soon -->
