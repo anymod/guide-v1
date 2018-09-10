@@ -20,7 +20,7 @@ Request data for a single mod from your project.
 
 - **Route**
 
-  `GET` https://<span></span>api.anymod.com/v0/data/{ **projectId** }/component/{ **key** }
+  `GET` https://<span></span>api.anymod.com/v0/data/{ **projectId** }/mod/{ **key** }
 
 - **Returns**
 
@@ -30,7 +30,7 @@ Request data for a single mod from your project.
 
 For mod `id=anymod-errba` in `project="library"`
 
-`GET` https://api.anymod.com/v0/data/library/component/errba
+`GET` https://api.anymod.com/v0/data/library/mod/errba
 
 ```json
 {
@@ -48,8 +48,8 @@ Request data for one or more mods from your project.
 
 - **Route**
 
-  `GET` https://<span></span>api.anymod.com/v0/data/{ **projectId** }/components/{ **key1,key2,key3** }
-  _*Note the "s" at the end of components_
+  `GET` https://<span></span>api.anymod.com/v0/data/{ **projectId** }/mods/{ **key1,key2,key3** }
+  _*Note the "s" at the end of mods_
 
   Here, the ids for each mod are separated by a comma (no space).
 
@@ -61,7 +61,7 @@ Request data for one or more mods from your project.
 
 - **Example**
 
-`GET` https://api.anymod.com/v0/data/library/components/errba,elarm
+`GET` https://api.anymod.com/v0/data/library/mods/errba,elarm
 
 ```json
 [
@@ -88,7 +88,7 @@ Request data for one or more mods from your project.
 
   In this example, we have duplicated the `elarm` mod, and the `foobar` mod does not exist:
 
-  `GET` https://api.anymod.com/v0/data/library/components/elarm,foobar,elarm
+  `GET` https://api.anymod.com/v0/data/library/mods/elarm,foobar,elarm
 
   ```json
   [
