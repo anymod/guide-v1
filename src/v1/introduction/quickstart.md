@@ -11,7 +11,7 @@ Anymod does **not** support IE8 and below, because it uses ECMAScript 5 features
 
 ## Hello World
 
-<p class="tip">You can fork this mod from the [Anymod editor](https://anymod.com/mod/ranno) or view it in a [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).</p>
+<p class="tip">You can clone this mod from the [Anymod editor](https://anymod.com/mod/ranno) or view it in a [jsfiddle](https://jsfiddle.net/component/hvnx6p0q/).</p>
 
 Add a basic `Hello World!` mod to one of your projects by pasting the following into your HTML:
 

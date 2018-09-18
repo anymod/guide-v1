@@ -19,7 +19,7 @@ Our mantra is "Simplify web development". We believe the web makes humanity bett
 
 To simplify development, we've built:
 
-- A [library](https://anymod.com/library) of free, open source mods you can fork and tweak
+- A [library](https://anymod.com/library) of free, open source mods you can clone and tweak
 - A free, cloud-based code editor with build tools automatically configured
 - A platform for delivering mods, which makes adding them as simple as copy & paste
 
